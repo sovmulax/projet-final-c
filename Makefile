@@ -31,7 +31,7 @@ $(BIN_DIR)/%.o: $(SRC_DIR_CPNT)/%.c
 	$(CC) -c -o $@ $<
 
 # Librairie statique
-$(LIB_DIR)/libevent.a: 
+$(LIB_DIR)/libevent.a: $(BIN_DIR)/*.o
 	ar rcs $@ $^
 
 # Nottoyage
