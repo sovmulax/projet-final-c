@@ -1,33 +1,43 @@
 CC = gcc
 SRC_DIR = ./functions
+SRC_DIR_SQL = ./functions/sql
+SRC_DIR_CPNT = ./functions/components
 BIN_DIR = ./bin
 LIB_DIR = ./lib
 
-# List all the source files
+# Liste des fichiers source
 SRC_FILES = $(wildcard $(SRC_DIR)/*.c)
-
-# Generate the corresponding object file names
+SRC_FILES = $(wildcard $(SRC_DIR_SQL)/*.c)
+SRC_FILES = $(wildcard $(SRC_DIR_CPNT)/*.c)
 OBJ_FILES = $(patsubst $(SRC_DIR)/%.c,$(BIN_DIR)/%.o,$(SRC_FILES))
+OBJ_FILES = $(patsubst $(SRC_DIR_SQL)/%.c,$(BIN_DIR)/%.o,$(SRC_FILES))
+OBJ_FILES = $(patsubst $(SRC_DIR_CPNT)/%.c,$(BIN_DIR)/%.o,$(SRC_FILES))
 
-# The default target, which will build the executable
-all: $(BIN_DIR)/bibliotheque run
+# execution du projet
+all: $(BIN_DIR)/event run
 
-# Link the object files and libraries to create the executable
-$(BIN_DIR)/bibliotheque: $(OBJ_FILES) $(LIB_DIR)/libotheque.a
+# liaisin fichier objet et la librairie statique
+$(BIN_DIR)/event: $(OBJ_FILES) $(LIB_DIR)/libevent.a
 	$(CC) -o $@ $^ -lsqlite3
 
-# Compile each source file into an object file
+# Fichier objet
 $(BIN_DIR)/%.o: $(SRC_DIR)/%.c
 	$(CC) -c -o $@ $<
 
-# Create the static library
-$(LIB_DIR)/libotheque.a:  $(BIN_DIR)/ajout_livre.o $(BIN_DIR)/ajout_user.o $(BIN_DIR)/emprunts.o $(BIN_DIR)/list_adh.o $(BIN_DIR)/list_livres.o $(BIN_DIR)/list_emprunt.o 
+$(BIN_DIR)/%.o: $(SRC_DIR_SQL)/%.c
+	$(CC) -c -o $@ $<
+
+$(BIN_DIR)/%.o: $(SRC_DIR_CPNT)/%.c
+	$(CC) -c -o $@ $<
+
+# Librairie statique
+$(LIB_DIR)/libevent.a: 
 	ar rcs $@ $^
 
-# Clean the generated files
+# Nottoyage
 clean:
 	rm -f $(BIN_DIR)/* $(LIB_DIR)/*
 
 # Run the program
 run:
-	$(BIN_DIR)/bibliotheque
+	$(BIN_DIR)/event
