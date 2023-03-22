@@ -4,58 +4,31 @@
 #include <stdlib.h>
 #include <string.h>
 
-int callbacks_adh(void *, int, char **, char **);
-
-int event_list()
+int event_list(sqlite3 *db)
 {
-    sqlite3 *db;
-    char *err_msg;
-    char *sql;
-    size_t sz;
-    int rc;
-    int price;
-    char *type;
+    // Ouvre la base de données event.db
+    sqlite3_open("event.db", &db);
 
-    err_msg = 0;
-    // requete
-    sz = snprintf(NULL, 0, "SELECT * FROM events");
-    sql = (char *)malloc(sz + 1);
-    snprintf(sql, sz + 1, "SELECT * FROM events");
+    // Récupère les données de la table "event"
+    sqlite3_stmt *stmt;
+    const char *sql = "SELECT * FROM events";
+    sqlite3_prepare_v2(db, sql, -1, &stmt, NULL);
 
-    // work
-    rc = sqlite3_open("./event.db", &db);
-    if (rc != SQLITE_OK)
+    // Affiche les données récupérées
+    while (sqlite3_step(stmt) == SQLITE_ROW)
     {
-        fprintf(stderr, "Cannot open database: %s\n", sqlite3_errmsg(db));
-        sqlite3_close(db);
-        return (1);
-    }
-    printf("✅ %s\n", sql);
+        int id = sqlite3_column_int(stmt, 0);
+        const unsigned char *c1 = sqlite3_column_text(stmt, 1);
+        const unsigned char *c2 = sqlite3_column_text(stmt, 2);
+        const unsigned char *c3 = sqlite3_column_text(stmt, 3);
+        const unsigned char *c4 = sqlite3_column_text(stmt, 4);
 
-    rc = sqlite3_exec(db, sql, callbacks_adh, 0, &err_msg);
-    if (rc != SQLITE_OK)
-    {
-        fprintf(stderr, "SQL error: %s\n", err_msg);
-        sqlite3_free(err_msg);
-        sqlite3_close(db);
-        return (1);
+        printf("ID: %d, Nom : %s, Type : %s, Date : %s, Nombre de Place : %s\n", id, c1, c2, c3, c4);
     }
 
+    // Libère les ressources utilisées par la requête
+    sqlite3_finalize(stmt);
+
+    // Ferme la base de données
     sqlite3_close(db);
-
-    return (0);
-}
-
-int callbacks_adh(void *NotUsed, int argc, char **argv, char **azColName)
-{
-    NotUsed = 0;
-
-    for (int i = 0; i < argc; i++)
-    {
-        printf("%s = %s\n", azColName[i], argv[i] ? argv[i] : "NULL");
-    }
-
-    printf("🗃️\n");
-
-    return (0);
 }

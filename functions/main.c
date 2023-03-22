@@ -56,7 +56,7 @@ int main(int argc, char *argv[])
 
         case 2:
             printf("\e[1;1H\e[2J");
-            retrieve_data_from_event_table(db);
+            event_list(db);
             break;
         }
 
