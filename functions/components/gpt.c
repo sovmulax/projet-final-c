@@ -36,28 +36,28 @@
 //     sqlite3_close(db);
 // }
 
-void retrieve_data_from_event_table(sqlite3 *db) {
-    // Ouvre la base de données event.db
-    sqlite3_open("event.db", &db);
+// void retrieve_data_from_event_table(sqlite3 *db) {
+//     // Ouvre la base de données event.db
+//     sqlite3_open("event.db", &db);
     
-    // Récupère les données de la table "event"
-    sqlite3_stmt *stmt;
-    const char *sql = "SELECT * FROM events";
-    sqlite3_prepare_v2(db, sql, -1, &stmt, NULL);
+//     // Récupère les données de la table "event"
+//     sqlite3_stmt *stmt;
+//     const char *sql = "SELECT * FROM events";
+//     sqlite3_prepare_v2(db, sql, -1, &stmt, NULL);
     
-    // Affiche les données récupérées
-    while (sqlite3_step(stmt) == SQLITE_ROW) {
-        int id = sqlite3_column_int(stmt, 0);
-        const unsigned char *column1 = sqlite3_column_text(stmt, 1);
-        const unsigned char *column2 = sqlite3_column_text(stmt, 2);
-        const unsigned char *column3 = sqlite3_column_text(stmt, 3);
+//     // Affiche les données récupérées
+//     while (sqlite3_step(stmt) == SQLITE_ROW) {
+//         int id = sqlite3_column_int(stmt, 0);
+//         const unsigned char *column1 = sqlite3_column_text(stmt, 1);
+//         const unsigned char *column2 = sqlite3_column_text(stmt, 2);
+//         const unsigned char *column3 = sqlite3_column_text(stmt, 3);
         
-        printf("ID: %d, Column 1: %s, Column 2: %s, Column 3: %s\n", id, column1, column2, column3);
-    }
+//         printf("ID: %d, Column 1: %s, Column 2: %s, Column 3: %s\n", id, column1, column2, column3);
+//     }
     
-    // Libère les ressources utilisées par la requête
-    sqlite3_finalize(stmt);
+//     // Libère les ressources utilisées par la requête
+//     sqlite3_finalize(stmt);
     
-    // Ferme la base de données
-    sqlite3_close(db);
-}
+//     // Ferme la base de données
+//     sqlite3_close(db);
+// }

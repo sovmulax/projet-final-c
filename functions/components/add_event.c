@@ -22,9 +22,9 @@ int add_event(char a[200], char b[200], char c[200], char d[200])
 
     err_msg = 0;
     // requete
-    sz = snprintf(NULL, 0, "INSERT INTO events(nom, type, date, nbplace) VALUES('%s', '%s', '%s', '%s')", a, b, c, d);
+    sz = snprintf(NULL, 0, "INSERT INTO events(nom, type, date, nbplace) VALUES('%s', '%s', '%s', '%s')", a, d, b, c);
     sql = (char *)malloc(sz + 1);
-    snprintf(sql, sz + 1, "INSERT INTO events(nom, type, date, nbplace) VALUES('%s', '%s', '%s', '%s')", a, b, c, d);
+    snprintf(sql, sz + 1, "INSERT INTO events(nom, type, date, nbplace) VALUES('%s', '%s', '%s', '%s')", a, d, b, c);
 
     // work
     rc = sqlite3_open("./event.db", &db);
