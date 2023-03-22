@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-int add_event(sqlite3 *db, char a[200], char b[200], char c[200], char d[200], char e[200])
+void add_event(sqlite3 *db, char a[200], char b[200], char c[200], char d[200], char e[200])
 {
     // Ouvre la base de données event.db
     sqlite3_open("event.db", &db);
@@ -20,6 +20,7 @@ int add_event(sqlite3 *db, char a[200], char b[200], char c[200], char d[200], c
     sqlite3_step(stmt_event);
     sqlite3_finalize(stmt_event);
 
+    printf("✅ INSERT INTO events (nom, type, date, nbplace) VALUES (%s, %s, %s, %s)\n", a, d, b, c);
     // Récupère l'id de la dernière insertion dans la table "event"
     int last_id = sqlite3_last_insert_rowid(db);
 
@@ -31,6 +32,8 @@ int add_event(sqlite3 *db, char a[200], char b[200], char c[200], char d[200], c
     sqlite3_bind_text(stmt_menu, 2, e, -1, SQLITE_STATIC);       // example data
     sqlite3_step(stmt_menu);
     sqlite3_finalize(stmt_menu);
+
+    printf("✅ INSERT INTO menus (idevent, element) VALUES (%d, %s)\n", last_id, e);
 
     // Ferme la base de données
     sqlite3_close(db);
