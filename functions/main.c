@@ -13,6 +13,7 @@ int main(int argc, char *argv[])
     char v2[100];
     char v3[100];
     char v4[100];
+    char v5[100];
 
     while (boo == 1)
     {
@@ -47,10 +48,11 @@ int main(int argc, char *argv[])
             printf("➡️ ");
             scanf("%s", v4);
             printf("\e[1;1H\e[2J");
-            add_event(v1, v2, v3, v4);
             printf("🧾 Création du Menu\n");
             printf("Liste des éléments (element;element;element)\n");
             printf("➡️ ");
+            scanf("%s", v5);
+            add_event(db, v1, v2, v3, v4, v5);
 
             break;
 

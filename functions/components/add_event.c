@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-int add_event(sqlite3 *db, char a[200], char b[200], char c[200], char d[200])
+int add_event(sqlite3 *db, char a[200], char b[200], char c[200], char d[200], char e[200])
 {
     // Ouvre la base de données event.db
     sqlite3_open("event.db", &db);
@@ -28,7 +28,7 @@ int add_event(sqlite3 *db, char a[200], char b[200], char c[200], char d[200])
     sqlite3_stmt *stmt_menu;
     sqlite3_prepare_v2(db, sql_menu, -1, &stmt_menu, NULL);
     sqlite3_bind_int(stmt_menu, 1, last_id);
-    sqlite3_bind_text(stmt_menu, 2, "element;element;element", -1, SQLITE_STATIC);       // example data
+    sqlite3_bind_text(stmt_menu, 2, e, -1, SQLITE_STATIC);       // example data
     sqlite3_step(stmt_menu);
     sqlite3_finalize(stmt_menu);
 
