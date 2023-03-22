@@ -4,18 +4,19 @@
 #include <stdlib.h>
 #include <string.h>
 
-// void insert_data_into_event_and_menu_tables(sqlite3 *db, char *element1, char *element2, char *element3)
+// void insert_data_into_event_and_menu_tables(sqlite3 *db, char *a, char *b, char *c, char *d)
 // {
 //     // Ouvre la base de données event.db
 //     sqlite3_open("event.db", &db);
 
 //     // Insère les données dans la table "event"
-//     char *sql_event = "INSERT INTO event (column1, column2, column3) VALUES (?, ?, ?)";
+//     char *sql_event = "INSERT INTO events (nom, type, date, nbplace) VALUES (?, ?, ?, ?)";
 //     sqlite3_stmt *stmt_event;
 //     sqlite3_prepare_v2(db, sql_event, -1, &stmt_event, NULL);
-//     sqlite3_bind_text(stmt_event, 1, element1, -1, SQLITE_STATIC);
-//     sqlite3_bind_text(stmt_event, 2, element2, -1, SQLITE_STATIC);
-//     sqlite3_bind_text(stmt_event, 3, element3, -1, SQLITE_STATIC);
+//     sqlite3_bind_text(stmt_event, 1, a, -1, SQLITE_STATIC);
+//     sqlite3_bind_text(stmt_event, 2, d, -1, SQLITE_STATIC);
+//     sqlite3_bind_text(stmt_event, 3, b, -1, SQLITE_STATIC);
+//     sqlite3_bind_text(stmt_event, 4, c, -1, SQLITE_STATIC);
 //     sqlite3_step(stmt_event);
 //     sqlite3_finalize(stmt_event);
 
@@ -23,12 +24,11 @@
 //     int last_id = sqlite3_last_insert_rowid(db);
 
 //     // Insère les données dans la table "menu" en utilisant l'id récupéré
-//     char *sql_menu = "INSERT INTO menu (event_id, column4, column5) VALUES (?, ?, ?)";
+//     char *sql_menu = "INSERT INTO menus (idevent, element) VALUES (?, ?)";
 //     sqlite3_stmt *stmt_menu;
 //     sqlite3_prepare_v2(db, sql_menu, -1, &stmt_menu, NULL);
 //     sqlite3_bind_int(stmt_menu, 1, last_id);
-//     sqlite3_bind_text(stmt_menu, 2, "some data", -1, SQLITE_STATIC);       // example data
-//     sqlite3_bind_text(stmt_menu, 3, "some other data", -1, SQLITE_STATIC); // example data
+//     sqlite3_bind_text(stmt_menu, 2, "element;element;element", -1, SQLITE_STATIC);       // example data
 //     sqlite3_step(stmt_menu);
 //     sqlite3_finalize(stmt_menu);
 

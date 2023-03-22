@@ -4,50 +4,34 @@
 #include <stdlib.h>
 #include <string.h>
 
-int callbacks_id(void *, int, char **, char **);
-
-int	idEvent();
-int	addMenu(int a);
-
-int add_event(char a[200], char b[200], char c[200], char d[200])
+int add_event(sqlite3 *db, char a[200], char b[200], char c[200], char d[200])
 {
-    sqlite3 *db;
-    char *err_msg;
-    char *sql;
-    size_t sz;
-    int rc;
-    int price;
-    char *type;
-    int idevent;
+    // Ouvre la base de données event.db
+    sqlite3_open("event.db", &db);
 
-    err_msg = 0;
-    // requete
-    sz = snprintf(NULL, 0, "INSERT INTO events(nom, type, date, nbplace) VALUES('%s', '%s', '%s', '%s')", a, d, b, c);
-    sql = (char *)malloc(sz + 1);
-    snprintf(sql, sz + 1, "INSERT INTO events(nom, type, date, nbplace) VALUES('%s', '%s', '%s', '%s')", a, d, b, c);
+    // Insère les données dans la table "event"
+    char *sql_event = "INSERT INTO events (nom, type, date, nbplace) VALUES (?, ?, ?, ?)";
+    sqlite3_stmt *stmt_event;
+    sqlite3_prepare_v2(db, sql_event, -1, &stmt_event, NULL);
+    sqlite3_bind_text(stmt_event, 1, a, -1, SQLITE_STATIC);
+    sqlite3_bind_text(stmt_event, 2, d, -1, SQLITE_STATIC);
+    sqlite3_bind_text(stmt_event, 3, b, -1, SQLITE_STATIC);
+    sqlite3_bind_text(stmt_event, 4, c, -1, SQLITE_STATIC);
+    sqlite3_step(stmt_event);
+    sqlite3_finalize(stmt_event);
 
-    // work
-    rc = sqlite3_open("./event.db", &db);
-    if (rc != SQLITE_OK)
-    {
-        fprintf(stderr, "Cannot open database: %s\n", sqlite3_errmsg(db));
-        sqlite3_close(db);
-        return (1);
-    }
-    printf("✅ %s\n", sql);
+    // Récupère l'id de la dernière insertion dans la table "event"
+    int last_id = sqlite3_last_insert_rowid(db);
 
-    rc = sqlite3_exec(db, sql, 0, 0, &err_msg);
-    if (rc != SQLITE_OK)
-    {
-        fprintf(stderr, "SQL error: %s\n", err_msg);
-        sqlite3_free(err_msg);
-        sqlite3_close(db);
-        return (1);
-    }
+    // Insère les données dans la table "menu" en utilisant l'id récupéré
+    char *sql_menu = "INSERT INTO menus (idevent, element) VALUES (?, ?)";
+    sqlite3_stmt *stmt_menu;
+    sqlite3_prepare_v2(db, sql_menu, -1, &stmt_menu, NULL);
+    sqlite3_bind_int(stmt_menu, 1, last_id);
+    sqlite3_bind_text(stmt_menu, 2, "element;element;element", -1, SQLITE_STATIC);       // example data
+    sqlite3_step(stmt_menu);
+    sqlite3_finalize(stmt_menu);
 
+    // Ferme la base de données
     sqlite3_close(db);
-
-    // idevent = idEvent();
-
-    return (0);
 }
