@@ -7,6 +7,7 @@ int main(int argc, char *argv[])
 {
     char choix[100];
     int boo = 1;
+    sqlite3 *db;
 
     char v1[100];
     char v2[100];
@@ -55,7 +56,7 @@ int main(int argc, char *argv[])
 
         case 2:
             printf("\e[1;1H\e[2J");
-            retrieve_data_from_event_table();
+            retrieve_data_from_event_table(db);
             break;
         }
 
