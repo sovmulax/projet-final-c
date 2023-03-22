@@ -4,6 +4,11 @@
 #include <stdlib.h>
 #include <string.h>
 
+int callbacks_id(void *, int, char **, char **);
+
+int	idEvent();
+int	addMenu(int a);
+
 int add_event(char a[200], char b[200], char c[200], char d[200])
 {
     sqlite3 *db;

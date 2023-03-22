@@ -47,6 +47,10 @@ int main(int argc, char *argv[])
             scanf("%s", v4);
             printf("\e[1;1H\e[2J");
             add_event(v1, v2, v3, v4);
+            printf("🧾 Création du Menu\n");
+            printf("Liste des éléments (element;element;element)\n");
+            printf("➡️ ");
+
             break;
 
         case 2:
