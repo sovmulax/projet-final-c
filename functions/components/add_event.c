@@ -18,6 +18,7 @@ int add_event(char a[200], char b[200], char c[200], char d[200])
     int rc;
     int price;
     char *type;
+    int idevent;
 
     err_msg = 0;
     // requete
@@ -45,6 +46,8 @@ int add_event(char a[200], char b[200], char c[200], char d[200])
     }
 
     sqlite3_close(db);
+
+    idevent = idEvent();
 
     return (0);
 }
