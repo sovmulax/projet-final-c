@@ -8,12 +8,15 @@ int main(int argc, char *argv[])
     char choix[100];
     int boo = 1;
     sqlite3 *db;
+    sqlite3 *db2;
 
     char v1[100];
     char v2[100];
     char v3[100];
     char v4[100];
     char v5[100];
+    int v6 = 1;
+    int v7 = 1;
 
     while (boo == 1)
     {
@@ -21,7 +24,8 @@ int main(int argc, char *argv[])
         printf("📖 Menu : \n");
         printf("1️⃣ - Création d'evenement : \n");
         printf("2️⃣ - Liste des evenements : \n");
-        printf("3️⃣ - Ajout de livre : \n");
+        printf("3️⃣ - Achat de billets: \n");
+
         printf("4️⃣ - Liste des livres : \n");
         printf("5️⃣ - Emprunté un livre : \n");
         printf("6️⃣ - Retourné un livre : \n");
@@ -60,9 +64,32 @@ int main(int argc, char *argv[])
             printf("\e[1;1H\e[2J");
             event_list(db, "*");
             break;
+
+        case 3:
+            printf("\e[1;1H\e[2J");
+            printf("Le type d'evenement (1 ou 2 ou 3)\n");
+            printf("1- Anniversaire\n");
+            printf("2- Mariage\n");
+            printf("3- Cinéma\n");
+            printf("➡️ ");
+            scanf("%d", &v6);
+            printf("\e[1;1H\e[2J");
+
+            if (v6 != 3)
+            {
+                event_list(db, "*");
+                printf("L'Id de l'evenement\n");
+                printf("➡️ ");
+                scanf("%d", &v7);
+                achat_billet(db2, v7, 0);
+            }
+            else
+            {
+                /* code */
+            }
         }
 
-        //printf("\e[1;1H\e[2J");
+        // printf("\e[1;1H\e[2J");
         printf(" 📌 Voulez-vous continuer ? (0 ou 1) \n");
         printf("➡️ ");
         scanf("%d", &boo);
