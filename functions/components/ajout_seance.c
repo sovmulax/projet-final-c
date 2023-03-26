@@ -44,8 +44,7 @@ void ajout_seance(sqlite3 *db, char *element1, char *element2)
     else
     {
         // Insertion de l'occurrence dans la table "seances"
-        char *sql_seances = sqlite3_mprintf("INSERT INTO seances(idjour, film, nbplace) VALUES(%lld, '%s', '%s')",
-                                            jours_id, element1, element2);
+        char *sql_seances = sqlite3_mprintf("INSERT INTO seances(idjour, film, nbplace) VALUES(%lld, '%s', '%s')", jours_id, element1, element2);
         sqlite3_exec(db, sql_seances, NULL, NULL, NULL);
         sqlite3_free(sql_seances);
 
