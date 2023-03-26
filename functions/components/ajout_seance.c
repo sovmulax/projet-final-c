@@ -2,7 +2,7 @@
 #include <sqlite3.h>
 #include <time.h>
 
-void insert_data_into_jours_and_seances_tables(sqlite3 *db, char *element1, char *element2)
+void ajout_seance(sqlite3 *db, char *element1, char *element2)
 {
     time_t current_time = time(NULL);
     struct tm *tm = localtime(&current_time);
