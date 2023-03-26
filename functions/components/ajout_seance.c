@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <time.h>
 
-void ajout_seance(sqlite3 *db, char *element1, char *element2)
+void ajout_seance(sqlite3 *db, char *element1, int element2)
 {
     // Ouvre la base de données event.db
     sqlite3_open("event.db", &db);
@@ -17,12 +17,6 @@ void ajout_seance(sqlite3 *db, char *element1, char *element2)
     char *sql_jours = sqlite3_mprintf("INSERT OR IGNORE INTO jours(date) VALUES('%s')", date);
     int rc = sqlite3_exec(db, sql_jours, NULL, NULL, NULL);
     sqlite3_free(sql_jours);
-
-    if (rc == SQLITE_CONSTRAINT)
-    {
-        printf("Erreur : le jour %s existe déjà dans la base de données.\n", date);
-        return;
-    }
 
     // Récupération de l'ID de l'occurrence insérée dans la table "jours"
     sqlite3_stmt *stmt;
@@ -44,14 +38,19 @@ void ajout_seance(sqlite3 *db, char *element1, char *element2)
     if (count >= 4)
     {
         printf("Erreur : il y a déjà 4 séances pour le jour %s.\n", date);
+        if (rc == SQLITE_CONSTRAINT)
+        {
+            printf("Erreur : le jour %s existe déjà dans la base de données.\n", date);
+            return;
+        }
     }
     else
     {
         // Insertion de l'occurrence dans la table "seances"
-        char *sql_seances = sqlite3_mprintf("INSERT INTO seances(idjour, film, nbplace) VALUES(%lld, '%s', '%s')", jours_id, element1, element2);
+        char *sql_seances = sqlite3_mprintf("INSERT INTO seances(idjour, film, nbplace) VALUES(%lld, '%s', %d)", jours_id, element1, element2);
         sqlite3_exec(db, sql_seances, NULL, NULL, NULL);
         sqlite3_free(sql_seances);
 
-        printf("✅ INSERT INTO seances(idjour, film, nbplace) VALUES(%lld, '%s', '%s')", jours_id, element1, element2);
+        printf("✅ INSERT INTO seances(idjour, film, nbplace) VALUES(%lld, '%s', '%d')", jours_id, element1, element2);
     }
 }
