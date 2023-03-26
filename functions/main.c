@@ -97,7 +97,7 @@ int main(int argc, char *argv[])
             printf("➡️ ");
             scanf("%d", &v7);
             ajout_seance(db, v1, v7);
-            printf("\e[1;1H\e[2J");
+            //printf("\e[1;1H\e[2J");
             liste_seance();
             break;
         }
