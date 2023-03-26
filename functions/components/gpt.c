@@ -1,82 +1,91 @@
-#include "../sql/sqlite3.h"
-#include "../header/header.c"
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+void insert_data_into_jours_and_seances_tables(sqlite3 *db, const char *film, int nb)
+{
+    char *zErrMsg = 0;
+    int rc;
 
-// void insert_data_into_event_and_menu_tables(sqlite3 *db, char *a, char *b, char *c, char *d)
-// {
-//     // Ouvre la base de données event.db
-//     sqlite3_open("event.db", &db);
+    // Get the current date
+    time_t now = time(NULL);
+    struct tm *t = localtime(&now);
+    char date[11];
+    strftime(date, sizeof(date), "%Y-%m-%d", t);
 
-//     // Insère les données dans la table "event"
-//     char *sql_event = "INSERT INTO events (nom, type, date, nbplace) VALUES (?, ?, ?, ?)";
-//     sqlite3_stmt *stmt_event;
-//     sqlite3_prepare_v2(db, sql_event, -1, &stmt_event, NULL);
-//     sqlite3_bind_text(stmt_event, 1, a, -1, SQLITE_STATIC);
-//     sqlite3_bind_text(stmt_event, 2, d, -1, SQLITE_STATIC);
-//     sqlite3_bind_text(stmt_event, 3, b, -1, SQLITE_STATIC);
-//     sqlite3_bind_text(stmt_event, 4, c, -1, SQLITE_STATIC);
-//     sqlite3_step(stmt_event);
-//     sqlite3_finalize(stmt_event);
+    // Check if the current date is already in the jours table
+    sqlite3_stmt *stmt;
+    char *sql = "SELECT id FROM jours WHERE date = ?";
+    sqlite3_prepare_v2(db, sql, -1, &stmt, NULL);
+    sqlite3_bind_text(stmt, 1, date, -1, SQLITE_TRANSIENT);
+    rc = sqlite3_step(stmt);
 
-//     // Récupère l'id de la dernière insertion dans la table "event"
-//     int last_id = sqlite3_last_insert_rowid(db);
+    if (rc == SQLITE_ROW)
+    {
+        // The current date is already in the jours table, check the number of seances
+        int jour_id = sqlite3_column_int(stmt, 0);
 
-//     // Insère les données dans la table "menu" en utilisant l'id récupéré
-//     char *sql_menu = "INSERT INTO menus (idevent, element) VALUES (?, ?)";
-//     sqlite3_stmt *stmt_menu;
-//     sqlite3_prepare_v2(db, sql_menu, -1, &stmt_menu, NULL);
-//     sqlite3_bind_int(stmt_menu, 1, last_id);
-//     sqlite3_bind_text(stmt_menu, 2, "element;element;element", -1, SQLITE_STATIC);       // example data
-//     sqlite3_step(stmt_menu);
-//     sqlite3_finalize(stmt_menu);
+        sqlite3_finalize(stmt);
 
-//     // Ferme la base de données
-//     sqlite3_close(db);
-// }
+        sql = "SELECT COUNT(*) FROM seances WHERE jour_id = ?";
+        sqlite3_prepare_v2(db, sql, -1, &stmt, NULL);
+        sqlite3_bind_int(stmt, 1, jour_id);
+        rc = sqlite3_step(stmt);
 
-// void retrieve_data_from_event_table(sqlite3 *db) {
-//     // Ouvre la base de données event.db
-//     sqlite3_open("event.db", &db);
-    
-//     // Récupère les données de la table "event"
-//     sqlite3_stmt *stmt;
-//     const char *sql = "SELECT * FROM events";
-//     sqlite3_prepare_v2(db, sql, -1, &stmt, NULL);
-    
-//     // Affiche les données récupérées
-//     while (sqlite3_step(stmt) == SQLITE_ROW) {
-//         int id = sqlite3_column_int(stmt, 0);
-//         const unsigned char *column1 = sqlite3_column_text(stmt, 1);
-//         const unsigned char *column2 = sqlite3_column_text(stmt, 2);
-//         const unsigned char *column3 = sqlite3_column_text(stmt, 3);
-        
-//         printf("ID: %d, Column 1: %s, Column 2: %s, Column 3: %s\n", id, column1, column2, column3);
-//     }
-    
-//     // Libère les ressources utilisées par la requête
-//     sqlite3_finalize(stmt);
-    
-//     // Ferme la base de données
-//     sqlite3_close(db);
-// }
+        if (rc == SQLITE_ROW)
+        {
+            int nb_seances = sqlite3_column_int(stmt, 0);
+            if (nb_seances >= 4)
+            {
+                printf("Erreur : le nombre maximum de séances a été atteint pour le jour %s.\n", date);
+                return;
+            }
+            else
+            {
+                // Insert a new seance for the current jour
+                sqlite3_finalize(stmt);
 
-// #include <stdio.h>
-// #include <time.h>
+                sql = "INSERT INTO seances (jour_id, film, nbplace) VALUES (?, ?, ?)";
+                sqlite3_prepare_v2(db, sql, -1, &stmt, NULL);
+                sqlite3_bind_int(stmt, 1, jour_id);
+                sqlite3_bind_text(stmt, 2, film, -1, SQLITE_TRANSIENT);
+                sqlite3_bind_int(stmt, 3, nb);
+                rc = sqlite3_step(stmt);
 
-// int main()
-// {
-//     time_t t = time(NULL);
-//     struct tm tm = *localtime(&t);
-//     printf("now: %d-%02d-%02d %02d:%02d:%02d\n", tm.tm_year + 1900, tm.tm_mon + 1, tm.tm_mday, tm.tm_hour, tm.tm_min, tm.tm_sec);
-// }
+                if (rc != SQLITE_DONE)
+                {
+                    printf("Erreur : impossible d'ajouter la séance pour le jour %s.\n", date);
+                }
+                else
+                {
+                    printf("Séance ajoutée avec succès pour le jour %s.\n", date);
+                }
+            }
+        }
+    }
+    else
+    {
+        // The current date is not in the jours table, insert a new jour and a new seance
+        sqlite3_finalize(stmt);
 
-// #include<stdio.h>
-// #include<stdlib.h>
-// int main()
-// {
-//   printf("\e[1;1H\e[2J");
-//   printf("Geeksforgeeks\n");
-//   printf("A computer Science portal\n");
-// }
+        sql = "INSERT INTO jours (date) VALUES (?)";
+        sqlite3_prepare_v2(db, sql, -1, &stmt, NULL);
+        sqlite3_bind_text(stmt, 1, date, -1, SQLITE_TRANSIENT);
+        rc = sqlite3_step(stmt);
+
+        if (rc != SQLITE_DONE)
+        {
+            printf("Erreur : impossible d'ajouter le jour %s.\n", date);
+        }
+        else
+        {
+            printf("Jour ajouté avec succès : %s\n", date);
+        }
+
+        sqlite3_finalize(stmt);
+
+        sql = "INSERT INTO seances (jour_id, film, nb) VALUES (?, ?, ?)";
+        sqlite3_prepare_v2(db, sql, -1, &stmt, NULL);
+        sqlite3_bind_int(stmt, 1, sqlite3_last_insert_rowid(db));
+        sqlite3_bind_text(stmt, 2, film, -1, SQLITE_TRANSIENT);
+        sqlite3_bind_int(stmt, 3, nb);
+        rc = sqlite3_step(stmt);
+        printf("Nouvelle date ajoutée avec succès avec une première séance.\n");
+    }
+}
