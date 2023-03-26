@@ -1,9 +1,13 @@
+#include "../sql/sqlite3.h"
+#include "../header/header.c"
 #include <stdio.h>
-#include <sqlite3.h>
 #include <time.h>
 
 void ajout_seance(sqlite3 *db, char *element1, char *element2)
 {
+    // Ouvre la base de données event.db
+    sqlite3_open("event.db", &db);
+
     time_t current_time = time(NULL);
     struct tm *tm = localtime(&current_time);
     char date[11];
