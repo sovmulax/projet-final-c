@@ -27,6 +27,7 @@ void liste_seance()
     int rc = sqlite3_prepare_v2(db, query, -1, &stmt, NULL);
     if (rc != SQLITE_OK)
     {
+        printf("❌ 1");
         fprintf(stderr, "Erreur lors de la préparation de la requête : %s\n", sqlite3_errmsg(db));
         sqlite3_close(db);
         return;
@@ -58,6 +59,7 @@ void liste_seance()
             rc = sqlite3_step(stmt);
             if (rc != SQLITE_OK && rc != SQLITE_DONE)
             {
+                printf("❌ 2");
                 fprintf(stderr, "Erreur lors de l'exécution de la requête : %s\n", sqlite3_errmsg(db));
                 sqlite3_finalize(stmt);
                 sqlite3_close(db);
