@@ -34,7 +34,7 @@ void liste_seance() {
         printf("Occurrence du jour courant (date=%s, id=%d):\n", date, id_jour);
         
         // Récupération des séances en lien avec l'occurrence du jour courant
-        sprintf(query, "SELECT id, debut, fin FROM seances WHERE id_jour=%d", id_jour);
+        sprintf(query, "SELECT id, film, nbplace FROM seances WHERE idjour=%d", id_jour);
         rc = sqlite3_prepare_v2(db, query, -1, &stmt, NULL);
         if (rc != SQLITE_OK) {
             fprintf(stderr, "Erreur lors de la préparation de la requête : %s\n", sqlite3_errmsg(db));
@@ -44,8 +44,8 @@ void liste_seance() {
         rc = sqlite3_step(stmt);
         while (rc == SQLITE_ROW) {
             int id_seance = sqlite3_column_int(stmt, 0);
-            char debut[6], fin[6];
-            sprintf(debut, "%02d:%02d", sqlite3_column_int(stmt, 1), sqlite3_column_int(stmt, 2));
+            char film[6], nbplace[6];
+            sprintf(film, "%02d:%02d", sqlite3_column_int(stmt, 1), sqlite3_column_int(stmt, 2));
             rc = sqlite3_step(stmt);
             if (rc != SQLITE_OK && rc != SQLITE_DONE) {
                 fprintf(stderr, "Erreur lors de l'exécution de la requête : %s\n", sqlite3_errmsg(db));
@@ -53,8 +53,8 @@ void liste_seance() {
                 sqlite3_close(db);
                 return;
             }
-            sprintf(fin, "%02d:%02d", sqlite3_column_int(stmt, 1), sqlite3_column_int(stmt, 2));
-            printf("- Séance %d : de %s à %s\n", id_seance, debut, fin);
+            sprintf(nbplace, "%02d:%02d", sqlite3_column_int(stmt, 1), sqlite3_column_int(stmt, 2));
+            printf("- Séance %d | film : %s | Places : %s\n", id_seance, film, nbplace);
         }
     } else {
         printf("Il n'y a pas d'occurrence pour le jour courant (date=%s).\n", date);
