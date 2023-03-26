@@ -8,6 +8,9 @@ void ajout_seance(sqlite3 *db, const char *film, int nb)
     char *zErrMsg = 0;
     int rc;
 
+    // Ouvre la base de données event.db
+    sqlite3_open("event.db", &db);
+
     // Get the current date
     time_t now = time(NULL);
     struct tm *t = localtime(&now);
