@@ -90,7 +90,7 @@ int main(int argc, char *argv[])
             }
             else
             {
-                liste_seance();
+                liste_seance(db2);
                 printf("L'Id de l'evenement\n");
                 printf("➡️ ");
                 scanf("%d", &v7);
@@ -99,16 +99,16 @@ int main(int argc, char *argv[])
             }
         case 4:
             printf("\e[1;1H\e[2J");
-            liste_seance();
+            liste_seance(db);
             printf("Le nom du film\n");
             printf("➡️ ");
             scanf("%s", v1);
             printf("Le nombre de place\n");
             printf("➡️ ");
             scanf("%d", &v7);
-            ajout_seance(v1, v7);
+            ajout_seance(db, v1, v7);
             // printf("\e[1;1H\e[2J");
-            liste_seance();
+            liste_seance(db);
             break;
         }
 

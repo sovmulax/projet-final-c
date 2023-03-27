@@ -5,6 +5,7 @@
 
 /// @brief
 /// @param exist
+/// @param db
 /// @param count
 /// @param id_jour
 /// @param seance
@@ -13,7 +14,6 @@
 void action(sqlite3 *db, int exist, int count, int id_jour, int seance, char *film, int nb)
 {
     // Connexion à la base de données
-    sqlite3 *db;
     int rc = sqlite3_open("event.db", &db);
     if (rc != SQLITE_OK) {
         fprintf(stderr, "Erreur lors de l'ouverture de la base de données : %s\n", sqlite3_errmsg(db));
@@ -37,7 +37,7 @@ void action(sqlite3 *db, int exist, int count, int id_jour, int seance, char *fi
             else
             {
                 sprintf(query, "INSERT INTO seances(idjour, film, nbplace) VALUES (%d, '%s', %d)", id_jour, film, seance);
-                rc = retry_exec(db, query, 10, 1000);
+                rc = sqlite3_exec(db, query, NULL, NULL, NULL);
                 if (rc != SQLITE_OK)
                 {
                     printf("Erreur SQLite : %s\n", sqlite3_errmsg(db));

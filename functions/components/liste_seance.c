@@ -6,10 +6,11 @@
 #define DB_PATH "event.db"
 
 /// @brief 
-void liste_seance()
+/// @param db
+void liste_seance(sqlite3 *db)
 {
     // Connexion à la base de données
-    sqlite3 *db;
+    
     if (sqlite3_open(DB_PATH, &db) != SQLITE_OK)
     {
         fprintf(stderr, "Erreur lors de la connexion à la base de données : %s\n", sqlite3_errmsg(db));

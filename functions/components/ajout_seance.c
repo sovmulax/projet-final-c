@@ -55,11 +55,8 @@ void ajout_seance(sqlite3 *db, char *film, int nb)
     sqlite3_close(db);
 
     // step trois
-    printf("%d\n", exist);
-    printf("%d\n", count);
-    printf("%d\n", id_jour);
-    printf("%d\n", nb_seances);
-    action(exist, count, id_jour, nb_seances, film, nb);
+    sqlite3 *dbZ;
+    action(dbZ, exist, count, id_jour, nb_seances, film, nb);
 }
 
 static int callback_select_id(void *data, int argc, char **argv, char **azColName)
