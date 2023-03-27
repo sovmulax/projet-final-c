@@ -32,12 +32,9 @@ int main(int argc, char *argv[])
         printf("4️⃣ - Création de Seances (Cinéma) : \n");
         printf("5️⃣ - Liste de Séances du jour: \n");
 
-
-        printf("5️⃣ - Emprunté un livre : \n");
-        
-        printf("5️⃣ - Emprunté un livre : \n");
-        printf("6️⃣ - Retourné un livre : \n");
-        printf("7️⃣ - Les emprunts en cour: \n");
+        // printf("5️⃣ - Emprunté un livre : \n");
+        // printf("6️⃣ - Retourné un livre : \n");
+        // printf("7️⃣ - Les emprunts en cour: \n");
         printf("➡️ ");
         scanf("%s", choix);
 
@@ -103,7 +100,6 @@ int main(int argc, char *argv[])
             }
         case 4:
             printf("\e[1;1H\e[2J");
-            sqlite3_close(db);
             printf("Le nom du film\n");
             printf("➡️ ");
             scanf("%s", v1);
@@ -111,7 +107,11 @@ int main(int argc, char *argv[])
             printf("➡️ ");
             scanf("%d", &v7);
             ajout_seance(db, v1, v7);
-            // printf("\e[1;1H\e[2J");
+            break;
+
+        case 5:
+            printf("\e[1;1H\e[2J");
+            liste_seance(db);
             break;
         }
 

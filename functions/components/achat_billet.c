@@ -65,7 +65,7 @@ int achat_billet(sqlite3 *db, int id, int cine)
         sqlite3_finalize(stmt);
 
         // Si le nombre d'occurrences est inférieur au nombre de places disponibles, insère une nouvelle occurrence dans la table "billets"
-        if (nbOccurences < nbPlaces)
+        if (nbOccurences >= nbPlaces)
         {
             sqlite3_prepare_v2(db, "INSERT INTO billets (idseance) VALUES (?)", -1, &stmt, NULL);
             sqlite3_bind_int(stmt, 1, id);
