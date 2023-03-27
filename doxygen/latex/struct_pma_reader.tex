@@ -1,0 +1,101 @@
+\hypertarget{struct_pma_reader}{}\doxysection{Pma\+Reader Struct Reference}
+\label{struct_pma_reader}\index{PmaReader@{PmaReader}}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a2a0f0f4ae7001eb54351f77ea1cdbcfd}{i64}} \mbox{\hyperlink{struct_pma_reader_a09bb995de66249294e0ae4715340f797}{i\+Read\+Off}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a2a0f0f4ae7001eb54351f77ea1cdbcfd}{i64}} \mbox{\hyperlink{struct_pma_reader_ae2045ce697bd581b187644cebea747cf}{i\+Eof}}
+\item 
+int \mbox{\hyperlink{struct_pma_reader_aec887fbb53f08664685baf4fb69ba5f5}{n\+Alloc}}
+\item 
+int \mbox{\hyperlink{struct_pma_reader_aec3f75e476fad43cd9f74b896c9c7a14}{n\+Key}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a3691103fd7c57f5f69123c4c03aea05a}{sqlite3\+\_\+file}} $\ast$ \mbox{\hyperlink{struct_pma_reader_ae44362cf35caac454319be8c145e374e}{p\+Fd}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} $\ast$ \mbox{\hyperlink{struct_pma_reader_a1ddfef5f5a51dc36e8c4bf5166339531}{a\+Alloc}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} $\ast$ \mbox{\hyperlink{struct_pma_reader_adf9b023fcbeb5fc12b86f133c62c64f4}{a\+Key}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} $\ast$ \mbox{\hyperlink{struct_pma_reader_a0784b18f1d9bbdd738b38824a6166656}{a\+Buffer}}
+\item 
+int \mbox{\hyperlink{struct_pma_reader_aaa5118b1ad1ecd130e422b18371df061}{n\+Buffer}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} $\ast$ \mbox{\hyperlink{struct_pma_reader_a91583d916d2032c7d35235563f55f64e}{a\+Map}}
+\item 
+\mbox{\hyperlink{struct_incr_merger}{Incr\+Merger}} $\ast$ \mbox{\hyperlink{struct_pma_reader_a0a87839a608a5ba48d1c92694ae9cd5e}{p\+Incr}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{struct_pma_reader_a1ddfef5f5a51dc36e8c4bf5166339531}\label{struct_pma_reader_a1ddfef5f5a51dc36e8c4bf5166339531}} 
+\index{PmaReader@{PmaReader}!aAlloc@{aAlloc}}
+\index{aAlloc@{aAlloc}!PmaReader@{PmaReader}}
+\doxysubsubsection{\texorpdfstring{aAlloc}{aAlloc}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}}$\ast$ a\+Alloc}
+
+\mbox{\Hypertarget{struct_pma_reader_a0784b18f1d9bbdd738b38824a6166656}\label{struct_pma_reader_a0784b18f1d9bbdd738b38824a6166656}} 
+\index{PmaReader@{PmaReader}!aBuffer@{aBuffer}}
+\index{aBuffer@{aBuffer}!PmaReader@{PmaReader}}
+\doxysubsubsection{\texorpdfstring{aBuffer}{aBuffer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}}$\ast$ a\+Buffer}
+
+\mbox{\Hypertarget{struct_pma_reader_adf9b023fcbeb5fc12b86f133c62c64f4}\label{struct_pma_reader_adf9b023fcbeb5fc12b86f133c62c64f4}} 
+\index{PmaReader@{PmaReader}!aKey@{aKey}}
+\index{aKey@{aKey}!PmaReader@{PmaReader}}
+\doxysubsubsection{\texorpdfstring{aKey}{aKey}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}}$\ast$ a\+Key}
+
+\mbox{\Hypertarget{struct_pma_reader_a91583d916d2032c7d35235563f55f64e}\label{struct_pma_reader_a91583d916d2032c7d35235563f55f64e}} 
+\index{PmaReader@{PmaReader}!aMap@{aMap}}
+\index{aMap@{aMap}!PmaReader@{PmaReader}}
+\doxysubsubsection{\texorpdfstring{aMap}{aMap}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}}$\ast$ a\+Map}
+
+\mbox{\Hypertarget{struct_pma_reader_ae2045ce697bd581b187644cebea747cf}\label{struct_pma_reader_ae2045ce697bd581b187644cebea747cf}} 
+\index{PmaReader@{PmaReader}!iEof@{iEof}}
+\index{iEof@{iEof}!PmaReader@{PmaReader}}
+\doxysubsubsection{\texorpdfstring{iEof}{iEof}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a2a0f0f4ae7001eb54351f77ea1cdbcfd}{i64}} i\+Eof}
+
+\mbox{\Hypertarget{struct_pma_reader_a09bb995de66249294e0ae4715340f797}\label{struct_pma_reader_a09bb995de66249294e0ae4715340f797}} 
+\index{PmaReader@{PmaReader}!iReadOff@{iReadOff}}
+\index{iReadOff@{iReadOff}!PmaReader@{PmaReader}}
+\doxysubsubsection{\texorpdfstring{iReadOff}{iReadOff}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a2a0f0f4ae7001eb54351f77ea1cdbcfd}{i64}} i\+Read\+Off}
+
+\mbox{\Hypertarget{struct_pma_reader_aec887fbb53f08664685baf4fb69ba5f5}\label{struct_pma_reader_aec887fbb53f08664685baf4fb69ba5f5}} 
+\index{PmaReader@{PmaReader}!nAlloc@{nAlloc}}
+\index{nAlloc@{nAlloc}!PmaReader@{PmaReader}}
+\doxysubsubsection{\texorpdfstring{nAlloc}{nAlloc}}
+{\footnotesize\ttfamily int n\+Alloc}
+
+\mbox{\Hypertarget{struct_pma_reader_aaa5118b1ad1ecd130e422b18371df061}\label{struct_pma_reader_aaa5118b1ad1ecd130e422b18371df061}} 
+\index{PmaReader@{PmaReader}!nBuffer@{nBuffer}}
+\index{nBuffer@{nBuffer}!PmaReader@{PmaReader}}
+\doxysubsubsection{\texorpdfstring{nBuffer}{nBuffer}}
+{\footnotesize\ttfamily int n\+Buffer}
+
+\mbox{\Hypertarget{struct_pma_reader_aec3f75e476fad43cd9f74b896c9c7a14}\label{struct_pma_reader_aec3f75e476fad43cd9f74b896c9c7a14}} 
+\index{PmaReader@{PmaReader}!nKey@{nKey}}
+\index{nKey@{nKey}!PmaReader@{PmaReader}}
+\doxysubsubsection{\texorpdfstring{nKey}{nKey}}
+{\footnotesize\ttfamily int n\+Key}
+
+\mbox{\Hypertarget{struct_pma_reader_ae44362cf35caac454319be8c145e374e}\label{struct_pma_reader_ae44362cf35caac454319be8c145e374e}} 
+\index{PmaReader@{PmaReader}!pFd@{pFd}}
+\index{pFd@{pFd}!PmaReader@{PmaReader}}
+\doxysubsubsection{\texorpdfstring{pFd}{pFd}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a3691103fd7c57f5f69123c4c03aea05a}{sqlite3\+\_\+file}}$\ast$ p\+Fd}
+
+\mbox{\Hypertarget{struct_pma_reader_a0a87839a608a5ba48d1c92694ae9cd5e}\label{struct_pma_reader_a0a87839a608a5ba48d1c92694ae9cd5e}} 
+\index{PmaReader@{PmaReader}!pIncr@{pIncr}}
+\index{pIncr@{pIncr}!PmaReader@{PmaReader}}
+\doxysubsubsection{\texorpdfstring{pIncr}{pIncr}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_incr_merger}{Incr\+Merger}}$\ast$ p\+Incr}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/macbookair/\+Documents/\+Git\+Hub/projet-\/final-\/c/functions/sql/\mbox{\hyperlink{sqlite3_8c}{sqlite3.\+c}}\end{DoxyCompactItemize}

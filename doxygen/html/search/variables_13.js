@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['u_0',['u',['../struct_func_def.html#a1662d021b4fdb61c76ac253ef6b5cb69',1,'FuncDef::u()'],['../struct_table.html#ae43f3f412122b07682cfcf1d893ae78c',1,'Table::u()'],['../struct_unpacked_record.html#a5c7df2d95c4b44c92e754fc185cdf577',1,'UnpackedRecord::u()'],['../struct_expr.html#a86c5f00afc4189d70631f0286221307a',1,'Expr::u()'],['../struct_expr_list_1_1_expr_list__item.html#acc184847d0116d2994b8b82ecb1d253d',1,'ExprList::ExprList_item::u()'],['../struct_walker.html#aa0d296f8756e7615f0555a2f9f171f08',1,'Walker::u()'],['../structsqlite3__value.html#a264470c094c7728dd7630f8b8d48f12e',1,'sqlite3_value::u()'],['../struct_bitvec.html#ac74c793df77505d54867b4a5039b1c78',1,'Bitvec::u()'],['../struct_sorter_record.html#a676159df3d830b76917bcb30d0afca31',1,'SorterRecord::u()'],['../struct_index_iterator.html#ad43a8d6f0da31cbd7aff7d7bc9806410',1,'IndexIterator::u()'],['../struct_where_level.html#a8c0040adc05bf53a6f6c8418f41e8ba7',1,'WhereLevel::u()'],['../struct_where_loop.html#ab75219035176cd6f51445b26c8d3d9d7',1,'WhereLoop::u()'],['../struct_where_term.html#ae5bfd1c3f945d51273be5baf1aef6b7b',1,'WhereTerm::u()'],['../struct_json_node.html#aa5c6b7a2802147570cb5ad670277ddca',1,'JsonNode::u()']]],
+  ['u1_1',['u1',['../structsqlite3.html#abc16fb0a2fa596251ba3331bfc7e05a8',1,'sqlite3::u1()'],['../struct_src_item.html#a83b6837b95943ccaf0a89ba05937766b',1,'SrcItem::u1()'],['../struct_parse.html#a873a2d6adf70f6cf30ba52188c76c9d7',1,'Parse::u1()']]],
+  ['u2_2',['u2',['../struct_src_item.html#a89e8d699db5a2991a4c92915c1452a2a',1,'SrcItem']]],
+  ['u3_3',['u3',['../struct_src_item.html#a02cebfc6ee670ee21863161dd36a4ef3',1,'SrcItem']]],
+  ['u4_4',['u4',['../struct_id_list_1_1_id_list__item.html#a8d0b52b37378df58e0fc4c4411066f63',1,'IdList::IdList_item']]],
+  ['ub_5',['ub',['../struct_vdbe_cursor.html#ab7e8ca6da931ad834d9029542af4f591',1,'VdbeCursor']]],
+  ['uc_6',['uc',['../struct_vdbe_cursor.html#a990a7042ecef75ac807ef33e2db5c051',1,'VdbeCursor']]],
+  ['unc_7',['uNC',['../struct_name_context.html#a6aaccf4fd7860070b1438db185d101c6',1,'NameContext']]],
+  ['uniqnotnull_8',['uniqNotNull',['../struct_index.html#ab2797a34b09eb3e8a38eb169d86e2b5c',1,'Index']]],
+  ['unlock_5fnotify_9',['unlock_notify',['../structsqlite3__api__routines.html#aa15644f817581573e744b6a0b768c2fb',1,'sqlite3_api_routines']]],
+  ['untestedterms_10',['untestedTerms',['../struct_where_info.html#ac994353c3e3d65a4d3c845f44f60ac3a',1,'WhereInfo']]],
+  ['unused_11',['unused',['../struct_wal_index_hdr.html#a4884baf6a3e410b581a16e00353028b6',1,'WalIndexHdr']]],
+  ['update_5fhook_12',['update_hook',['../structsqlite3__api__routines.html#a4e1430aeea84f419cff3ff1baf444bf8',1,'sqlite3_api_routines']]],
+  ['uri_5fboolean_13',['uri_boolean',['../structsqlite3__api__routines.html#a61df047cb68e954a5a8bdddf0f1e0d4f',1,'sqlite3_api_routines']]],
+  ['uri_5fint64_14',['uri_int64',['../structsqlite3__api__routines.html#a2ce954afa2ad1e413234a4412378af04',1,'sqlite3_api_routines']]],
+  ['uri_5fkey_15',['uri_key',['../structsqlite3__api__routines.html#a697df948c1354be77b7b2bdb3fba5103',1,'sqlite3_api_routines']]],
+  ['uri_5fparameter_16',['uri_parameter',['../structsqlite3__api__routines.html#a4e85fa3a0fa368b10133b5233656cf62',1,'sqlite3_api_routines']]],
+  ['usable_17',['usable',['../structsqlite3__index__info_1_1sqlite3__index__constraint.html#a2cd12922598daeddd0423ba5584d2963',1,'sqlite3_index_info::sqlite3_index_constraint']]],
+  ['usablesize_18',['usableSize',['../struct_bt_shared.html#a70b6ce95d7e84acc2a6977de8467cc9d',1,'BtShared']]],
+  ['usejournal_19',['useJournal',['../struct_pager.html#a931b7472041e2b8b26dfc9a52c16b108',1,'Pager']]],
+  ['user_5fdata_20',['user_data',['../structsqlite3__api__routines.html#ac79724f05e0dffad554bd53918231b6e',1,'sqlite3_api_routines']]],
+  ['userandomrowid_21',['useRandomRowid',['../struct_vdbe_cursor.html#aa1fa2ce0c85923d79e8a119d949722a7',1,'VdbeCursor']]],
+  ['usesortingidx_22',['useSortingIdx',['../struct_agg_info.html#a391d05aacd406e0a61ac222d31d41634',1,'AggInfo']]],
+  ['usesstmtjournal_23',['usesStmtJournal',['../struct_vdbe.html#ad44e010197df2be247a419560d5dcd85',1,'Vdbe']]],
+  ['utemp_24',['uTemp',['../structsqlite3__value.html#a95b9bece3b8200fe5d56d20aa4c6ea94',1,'sqlite3_value']]]
+];

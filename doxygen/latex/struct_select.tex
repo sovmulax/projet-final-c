@@ -1,0 +1,165 @@
+\hypertarget{struct_select}{}\doxysection{Select Struct Reference}
+\label{struct_select}\index{Select@{Select}}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} \mbox{\hyperlink{struct_select_a0991b29aa40e12f033237266ebe6610c}{op}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_aa0f9b3b63ad120ac15b96785b05ce733}{Log\+Est}} \mbox{\hyperlink{struct_select_a5614f34a7a49c6c482e90fbb4e054549}{n\+Select\+Row}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a03ad5adfaeb9b7640dde78a0cc390319}{u32}} \mbox{\hyperlink{struct_select_a76670c5aa8df62d0f921f65d48e1fe91}{sel\+Flags}}
+\item 
+int \mbox{\hyperlink{struct_select_a2f7ebf02d49ab350a4978abefe1a6874}{i\+Limit}}
+\item 
+int \mbox{\hyperlink{struct_select_a7257a503e6fefa9f18d900e52ec8dc75}{i\+Offset}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a03ad5adfaeb9b7640dde78a0cc390319}{u32}} \mbox{\hyperlink{struct_select_aac399e559ec9a8738a0986e7a978e7b0}{sel\+Id}}
+\item 
+int \mbox{\hyperlink{struct_select_aec1d8ba6d2600933d0da4e8c138b760f}{addr\+Open\+Ephm}} \mbox{[}2\mbox{]}
+\item 
+\mbox{\hyperlink{struct_expr_list}{Expr\+List}} $\ast$ \mbox{\hyperlink{struct_select_a08025e7aa4f4c6b65204b463580746ef}{p\+EList}}
+\item 
+\mbox{\hyperlink{struct_src_list}{Src\+List}} $\ast$ \mbox{\hyperlink{struct_select_a84a7e06ff4c94a96573b33b55a0e23cf}{p\+Src}}
+\item 
+\mbox{\hyperlink{struct_expr}{Expr}} $\ast$ \mbox{\hyperlink{struct_select_aa35a11dc7821bfaf357249ff3da68863}{p\+Where}}
+\item 
+\mbox{\hyperlink{struct_expr_list}{Expr\+List}} $\ast$ \mbox{\hyperlink{struct_select_ab73f489b26450bf7c199d78c93092cea}{p\+Group\+By}}
+\item 
+\mbox{\hyperlink{struct_expr}{Expr}} $\ast$ \mbox{\hyperlink{struct_select_afc7e0bb89d63e1b2ca12d2d083ab7d05}{p\+Having}}
+\item 
+\mbox{\hyperlink{struct_expr_list}{Expr\+List}} $\ast$ \mbox{\hyperlink{struct_select_a9150e506e5902e336130c9764caf96a0}{p\+Order\+By}}
+\item 
+\mbox{\hyperlink{struct_select}{Select}} $\ast$ \mbox{\hyperlink{struct_select_a380ce35e11c269ed7950cba7dffe2934}{p\+Prior}}
+\item 
+\mbox{\hyperlink{struct_select}{Select}} $\ast$ \mbox{\hyperlink{struct_select_aac48b00813a5c8f3392f9ab6cc0c260e}{p\+Next}}
+\item 
+\mbox{\hyperlink{struct_expr}{Expr}} $\ast$ \mbox{\hyperlink{struct_select_a343fcdf61b7e033a4d8cb1f3484e8002}{p\+Limit}}
+\item 
+\mbox{\hyperlink{struct_with}{With}} $\ast$ \mbox{\hyperlink{struct_select_a49014e0850234bf861fd5de6ea610b7e}{p\+With}}
+\item 
+\mbox{\hyperlink{struct_window}{Window}} $\ast$ \mbox{\hyperlink{struct_select_a1b249956505812937cfbd28954382e85}{p\+Win}}
+\item 
+\mbox{\hyperlink{struct_window}{Window}} $\ast$ \mbox{\hyperlink{struct_select_a5a558603b7d86aebda8c4cc8acf86f83}{p\+Win\+Defn}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{struct_select_aec1d8ba6d2600933d0da4e8c138b760f}\label{struct_select_aec1d8ba6d2600933d0da4e8c138b760f}} 
+\index{Select@{Select}!addrOpenEphm@{addrOpenEphm}}
+\index{addrOpenEphm@{addrOpenEphm}!Select@{Select}}
+\doxysubsubsection{\texorpdfstring{addrOpenEphm}{addrOpenEphm}}
+{\footnotesize\ttfamily int addr\+Open\+Ephm\mbox{[}2\mbox{]}}
+
+\mbox{\Hypertarget{struct_select_a2f7ebf02d49ab350a4978abefe1a6874}\label{struct_select_a2f7ebf02d49ab350a4978abefe1a6874}} 
+\index{Select@{Select}!iLimit@{iLimit}}
+\index{iLimit@{iLimit}!Select@{Select}}
+\doxysubsubsection{\texorpdfstring{iLimit}{iLimit}}
+{\footnotesize\ttfamily int i\+Limit}
+
+\mbox{\Hypertarget{struct_select_a7257a503e6fefa9f18d900e52ec8dc75}\label{struct_select_a7257a503e6fefa9f18d900e52ec8dc75}} 
+\index{Select@{Select}!iOffset@{iOffset}}
+\index{iOffset@{iOffset}!Select@{Select}}
+\doxysubsubsection{\texorpdfstring{iOffset}{iOffset}}
+{\footnotesize\ttfamily int i\+Offset}
+
+\mbox{\Hypertarget{struct_select_a5614f34a7a49c6c482e90fbb4e054549}\label{struct_select_a5614f34a7a49c6c482e90fbb4e054549}} 
+\index{Select@{Select}!nSelectRow@{nSelectRow}}
+\index{nSelectRow@{nSelectRow}!Select@{Select}}
+\doxysubsubsection{\texorpdfstring{nSelectRow}{nSelectRow}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_aa0f9b3b63ad120ac15b96785b05ce733}{Log\+Est}} n\+Select\+Row}
+
+\mbox{\Hypertarget{struct_select_a0991b29aa40e12f033237266ebe6610c}\label{struct_select_a0991b29aa40e12f033237266ebe6610c}} 
+\index{Select@{Select}!op@{op}}
+\index{op@{op}!Select@{Select}}
+\doxysubsubsection{\texorpdfstring{op}{op}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} op}
+
+\mbox{\Hypertarget{struct_select_a08025e7aa4f4c6b65204b463580746ef}\label{struct_select_a08025e7aa4f4c6b65204b463580746ef}} 
+\index{Select@{Select}!pEList@{pEList}}
+\index{pEList@{pEList}!Select@{Select}}
+\doxysubsubsection{\texorpdfstring{pEList}{pEList}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_expr_list}{Expr\+List}}$\ast$ p\+EList}
+
+\mbox{\Hypertarget{struct_select_ab73f489b26450bf7c199d78c93092cea}\label{struct_select_ab73f489b26450bf7c199d78c93092cea}} 
+\index{Select@{Select}!pGroupBy@{pGroupBy}}
+\index{pGroupBy@{pGroupBy}!Select@{Select}}
+\doxysubsubsection{\texorpdfstring{pGroupBy}{pGroupBy}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_expr_list}{Expr\+List}}$\ast$ p\+Group\+By}
+
+\mbox{\Hypertarget{struct_select_afc7e0bb89d63e1b2ca12d2d083ab7d05}\label{struct_select_afc7e0bb89d63e1b2ca12d2d083ab7d05}} 
+\index{Select@{Select}!pHaving@{pHaving}}
+\index{pHaving@{pHaving}!Select@{Select}}
+\doxysubsubsection{\texorpdfstring{pHaving}{pHaving}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_expr}{Expr}}$\ast$ p\+Having}
+
+\mbox{\Hypertarget{struct_select_a343fcdf61b7e033a4d8cb1f3484e8002}\label{struct_select_a343fcdf61b7e033a4d8cb1f3484e8002}} 
+\index{Select@{Select}!pLimit@{pLimit}}
+\index{pLimit@{pLimit}!Select@{Select}}
+\doxysubsubsection{\texorpdfstring{pLimit}{pLimit}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_expr}{Expr}}$\ast$ p\+Limit}
+
+\mbox{\Hypertarget{struct_select_aac48b00813a5c8f3392f9ab6cc0c260e}\label{struct_select_aac48b00813a5c8f3392f9ab6cc0c260e}} 
+\index{Select@{Select}!pNext@{pNext}}
+\index{pNext@{pNext}!Select@{Select}}
+\doxysubsubsection{\texorpdfstring{pNext}{pNext}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_select}{Select}}$\ast$ p\+Next}
+
+\mbox{\Hypertarget{struct_select_a9150e506e5902e336130c9764caf96a0}\label{struct_select_a9150e506e5902e336130c9764caf96a0}} 
+\index{Select@{Select}!pOrderBy@{pOrderBy}}
+\index{pOrderBy@{pOrderBy}!Select@{Select}}
+\doxysubsubsection{\texorpdfstring{pOrderBy}{pOrderBy}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_expr_list}{Expr\+List}}$\ast$ p\+Order\+By}
+
+\mbox{\Hypertarget{struct_select_a380ce35e11c269ed7950cba7dffe2934}\label{struct_select_a380ce35e11c269ed7950cba7dffe2934}} 
+\index{Select@{Select}!pPrior@{pPrior}}
+\index{pPrior@{pPrior}!Select@{Select}}
+\doxysubsubsection{\texorpdfstring{pPrior}{pPrior}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_select}{Select}}$\ast$ p\+Prior}
+
+\mbox{\Hypertarget{struct_select_a84a7e06ff4c94a96573b33b55a0e23cf}\label{struct_select_a84a7e06ff4c94a96573b33b55a0e23cf}} 
+\index{Select@{Select}!pSrc@{pSrc}}
+\index{pSrc@{pSrc}!Select@{Select}}
+\doxysubsubsection{\texorpdfstring{pSrc}{pSrc}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_src_list}{Src\+List}}$\ast$ p\+Src}
+
+\mbox{\Hypertarget{struct_select_aa35a11dc7821bfaf357249ff3da68863}\label{struct_select_aa35a11dc7821bfaf357249ff3da68863}} 
+\index{Select@{Select}!pWhere@{pWhere}}
+\index{pWhere@{pWhere}!Select@{Select}}
+\doxysubsubsection{\texorpdfstring{pWhere}{pWhere}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_expr}{Expr}}$\ast$ p\+Where}
+
+\mbox{\Hypertarget{struct_select_a1b249956505812937cfbd28954382e85}\label{struct_select_a1b249956505812937cfbd28954382e85}} 
+\index{Select@{Select}!pWin@{pWin}}
+\index{pWin@{pWin}!Select@{Select}}
+\doxysubsubsection{\texorpdfstring{pWin}{pWin}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_window}{Window}}$\ast$ p\+Win}
+
+\mbox{\Hypertarget{struct_select_a5a558603b7d86aebda8c4cc8acf86f83}\label{struct_select_a5a558603b7d86aebda8c4cc8acf86f83}} 
+\index{Select@{Select}!pWinDefn@{pWinDefn}}
+\index{pWinDefn@{pWinDefn}!Select@{Select}}
+\doxysubsubsection{\texorpdfstring{pWinDefn}{pWinDefn}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_window}{Window}}$\ast$ p\+Win\+Defn}
+
+\mbox{\Hypertarget{struct_select_a49014e0850234bf861fd5de6ea610b7e}\label{struct_select_a49014e0850234bf861fd5de6ea610b7e}} 
+\index{Select@{Select}!pWith@{pWith}}
+\index{pWith@{pWith}!Select@{Select}}
+\doxysubsubsection{\texorpdfstring{pWith}{pWith}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_with}{With}}$\ast$ p\+With}
+
+\mbox{\Hypertarget{struct_select_a76670c5aa8df62d0f921f65d48e1fe91}\label{struct_select_a76670c5aa8df62d0f921f65d48e1fe91}} 
+\index{Select@{Select}!selFlags@{selFlags}}
+\index{selFlags@{selFlags}!Select@{Select}}
+\doxysubsubsection{\texorpdfstring{selFlags}{selFlags}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a03ad5adfaeb9b7640dde78a0cc390319}{u32}} sel\+Flags}
+
+\mbox{\Hypertarget{struct_select_aac399e559ec9a8738a0986e7a978e7b0}\label{struct_select_aac399e559ec9a8738a0986e7a978e7b0}} 
+\index{Select@{Select}!selId@{selId}}
+\index{selId@{selId}!Select@{Select}}
+\doxysubsubsection{\texorpdfstring{selId}{selId}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a03ad5adfaeb9b7640dde78a0cc390319}{u32}} sel\+Id}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/macbookair/\+Documents/\+Git\+Hub/projet-\/final-\/c/functions/sql/\mbox{\hyperlink{sqlite3_8c}{sqlite3.\+c}}\end{DoxyCompactItemize}

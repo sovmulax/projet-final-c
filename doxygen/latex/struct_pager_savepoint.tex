@@ -1,0 +1,69 @@
+\hypertarget{struct_pager_savepoint}{}\doxysection{Pager\+Savepoint Struct Reference}
+\label{struct_pager_savepoint}\index{PagerSavepoint@{PagerSavepoint}}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a2a0f0f4ae7001eb54351f77ea1cdbcfd}{i64}} \mbox{\hyperlink{struct_pager_savepoint_a5847134335c04ff468319a20ca90c194}{i\+Offset}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a2a0f0f4ae7001eb54351f77ea1cdbcfd}{i64}} \mbox{\hyperlink{struct_pager_savepoint_a1fe600717a168ef1f6a91ec450ac63bb}{i\+Hdr\+Offset}}
+\item 
+\mbox{\hyperlink{struct_bitvec}{Bitvec}} $\ast$ \mbox{\hyperlink{struct_pager_savepoint_a6480e6f4cc03ee3e484e9ba1a183b330}{p\+In\+Savepoint}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_aec0c653e8dd16e4639caf2f8ea54f55c}{Pgno}} \mbox{\hyperlink{struct_pager_savepoint_a12bf72a8589b4dea3ac4af0c87eb8e17}{n\+Orig}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_aec0c653e8dd16e4639caf2f8ea54f55c}{Pgno}} \mbox{\hyperlink{struct_pager_savepoint_acb7e9617ad1b26a76b4d83f2216665d8}{i\+Sub\+Rec}}
+\item 
+int \mbox{\hyperlink{struct_pager_savepoint_a198d34a10e341bc95d1b20605b39ed93}{b\+Truncate\+On\+Release}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a03ad5adfaeb9b7640dde78a0cc390319}{u32}} \mbox{\hyperlink{struct_pager_savepoint_aa642cbaf7f0a3ab1250d603e7a713516}{a\+Wal\+Data}} \mbox{[}\mbox{\hyperlink{sqlite3_8c_a1406052a1dfd30c3c79af16f3487307e}{WAL\+\_\+\+SAVEPOINT\+\_\+\+NDATA}}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{struct_pager_savepoint_aa642cbaf7f0a3ab1250d603e7a713516}\label{struct_pager_savepoint_aa642cbaf7f0a3ab1250d603e7a713516}} 
+\index{PagerSavepoint@{PagerSavepoint}!aWalData@{aWalData}}
+\index{aWalData@{aWalData}!PagerSavepoint@{PagerSavepoint}}
+\doxysubsubsection{\texorpdfstring{aWalData}{aWalData}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a03ad5adfaeb9b7640dde78a0cc390319}{u32}} a\+Wal\+Data\mbox{[}\mbox{\hyperlink{sqlite3_8c_a1406052a1dfd30c3c79af16f3487307e}{WAL\+\_\+\+SAVEPOINT\+\_\+\+NDATA}}\mbox{]}}
+
+\mbox{\Hypertarget{struct_pager_savepoint_a198d34a10e341bc95d1b20605b39ed93}\label{struct_pager_savepoint_a198d34a10e341bc95d1b20605b39ed93}} 
+\index{PagerSavepoint@{PagerSavepoint}!bTruncateOnRelease@{bTruncateOnRelease}}
+\index{bTruncateOnRelease@{bTruncateOnRelease}!PagerSavepoint@{PagerSavepoint}}
+\doxysubsubsection{\texorpdfstring{bTruncateOnRelease}{bTruncateOnRelease}}
+{\footnotesize\ttfamily int b\+Truncate\+On\+Release}
+
+\mbox{\Hypertarget{struct_pager_savepoint_a1fe600717a168ef1f6a91ec450ac63bb}\label{struct_pager_savepoint_a1fe600717a168ef1f6a91ec450ac63bb}} 
+\index{PagerSavepoint@{PagerSavepoint}!iHdrOffset@{iHdrOffset}}
+\index{iHdrOffset@{iHdrOffset}!PagerSavepoint@{PagerSavepoint}}
+\doxysubsubsection{\texorpdfstring{iHdrOffset}{iHdrOffset}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a2a0f0f4ae7001eb54351f77ea1cdbcfd}{i64}} i\+Hdr\+Offset}
+
+\mbox{\Hypertarget{struct_pager_savepoint_a5847134335c04ff468319a20ca90c194}\label{struct_pager_savepoint_a5847134335c04ff468319a20ca90c194}} 
+\index{PagerSavepoint@{PagerSavepoint}!iOffset@{iOffset}}
+\index{iOffset@{iOffset}!PagerSavepoint@{PagerSavepoint}}
+\doxysubsubsection{\texorpdfstring{iOffset}{iOffset}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a2a0f0f4ae7001eb54351f77ea1cdbcfd}{i64}} i\+Offset}
+
+\mbox{\Hypertarget{struct_pager_savepoint_acb7e9617ad1b26a76b4d83f2216665d8}\label{struct_pager_savepoint_acb7e9617ad1b26a76b4d83f2216665d8}} 
+\index{PagerSavepoint@{PagerSavepoint}!iSubRec@{iSubRec}}
+\index{iSubRec@{iSubRec}!PagerSavepoint@{PagerSavepoint}}
+\doxysubsubsection{\texorpdfstring{iSubRec}{iSubRec}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_aec0c653e8dd16e4639caf2f8ea54f55c}{Pgno}} i\+Sub\+Rec}
+
+\mbox{\Hypertarget{struct_pager_savepoint_a12bf72a8589b4dea3ac4af0c87eb8e17}\label{struct_pager_savepoint_a12bf72a8589b4dea3ac4af0c87eb8e17}} 
+\index{PagerSavepoint@{PagerSavepoint}!nOrig@{nOrig}}
+\index{nOrig@{nOrig}!PagerSavepoint@{PagerSavepoint}}
+\doxysubsubsection{\texorpdfstring{nOrig}{nOrig}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_aec0c653e8dd16e4639caf2f8ea54f55c}{Pgno}} n\+Orig}
+
+\mbox{\Hypertarget{struct_pager_savepoint_a6480e6f4cc03ee3e484e9ba1a183b330}\label{struct_pager_savepoint_a6480e6f4cc03ee3e484e9ba1a183b330}} 
+\index{PagerSavepoint@{PagerSavepoint}!pInSavepoint@{pInSavepoint}}
+\index{pInSavepoint@{pInSavepoint}!PagerSavepoint@{PagerSavepoint}}
+\doxysubsubsection{\texorpdfstring{pInSavepoint}{pInSavepoint}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_bitvec}{Bitvec}}$\ast$ p\+In\+Savepoint}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/macbookair/\+Documents/\+Git\+Hub/projet-\/final-\/c/functions/sql/\mbox{\hyperlink{sqlite3_8c}{sqlite3.\+c}}\end{DoxyCompactItemize}

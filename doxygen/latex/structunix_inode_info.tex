@@ -1,0 +1,101 @@
+\hypertarget{structunix_inode_info}{}\doxysection{unix\+Inode\+Info Struct Reference}
+\label{structunix_inode_info}\index{unixInodeInfo@{unixInodeInfo}}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structunix_file_id}{unix\+File\+Id}} \mbox{\hyperlink{structunix_inode_info_a90d68cb51e9a69f9fca055fe70a066e4}{file\+Id}}
+\item 
+\mbox{\hyperlink{structsqlite3__mutex}{sqlite3\+\_\+mutex}} $\ast$ \mbox{\hyperlink{structunix_inode_info_ae176c571947234c1b1b272455732fbb1}{p\+Lock\+Mutex}}
+\item 
+int \mbox{\hyperlink{structunix_inode_info_ad9aa6b43edcb95edb5edb57db88deb6e}{n\+Shared}}
+\item 
+int \mbox{\hyperlink{structunix_inode_info_a8928c430237c0a4baca86f43854c0649}{n\+Lock}}
+\item 
+unsigned char \mbox{\hyperlink{structunix_inode_info_a074528e86f4417f8c3ce538e07908824}{e\+File\+Lock}}
+\item 
+unsigned char \mbox{\hyperlink{structunix_inode_info_a914e97ae932a15853079b35b212d870e}{b\+Process\+Lock}}
+\item 
+\mbox{\hyperlink{struct_unix_unused_fd}{Unix\+Unused\+Fd}} $\ast$ \mbox{\hyperlink{structunix_inode_info_a7ecad57bed967765906dd7d10af97be1}{p\+Unused}}
+\item 
+int \mbox{\hyperlink{structunix_inode_info_a3c459f9ae278c22b72583c55ca01acb7}{n\+Ref}}
+\item 
+\mbox{\hyperlink{structunix_shm_node}{unix\+Shm\+Node}} $\ast$ \mbox{\hyperlink{structunix_inode_info_a33d94caf6216ac0179eaf8fc02bc0237}{p\+Shm\+Node}}
+\item 
+\mbox{\hyperlink{structunix_inode_info}{unix\+Inode\+Info}} $\ast$ \mbox{\hyperlink{structunix_inode_info_ab9be30e7413abc800209febcd123d889}{p\+Next}}
+\item 
+\mbox{\hyperlink{structunix_inode_info}{unix\+Inode\+Info}} $\ast$ \mbox{\hyperlink{structunix_inode_info_a0d29ce137f0370c2b19132ab0adeb178}{p\+Prev}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{structunix_inode_info_a914e97ae932a15853079b35b212d870e}\label{structunix_inode_info_a914e97ae932a15853079b35b212d870e}} 
+\index{unixInodeInfo@{unixInodeInfo}!bProcessLock@{bProcessLock}}
+\index{bProcessLock@{bProcessLock}!unixInodeInfo@{unixInodeInfo}}
+\doxysubsubsection{\texorpdfstring{bProcessLock}{bProcessLock}}
+{\footnotesize\ttfamily unsigned char b\+Process\+Lock}
+
+\mbox{\Hypertarget{structunix_inode_info_a074528e86f4417f8c3ce538e07908824}\label{structunix_inode_info_a074528e86f4417f8c3ce538e07908824}} 
+\index{unixInodeInfo@{unixInodeInfo}!eFileLock@{eFileLock}}
+\index{eFileLock@{eFileLock}!unixInodeInfo@{unixInodeInfo}}
+\doxysubsubsection{\texorpdfstring{eFileLock}{eFileLock}}
+{\footnotesize\ttfamily unsigned char e\+File\+Lock}
+
+\mbox{\Hypertarget{structunix_inode_info_a90d68cb51e9a69f9fca055fe70a066e4}\label{structunix_inode_info_a90d68cb51e9a69f9fca055fe70a066e4}} 
+\index{unixInodeInfo@{unixInodeInfo}!fileId@{fileId}}
+\index{fileId@{fileId}!unixInodeInfo@{unixInodeInfo}}
+\doxysubsubsection{\texorpdfstring{fileId}{fileId}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structunix_file_id}{unix\+File\+Id}} file\+Id}
+
+\mbox{\Hypertarget{structunix_inode_info_a8928c430237c0a4baca86f43854c0649}\label{structunix_inode_info_a8928c430237c0a4baca86f43854c0649}} 
+\index{unixInodeInfo@{unixInodeInfo}!nLock@{nLock}}
+\index{nLock@{nLock}!unixInodeInfo@{unixInodeInfo}}
+\doxysubsubsection{\texorpdfstring{nLock}{nLock}}
+{\footnotesize\ttfamily int n\+Lock}
+
+\mbox{\Hypertarget{structunix_inode_info_a3c459f9ae278c22b72583c55ca01acb7}\label{structunix_inode_info_a3c459f9ae278c22b72583c55ca01acb7}} 
+\index{unixInodeInfo@{unixInodeInfo}!nRef@{nRef}}
+\index{nRef@{nRef}!unixInodeInfo@{unixInodeInfo}}
+\doxysubsubsection{\texorpdfstring{nRef}{nRef}}
+{\footnotesize\ttfamily int n\+Ref}
+
+\mbox{\Hypertarget{structunix_inode_info_ad9aa6b43edcb95edb5edb57db88deb6e}\label{structunix_inode_info_ad9aa6b43edcb95edb5edb57db88deb6e}} 
+\index{unixInodeInfo@{unixInodeInfo}!nShared@{nShared}}
+\index{nShared@{nShared}!unixInodeInfo@{unixInodeInfo}}
+\doxysubsubsection{\texorpdfstring{nShared}{nShared}}
+{\footnotesize\ttfamily int n\+Shared}
+
+\mbox{\Hypertarget{structunix_inode_info_ae176c571947234c1b1b272455732fbb1}\label{structunix_inode_info_ae176c571947234c1b1b272455732fbb1}} 
+\index{unixInodeInfo@{unixInodeInfo}!pLockMutex@{pLockMutex}}
+\index{pLockMutex@{pLockMutex}!unixInodeInfo@{unixInodeInfo}}
+\doxysubsubsection{\texorpdfstring{pLockMutex}{pLockMutex}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsqlite3__mutex}{sqlite3\+\_\+mutex}}$\ast$ p\+Lock\+Mutex}
+
+\mbox{\Hypertarget{structunix_inode_info_ab9be30e7413abc800209febcd123d889}\label{structunix_inode_info_ab9be30e7413abc800209febcd123d889}} 
+\index{unixInodeInfo@{unixInodeInfo}!pNext@{pNext}}
+\index{pNext@{pNext}!unixInodeInfo@{unixInodeInfo}}
+\doxysubsubsection{\texorpdfstring{pNext}{pNext}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structunix_inode_info}{unix\+Inode\+Info}}$\ast$ p\+Next}
+
+\mbox{\Hypertarget{structunix_inode_info_a0d29ce137f0370c2b19132ab0adeb178}\label{structunix_inode_info_a0d29ce137f0370c2b19132ab0adeb178}} 
+\index{unixInodeInfo@{unixInodeInfo}!pPrev@{pPrev}}
+\index{pPrev@{pPrev}!unixInodeInfo@{unixInodeInfo}}
+\doxysubsubsection{\texorpdfstring{pPrev}{pPrev}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structunix_inode_info}{unix\+Inode\+Info}}$\ast$ p\+Prev}
+
+\mbox{\Hypertarget{structunix_inode_info_a33d94caf6216ac0179eaf8fc02bc0237}\label{structunix_inode_info_a33d94caf6216ac0179eaf8fc02bc0237}} 
+\index{unixInodeInfo@{unixInodeInfo}!pShmNode@{pShmNode}}
+\index{pShmNode@{pShmNode}!unixInodeInfo@{unixInodeInfo}}
+\doxysubsubsection{\texorpdfstring{pShmNode}{pShmNode}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structunix_shm_node}{unix\+Shm\+Node}}$\ast$ p\+Shm\+Node}
+
+\mbox{\Hypertarget{structunix_inode_info_a7ecad57bed967765906dd7d10af97be1}\label{structunix_inode_info_a7ecad57bed967765906dd7d10af97be1}} 
+\index{unixInodeInfo@{unixInodeInfo}!pUnused@{pUnused}}
+\index{pUnused@{pUnused}!unixInodeInfo@{unixInodeInfo}}
+\doxysubsubsection{\texorpdfstring{pUnused}{pUnused}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_unix_unused_fd}{Unix\+Unused\+Fd}}$\ast$ p\+Unused}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/macbookair/\+Documents/\+Git\+Hub/projet-\/final-\/c/functions/sql/\mbox{\hyperlink{sqlite3_8c}{sqlite3.\+c}}\end{DoxyCompactItemize}

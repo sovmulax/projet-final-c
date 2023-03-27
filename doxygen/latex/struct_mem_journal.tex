@@ -1,0 +1,85 @@
+\hypertarget{struct_mem_journal}{}\doxysection{Mem\+Journal Struct Reference}
+\label{struct_mem_journal}\index{MemJournal@{MemJournal}}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{sqlite3_8c_a7300cc4479df6a5e3437a9f41daa4942}{sqlite3\+\_\+io\+\_\+methods}} $\ast$ \mbox{\hyperlink{struct_mem_journal_afd1909af6f35252eea336bc0613f76b6}{p\+Method}}
+\item 
+int \mbox{\hyperlink{struct_mem_journal_af4db34f8c87ebf550bda526ade050edd}{n\+Chunk\+Size}}
+\item 
+int \mbox{\hyperlink{struct_mem_journal_a0b801d3a796d98d8e3825c301203b3a5}{n\+Spill}}
+\item 
+\mbox{\hyperlink{struct_file_chunk}{File\+Chunk}} $\ast$ \mbox{\hyperlink{struct_mem_journal_a29d3dfeda536231e3b11189539617cb0}{p\+First}}
+\item 
+\mbox{\hyperlink{struct_file_point}{File\+Point}} \mbox{\hyperlink{struct_mem_journal_a3c38a239e2e74b37ad14fdc68f7b3294}{endpoint}}
+\item 
+\mbox{\hyperlink{struct_file_point}{File\+Point}} \mbox{\hyperlink{struct_mem_journal_a04600dbe595653d0f08e0ef0e64fdc64}{readpoint}}
+\item 
+int \mbox{\hyperlink{struct_mem_journal_ac8bf36fe0577cba66bccda3a6f7e80a4}{flags}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a4b3859573509d792fc68dfed06ba888b}{sqlite3\+\_\+vfs}} $\ast$ \mbox{\hyperlink{struct_mem_journal_a59603ca1cedf2bda0ee4e65eb610a0b5}{p\+Vfs}}
+\item 
+const char $\ast$ \mbox{\hyperlink{struct_mem_journal_a5efdce405733d8585abd62ec368f5326}{z\+Journal}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{struct_mem_journal_a3c38a239e2e74b37ad14fdc68f7b3294}\label{struct_mem_journal_a3c38a239e2e74b37ad14fdc68f7b3294}} 
+\index{MemJournal@{MemJournal}!endpoint@{endpoint}}
+\index{endpoint@{endpoint}!MemJournal@{MemJournal}}
+\doxysubsubsection{\texorpdfstring{endpoint}{endpoint}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_file_point}{File\+Point}} endpoint}
+
+\mbox{\Hypertarget{struct_mem_journal_ac8bf36fe0577cba66bccda3a6f7e80a4}\label{struct_mem_journal_ac8bf36fe0577cba66bccda3a6f7e80a4}} 
+\index{MemJournal@{MemJournal}!flags@{flags}}
+\index{flags@{flags}!MemJournal@{MemJournal}}
+\doxysubsubsection{\texorpdfstring{flags}{flags}}
+{\footnotesize\ttfamily int flags}
+
+\mbox{\Hypertarget{struct_mem_journal_af4db34f8c87ebf550bda526ade050edd}\label{struct_mem_journal_af4db34f8c87ebf550bda526ade050edd}} 
+\index{MemJournal@{MemJournal}!nChunkSize@{nChunkSize}}
+\index{nChunkSize@{nChunkSize}!MemJournal@{MemJournal}}
+\doxysubsubsection{\texorpdfstring{nChunkSize}{nChunkSize}}
+{\footnotesize\ttfamily int n\+Chunk\+Size}
+
+\mbox{\Hypertarget{struct_mem_journal_a0b801d3a796d98d8e3825c301203b3a5}\label{struct_mem_journal_a0b801d3a796d98d8e3825c301203b3a5}} 
+\index{MemJournal@{MemJournal}!nSpill@{nSpill}}
+\index{nSpill@{nSpill}!MemJournal@{MemJournal}}
+\doxysubsubsection{\texorpdfstring{nSpill}{nSpill}}
+{\footnotesize\ttfamily int n\+Spill}
+
+\mbox{\Hypertarget{struct_mem_journal_a29d3dfeda536231e3b11189539617cb0}\label{struct_mem_journal_a29d3dfeda536231e3b11189539617cb0}} 
+\index{MemJournal@{MemJournal}!pFirst@{pFirst}}
+\index{pFirst@{pFirst}!MemJournal@{MemJournal}}
+\doxysubsubsection{\texorpdfstring{pFirst}{pFirst}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_file_chunk}{File\+Chunk}}$\ast$ p\+First}
+
+\mbox{\Hypertarget{struct_mem_journal_afd1909af6f35252eea336bc0613f76b6}\label{struct_mem_journal_afd1909af6f35252eea336bc0613f76b6}} 
+\index{MemJournal@{MemJournal}!pMethod@{pMethod}}
+\index{pMethod@{pMethod}!MemJournal@{MemJournal}}
+\doxysubsubsection{\texorpdfstring{pMethod}{pMethod}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{sqlite3_8c_a7300cc4479df6a5e3437a9f41daa4942}{sqlite3\+\_\+io\+\_\+methods}}$\ast$ p\+Method}
+
+\mbox{\Hypertarget{struct_mem_journal_a59603ca1cedf2bda0ee4e65eb610a0b5}\label{struct_mem_journal_a59603ca1cedf2bda0ee4e65eb610a0b5}} 
+\index{MemJournal@{MemJournal}!pVfs@{pVfs}}
+\index{pVfs@{pVfs}!MemJournal@{MemJournal}}
+\doxysubsubsection{\texorpdfstring{pVfs}{pVfs}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a4b3859573509d792fc68dfed06ba888b}{sqlite3\+\_\+vfs}}$\ast$ p\+Vfs}
+
+\mbox{\Hypertarget{struct_mem_journal_a04600dbe595653d0f08e0ef0e64fdc64}\label{struct_mem_journal_a04600dbe595653d0f08e0ef0e64fdc64}} 
+\index{MemJournal@{MemJournal}!readpoint@{readpoint}}
+\index{readpoint@{readpoint}!MemJournal@{MemJournal}}
+\doxysubsubsection{\texorpdfstring{readpoint}{readpoint}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_file_point}{File\+Point}} readpoint}
+
+\mbox{\Hypertarget{struct_mem_journal_a5efdce405733d8585abd62ec368f5326}\label{struct_mem_journal_a5efdce405733d8585abd62ec368f5326}} 
+\index{MemJournal@{MemJournal}!zJournal@{zJournal}}
+\index{zJournal@{zJournal}!MemJournal@{MemJournal}}
+\doxysubsubsection{\texorpdfstring{zJournal}{zJournal}}
+{\footnotesize\ttfamily const char$\ast$ z\+Journal}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/macbookair/\+Documents/\+Git\+Hub/projet-\/final-\/c/functions/sql/\mbox{\hyperlink{sqlite3_8c}{sqlite3.\+c}}\end{DoxyCompactItemize}

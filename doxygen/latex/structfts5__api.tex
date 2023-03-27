@@ -1,0 +1,50 @@
+\hypertarget{structfts5__api}{}\doxysection{fts5\+\_\+api Struct Reference}
+\label{structfts5__api}\index{fts5\_api@{fts5\_api}}
+
+
+{\ttfamily \#include $<$sqlite3.\+h$>$}
+
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{structfts5__api_a1138620d71393e6105389670719d9685}{i\+Version}}
+\item 
+int($\ast$ \mbox{\hyperlink{structfts5__api_af6f12b55968e788cd9fc1a79fb17153c}{x\+Create\+Tokenizer}} )(\mbox{\hyperlink{structfts5__api}{fts5\+\_\+api}} $\ast$p\+Api, const char $\ast$\mbox{\hyperlink{sqlite3_8c_aa249904642cc7f55f2f42fbf9a61f131}{z\+Name}}, void $\ast$p\+Context, \mbox{\hyperlink{structfts5__tokenizer}{fts5\+\_\+tokenizer}} $\ast$p\+Tokenizer, void($\ast$x\+Destroy)(void $\ast$))
+\item 
+int($\ast$ \mbox{\hyperlink{structfts5__api_a68f16bc718bf56fb5bee9020073acbc1}{x\+Find\+Tokenizer}} )(\mbox{\hyperlink{structfts5__api}{fts5\+\_\+api}} $\ast$p\+Api, const char $\ast$\mbox{\hyperlink{sqlite3_8c_aa249904642cc7f55f2f42fbf9a61f131}{z\+Name}}, void $\ast$$\ast$pp\+Context, \mbox{\hyperlink{structfts5__tokenizer}{fts5\+\_\+tokenizer}} $\ast$p\+Tokenizer)
+\item 
+int($\ast$ \mbox{\hyperlink{structfts5__api_af84f655c4a9f6f3a1aa44579e8a63235}{x\+Create\+Function}} )(\mbox{\hyperlink{structfts5__api}{fts5\+\_\+api}} $\ast$p\+Api, const char $\ast$\mbox{\hyperlink{sqlite3_8c_aa249904642cc7f55f2f42fbf9a61f131}{z\+Name}}, void $\ast$p\+Context, \mbox{\hyperlink{sqlite3_8h_a8a1df7b5a066b194f490be5936e85c17}{fts5\+\_\+extension\+\_\+function}} x\+Function, void($\ast$x\+Destroy)(void $\ast$))
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{structfts5__api_a1138620d71393e6105389670719d9685}\label{structfts5__api_a1138620d71393e6105389670719d9685}} 
+\index{fts5\_api@{fts5\_api}!iVersion@{iVersion}}
+\index{iVersion@{iVersion}!fts5\_api@{fts5\_api}}
+\doxysubsubsection{\texorpdfstring{iVersion}{iVersion}}
+{\footnotesize\ttfamily int i\+Version}
+
+\mbox{\Hypertarget{structfts5__api_af84f655c4a9f6f3a1aa44579e8a63235}\label{structfts5__api_af84f655c4a9f6f3a1aa44579e8a63235}} 
+\index{fts5\_api@{fts5\_api}!xCreateFunction@{xCreateFunction}}
+\index{xCreateFunction@{xCreateFunction}!fts5\_api@{fts5\_api}}
+\doxysubsubsection{\texorpdfstring{xCreateFunction}{xCreateFunction}}
+{\footnotesize\ttfamily int($\ast$ x\+Create\+Function)(\mbox{\hyperlink{structfts5__api}{fts5\+\_\+api}} $\ast$p\+Api, const char $\ast$\mbox{\hyperlink{sqlite3_8c_aa249904642cc7f55f2f42fbf9a61f131}{z\+Name}}, void $\ast$p\+Context, \mbox{\hyperlink{sqlite3_8h_a8a1df7b5a066b194f490be5936e85c17}{fts5\+\_\+extension\+\_\+function}} x\+Function, void($\ast$x\+Destroy)(void $\ast$))}
+
+\mbox{\Hypertarget{structfts5__api_af6f12b55968e788cd9fc1a79fb17153c}\label{structfts5__api_af6f12b55968e788cd9fc1a79fb17153c}} 
+\index{fts5\_api@{fts5\_api}!xCreateTokenizer@{xCreateTokenizer}}
+\index{xCreateTokenizer@{xCreateTokenizer}!fts5\_api@{fts5\_api}}
+\doxysubsubsection{\texorpdfstring{xCreateTokenizer}{xCreateTokenizer}}
+{\footnotesize\ttfamily int($\ast$ x\+Create\+Tokenizer)(\mbox{\hyperlink{structfts5__api}{fts5\+\_\+api}} $\ast$p\+Api, const char $\ast$\mbox{\hyperlink{sqlite3_8c_aa249904642cc7f55f2f42fbf9a61f131}{z\+Name}}, void $\ast$p\+Context, \mbox{\hyperlink{structfts5__tokenizer}{fts5\+\_\+tokenizer}} $\ast$p\+Tokenizer, void($\ast$x\+Destroy)(void $\ast$))}
+
+\mbox{\Hypertarget{structfts5__api_a68f16bc718bf56fb5bee9020073acbc1}\label{structfts5__api_a68f16bc718bf56fb5bee9020073acbc1}} 
+\index{fts5\_api@{fts5\_api}!xFindTokenizer@{xFindTokenizer}}
+\index{xFindTokenizer@{xFindTokenizer}!fts5\_api@{fts5\_api}}
+\doxysubsubsection{\texorpdfstring{xFindTokenizer}{xFindTokenizer}}
+{\footnotesize\ttfamily int($\ast$ x\+Find\+Tokenizer)(\mbox{\hyperlink{structfts5__api}{fts5\+\_\+api}} $\ast$p\+Api, const char $\ast$\mbox{\hyperlink{sqlite3_8c_aa249904642cc7f55f2f42fbf9a61f131}{z\+Name}}, void $\ast$$\ast$pp\+Context, \mbox{\hyperlink{structfts5__tokenizer}{fts5\+\_\+tokenizer}} $\ast$p\+Tokenizer)}
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/macbookair/\+Documents/\+Git\+Hub/projet-\/final-\/c/functions/sql/\mbox{\hyperlink{sqlite3_8c}{sqlite3.\+c}}\item 
+/\+Users/macbookair/\+Documents/\+Git\+Hub/projet-\/final-\/c/functions/sql/\mbox{\hyperlink{sqlite3_8h}{sqlite3.\+h}}\end{DoxyCompactItemize}

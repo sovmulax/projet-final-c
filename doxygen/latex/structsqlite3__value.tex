@@ -1,0 +1,106 @@
+\hypertarget{structsqlite3__value}{}\doxysection{sqlite3\+\_\+value Struct Reference}
+\label{structsqlite3__value}\index{sqlite3\_value@{sqlite3\_value}}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+union \mbox{\hyperlink{unionsqlite3__value_1_1_mem_value}{Mem\+Value}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+union \mbox{\hyperlink{unionsqlite3__value_1_1_mem_value}{sqlite3\+\_\+value\+::\+Mem\+Value}} \mbox{\hyperlink{structsqlite3__value_a264470c094c7728dd7630f8b8d48f12e}{u}}
+\item 
+char $\ast$ \mbox{\hyperlink{structsqlite3__value_a99c0cc44b073a87d419d090571f773a5}{z}}
+\item 
+int \mbox{\hyperlink{structsqlite3__value_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a20f2299e322dcbde37cb07b16910b843}{u16}} \mbox{\hyperlink{structsqlite3__value_a687c73b55452210faa467db4d365a3ee}{flags}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} \mbox{\hyperlink{structsqlite3__value_a9c71ab1f0d39a2b088a6d8a1093159c0}{enc}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} \mbox{\hyperlink{structsqlite3__value_a8767ebafcbb02eb471add087235713f2}{e\+Subtype}}
+\item 
+\mbox{\hyperlink{structsqlite3}{sqlite3}} $\ast$ \mbox{\hyperlink{structsqlite3__value_ad6e663497d2c934364b3bcf07496b30b}{db}}
+\item 
+int \mbox{\hyperlink{structsqlite3__value_a56d1abb60aeee5af56cbe04752733cd3}{sz\+Malloc}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a03ad5adfaeb9b7640dde78a0cc390319}{u32}} \mbox{\hyperlink{structsqlite3__value_a95b9bece3b8200fe5d56d20aa4c6ea94}{u\+Temp}}
+\item 
+char $\ast$ \mbox{\hyperlink{structsqlite3__value_a61cff46330bc94e3750512be20335341}{z\+Malloc}}
+\item 
+void($\ast$ \mbox{\hyperlink{structsqlite3__value_ad2185e5192b0df27c6a55ba9b65c94c2}{x\+Del}} )(void $\ast$)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{structsqlite3__value_ad6e663497d2c934364b3bcf07496b30b}\label{structsqlite3__value_ad6e663497d2c934364b3bcf07496b30b}} 
+\index{sqlite3\_value@{sqlite3\_value}!db@{db}}
+\index{db@{db}!sqlite3\_value@{sqlite3\_value}}
+\doxysubsubsection{\texorpdfstring{db}{db}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsqlite3}{sqlite3}}$\ast$ db}
+
+\mbox{\Hypertarget{structsqlite3__value_a9c71ab1f0d39a2b088a6d8a1093159c0}\label{structsqlite3__value_a9c71ab1f0d39a2b088a6d8a1093159c0}} 
+\index{sqlite3\_value@{sqlite3\_value}!enc@{enc}}
+\index{enc@{enc}!sqlite3\_value@{sqlite3\_value}}
+\doxysubsubsection{\texorpdfstring{enc}{enc}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} enc}
+
+\mbox{\Hypertarget{structsqlite3__value_a8767ebafcbb02eb471add087235713f2}\label{structsqlite3__value_a8767ebafcbb02eb471add087235713f2}} 
+\index{sqlite3\_value@{sqlite3\_value}!eSubtype@{eSubtype}}
+\index{eSubtype@{eSubtype}!sqlite3\_value@{sqlite3\_value}}
+\doxysubsubsection{\texorpdfstring{eSubtype}{eSubtype}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} e\+Subtype}
+
+\mbox{\Hypertarget{structsqlite3__value_a687c73b55452210faa467db4d365a3ee}\label{structsqlite3__value_a687c73b55452210faa467db4d365a3ee}} 
+\index{sqlite3\_value@{sqlite3\_value}!flags@{flags}}
+\index{flags@{flags}!sqlite3\_value@{sqlite3\_value}}
+\doxysubsubsection{\texorpdfstring{flags}{flags}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a20f2299e322dcbde37cb07b16910b843}{u16}} flags}
+
+\mbox{\Hypertarget{structsqlite3__value_a76f11d9a0a47b94f72c2d0e77fb32240}\label{structsqlite3__value_a76f11d9a0a47b94f72c2d0e77fb32240}} 
+\index{sqlite3\_value@{sqlite3\_value}!n@{n}}
+\index{n@{n}!sqlite3\_value@{sqlite3\_value}}
+\doxysubsubsection{\texorpdfstring{n}{n}}
+{\footnotesize\ttfamily int n}
+
+\mbox{\Hypertarget{structsqlite3__value_a56d1abb60aeee5af56cbe04752733cd3}\label{structsqlite3__value_a56d1abb60aeee5af56cbe04752733cd3}} 
+\index{sqlite3\_value@{sqlite3\_value}!szMalloc@{szMalloc}}
+\index{szMalloc@{szMalloc}!sqlite3\_value@{sqlite3\_value}}
+\doxysubsubsection{\texorpdfstring{szMalloc}{szMalloc}}
+{\footnotesize\ttfamily int sz\+Malloc}
+
+\mbox{\Hypertarget{structsqlite3__value_a264470c094c7728dd7630f8b8d48f12e}\label{structsqlite3__value_a264470c094c7728dd7630f8b8d48f12e}} 
+\index{sqlite3\_value@{sqlite3\_value}!u@{u}}
+\index{u@{u}!sqlite3\_value@{sqlite3\_value}}
+\doxysubsubsection{\texorpdfstring{u}{u}}
+{\footnotesize\ttfamily union \mbox{\hyperlink{unionsqlite3__value_1_1_mem_value}{sqlite3\+\_\+value\+::\+Mem\+Value}} u}
+
+\mbox{\Hypertarget{structsqlite3__value_a95b9bece3b8200fe5d56d20aa4c6ea94}\label{structsqlite3__value_a95b9bece3b8200fe5d56d20aa4c6ea94}} 
+\index{sqlite3\_value@{sqlite3\_value}!uTemp@{uTemp}}
+\index{uTemp@{uTemp}!sqlite3\_value@{sqlite3\_value}}
+\doxysubsubsection{\texorpdfstring{uTemp}{uTemp}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a03ad5adfaeb9b7640dde78a0cc390319}{u32}} u\+Temp}
+
+\mbox{\Hypertarget{structsqlite3__value_ad2185e5192b0df27c6a55ba9b65c94c2}\label{structsqlite3__value_ad2185e5192b0df27c6a55ba9b65c94c2}} 
+\index{sqlite3\_value@{sqlite3\_value}!xDel@{xDel}}
+\index{xDel@{xDel}!sqlite3\_value@{sqlite3\_value}}
+\doxysubsubsection{\texorpdfstring{xDel}{xDel}}
+{\footnotesize\ttfamily void($\ast$ x\+Del) (void $\ast$)}
+
+\mbox{\Hypertarget{structsqlite3__value_a99c0cc44b073a87d419d090571f773a5}\label{structsqlite3__value_a99c0cc44b073a87d419d090571f773a5}} 
+\index{sqlite3\_value@{sqlite3\_value}!z@{z}}
+\index{z@{z}!sqlite3\_value@{sqlite3\_value}}
+\doxysubsubsection{\texorpdfstring{z}{z}}
+{\footnotesize\ttfamily char$\ast$ z}
+
+\mbox{\Hypertarget{structsqlite3__value_a61cff46330bc94e3750512be20335341}\label{structsqlite3__value_a61cff46330bc94e3750512be20335341}} 
+\index{sqlite3\_value@{sqlite3\_value}!zMalloc@{zMalloc}}
+\index{zMalloc@{zMalloc}!sqlite3\_value@{sqlite3\_value}}
+\doxysubsubsection{\texorpdfstring{zMalloc}{zMalloc}}
+{\footnotesize\ttfamily char$\ast$ z\+Malloc}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/macbookair/\+Documents/\+Git\+Hub/projet-\/final-\/c/functions/sql/\mbox{\hyperlink{sqlite3_8c}{sqlite3.\+c}}\end{DoxyCompactItemize}

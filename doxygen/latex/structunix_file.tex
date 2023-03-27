@@ -1,0 +1,125 @@
+\hypertarget{structunix_file}{}\doxysection{unix\+File Struct Reference}
+\label{structunix_file}\index{unixFile@{unixFile}}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a7300cc4479df6a5e3437a9f41daa4942}{sqlite3\+\_\+io\+\_\+methods}} const  $\ast$ \mbox{\hyperlink{structunix_file_a4543ba4f315142783b138112898c5c59}{p\+Method}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a4b3859573509d792fc68dfed06ba888b}{sqlite3\+\_\+vfs}} $\ast$ \mbox{\hyperlink{structunix_file_a59603ca1cedf2bda0ee4e65eb610a0b5}{p\+Vfs}}
+\item 
+\mbox{\hyperlink{structunix_inode_info}{unix\+Inode\+Info}} $\ast$ \mbox{\hyperlink{structunix_file_afe19cb877f2c3a50ca04a8272ed435b8}{p\+Inode}}
+\item 
+int \mbox{\hyperlink{structunix_file_a16611451551e3d15916bae723c3f59f7}{h}}
+\item 
+unsigned char \mbox{\hyperlink{structunix_file_a074528e86f4417f8c3ce538e07908824}{e\+File\+Lock}}
+\item 
+unsigned short int \mbox{\hyperlink{structunix_file_a703267dc2b2f5100ed329cc2bfab7699}{ctrl\+Flags}}
+\item 
+int \mbox{\hyperlink{structunix_file_aabab360690091497ac312b35a13e4c56}{last\+Errno}}
+\item 
+void $\ast$ \mbox{\hyperlink{structunix_file_aab5edf9be7a69d30e33ed8d8a89291ea}{locking\+Context}}
+\item 
+\mbox{\hyperlink{struct_unix_unused_fd}{Unix\+Unused\+Fd}} $\ast$ \mbox{\hyperlink{structunix_file_a1965ef768a4e1983bdf87db919f2e94d}{p\+Preallocated\+Unused}}
+\item 
+const char $\ast$ \mbox{\hyperlink{structunix_file_adfe0c5350fc7ff271fd542aa50bdc259}{z\+Path}}
+\item 
+\mbox{\hyperlink{structunix_shm}{unix\+Shm}} $\ast$ \mbox{\hyperlink{structunix_file_aa155aff7111790d83ffdb16892b15dae}{p\+Shm}}
+\item 
+int \mbox{\hyperlink{structunix_file_aec8d343f93783cd4e6a649d4b157ac8c}{sz\+Chunk}}
+\item 
+int \mbox{\hyperlink{structunix_file_a8db85b797307db82c283796d1cf0c9dc}{sector\+Size}}
+\item 
+int \mbox{\hyperlink{structunix_file_ac55813eea5292f4124777108e8d05642}{device\+Characteristics}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{structunix_file_a703267dc2b2f5100ed329cc2bfab7699}\label{structunix_file_a703267dc2b2f5100ed329cc2bfab7699}} 
+\index{unixFile@{unixFile}!ctrlFlags@{ctrlFlags}}
+\index{ctrlFlags@{ctrlFlags}!unixFile@{unixFile}}
+\doxysubsubsection{\texorpdfstring{ctrlFlags}{ctrlFlags}}
+{\footnotesize\ttfamily unsigned short int ctrl\+Flags}
+
+\mbox{\Hypertarget{structunix_file_ac55813eea5292f4124777108e8d05642}\label{structunix_file_ac55813eea5292f4124777108e8d05642}} 
+\index{unixFile@{unixFile}!deviceCharacteristics@{deviceCharacteristics}}
+\index{deviceCharacteristics@{deviceCharacteristics}!unixFile@{unixFile}}
+\doxysubsubsection{\texorpdfstring{deviceCharacteristics}{deviceCharacteristics}}
+{\footnotesize\ttfamily int device\+Characteristics}
+
+\mbox{\Hypertarget{structunix_file_a074528e86f4417f8c3ce538e07908824}\label{structunix_file_a074528e86f4417f8c3ce538e07908824}} 
+\index{unixFile@{unixFile}!eFileLock@{eFileLock}}
+\index{eFileLock@{eFileLock}!unixFile@{unixFile}}
+\doxysubsubsection{\texorpdfstring{eFileLock}{eFileLock}}
+{\footnotesize\ttfamily unsigned char e\+File\+Lock}
+
+\mbox{\Hypertarget{structunix_file_a16611451551e3d15916bae723c3f59f7}\label{structunix_file_a16611451551e3d15916bae723c3f59f7}} 
+\index{unixFile@{unixFile}!h@{h}}
+\index{h@{h}!unixFile@{unixFile}}
+\doxysubsubsection{\texorpdfstring{h}{h}}
+{\footnotesize\ttfamily int h}
+
+\mbox{\Hypertarget{structunix_file_aabab360690091497ac312b35a13e4c56}\label{structunix_file_aabab360690091497ac312b35a13e4c56}} 
+\index{unixFile@{unixFile}!lastErrno@{lastErrno}}
+\index{lastErrno@{lastErrno}!unixFile@{unixFile}}
+\doxysubsubsection{\texorpdfstring{lastErrno}{lastErrno}}
+{\footnotesize\ttfamily int last\+Errno}
+
+\mbox{\Hypertarget{structunix_file_aab5edf9be7a69d30e33ed8d8a89291ea}\label{structunix_file_aab5edf9be7a69d30e33ed8d8a89291ea}} 
+\index{unixFile@{unixFile}!lockingContext@{lockingContext}}
+\index{lockingContext@{lockingContext}!unixFile@{unixFile}}
+\doxysubsubsection{\texorpdfstring{lockingContext}{lockingContext}}
+{\footnotesize\ttfamily void$\ast$ locking\+Context}
+
+\mbox{\Hypertarget{structunix_file_afe19cb877f2c3a50ca04a8272ed435b8}\label{structunix_file_afe19cb877f2c3a50ca04a8272ed435b8}} 
+\index{unixFile@{unixFile}!pInode@{pInode}}
+\index{pInode@{pInode}!unixFile@{unixFile}}
+\doxysubsubsection{\texorpdfstring{pInode}{pInode}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structunix_inode_info}{unix\+Inode\+Info}}$\ast$ p\+Inode}
+
+\mbox{\Hypertarget{structunix_file_a4543ba4f315142783b138112898c5c59}\label{structunix_file_a4543ba4f315142783b138112898c5c59}} 
+\index{unixFile@{unixFile}!pMethod@{pMethod}}
+\index{pMethod@{pMethod}!unixFile@{unixFile}}
+\doxysubsubsection{\texorpdfstring{pMethod}{pMethod}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a7300cc4479df6a5e3437a9f41daa4942}{sqlite3\+\_\+io\+\_\+methods}} const$\ast$ p\+Method}
+
+\mbox{\Hypertarget{structunix_file_a1965ef768a4e1983bdf87db919f2e94d}\label{structunix_file_a1965ef768a4e1983bdf87db919f2e94d}} 
+\index{unixFile@{unixFile}!pPreallocatedUnused@{pPreallocatedUnused}}
+\index{pPreallocatedUnused@{pPreallocatedUnused}!unixFile@{unixFile}}
+\doxysubsubsection{\texorpdfstring{pPreallocatedUnused}{pPreallocatedUnused}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_unix_unused_fd}{Unix\+Unused\+Fd}}$\ast$ p\+Preallocated\+Unused}
+
+\mbox{\Hypertarget{structunix_file_aa155aff7111790d83ffdb16892b15dae}\label{structunix_file_aa155aff7111790d83ffdb16892b15dae}} 
+\index{unixFile@{unixFile}!pShm@{pShm}}
+\index{pShm@{pShm}!unixFile@{unixFile}}
+\doxysubsubsection{\texorpdfstring{pShm}{pShm}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structunix_shm}{unix\+Shm}}$\ast$ p\+Shm}
+
+\mbox{\Hypertarget{structunix_file_a59603ca1cedf2bda0ee4e65eb610a0b5}\label{structunix_file_a59603ca1cedf2bda0ee4e65eb610a0b5}} 
+\index{unixFile@{unixFile}!pVfs@{pVfs}}
+\index{pVfs@{pVfs}!unixFile@{unixFile}}
+\doxysubsubsection{\texorpdfstring{pVfs}{pVfs}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a4b3859573509d792fc68dfed06ba888b}{sqlite3\+\_\+vfs}}$\ast$ p\+Vfs}
+
+\mbox{\Hypertarget{structunix_file_a8db85b797307db82c283796d1cf0c9dc}\label{structunix_file_a8db85b797307db82c283796d1cf0c9dc}} 
+\index{unixFile@{unixFile}!sectorSize@{sectorSize}}
+\index{sectorSize@{sectorSize}!unixFile@{unixFile}}
+\doxysubsubsection{\texorpdfstring{sectorSize}{sectorSize}}
+{\footnotesize\ttfamily int sector\+Size}
+
+\mbox{\Hypertarget{structunix_file_aec8d343f93783cd4e6a649d4b157ac8c}\label{structunix_file_aec8d343f93783cd4e6a649d4b157ac8c}} 
+\index{unixFile@{unixFile}!szChunk@{szChunk}}
+\index{szChunk@{szChunk}!unixFile@{unixFile}}
+\doxysubsubsection{\texorpdfstring{szChunk}{szChunk}}
+{\footnotesize\ttfamily int sz\+Chunk}
+
+\mbox{\Hypertarget{structunix_file_adfe0c5350fc7ff271fd542aa50bdc259}\label{structunix_file_adfe0c5350fc7ff271fd542aa50bdc259}} 
+\index{unixFile@{unixFile}!zPath@{zPath}}
+\index{zPath@{zPath}!unixFile@{unixFile}}
+\doxysubsubsection{\texorpdfstring{zPath}{zPath}}
+{\footnotesize\ttfamily const char$\ast$ z\+Path}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/macbookair/\+Documents/\+Git\+Hub/projet-\/final-\/c/functions/sql/\mbox{\hyperlink{sqlite3_8c}{sqlite3.\+c}}\end{DoxyCompactItemize}

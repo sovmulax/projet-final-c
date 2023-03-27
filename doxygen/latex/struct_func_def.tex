@@ -1,0 +1,111 @@
+\hypertarget{struct_func_def}{}\doxysection{Func\+Def Struct Reference}
+\label{struct_func_def}\index{FuncDef@{FuncDef}}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{sqlite3_8c_ad11a1324ecade336dc6ce17a20cf6617}{i8}} \mbox{\hyperlink{struct_func_def_a30cc0f08eced735876be25dd939b4929}{n\+Arg}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a03ad5adfaeb9b7640dde78a0cc390319}{u32}} \mbox{\hyperlink{struct_func_def_abfbc81f503423ba0b3b68428e4f27e34}{func\+Flags}}
+\item 
+void $\ast$ \mbox{\hyperlink{struct_func_def_a8d75dbe9027a94780bc2f31670400613}{p\+User\+Data}}
+\item 
+\mbox{\hyperlink{struct_func_def}{Func\+Def}} $\ast$ \mbox{\hyperlink{struct_func_def_ad76d035fd062a7a1568a052ede09ea6e}{p\+Next}}
+\item 
+void($\ast$ \mbox{\hyperlink{struct_func_def_a036a5c6fbff5fee11238345083a21574}{x\+SFunc}} )(\mbox{\hyperlink{structsqlite3__context}{sqlite3\+\_\+context}} $\ast$, int, \mbox{\hyperlink{structsqlite3__value}{sqlite3\+\_\+value}} $\ast$$\ast$)
+\item 
+void($\ast$ \mbox{\hyperlink{struct_func_def_a41e296d3e0af2a6f7c80c94139988e77}{x\+Finalize}} )(\mbox{\hyperlink{structsqlite3__context}{sqlite3\+\_\+context}} $\ast$)
+\item 
+void($\ast$ \mbox{\hyperlink{struct_func_def_a58f4fa3cbee84d6769bc6f817cb26146}{x\+Value}} )(\mbox{\hyperlink{structsqlite3__context}{sqlite3\+\_\+context}} $\ast$)
+\item 
+void($\ast$ \mbox{\hyperlink{struct_func_def_a36a5cc0ebefe94cf25dec9c475f553fc}{x\+Inverse}} )(\mbox{\hyperlink{structsqlite3__context}{sqlite3\+\_\+context}} $\ast$, int, \mbox{\hyperlink{structsqlite3__value}{sqlite3\+\_\+value}} $\ast$$\ast$)
+\item 
+const char $\ast$ \mbox{\hyperlink{struct_func_def_ab014fc02d99cc45050cdfcda485c780a}{z\+Name}}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>\mbox{\hyperlink{struct_func_def}{Func\+Def}} $\ast$ \mbox{\hyperlink{struct_func_def_aa8c6f56dcfbdae15ece45ba7b71a13bb}{p\+Hash}}\\
+\>\mbox{\hyperlink{struct_func_destructor}{Func\+Destructor}} $\ast$ \mbox{\hyperlink{struct_func_def_ad1dfb003b093e5f8b868da1d6676c484}{p\+Destructor}}\\
+\} \mbox{\hyperlink{struct_func_def_a1662d021b4fdb61c76ac253ef6b5cb69}{u}}\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{struct_func_def_abfbc81f503423ba0b3b68428e4f27e34}\label{struct_func_def_abfbc81f503423ba0b3b68428e4f27e34}} 
+\index{FuncDef@{FuncDef}!funcFlags@{funcFlags}}
+\index{funcFlags@{funcFlags}!FuncDef@{FuncDef}}
+\doxysubsubsection{\texorpdfstring{funcFlags}{funcFlags}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a03ad5adfaeb9b7640dde78a0cc390319}{u32}} func\+Flags}
+
+\mbox{\Hypertarget{struct_func_def_a30cc0f08eced735876be25dd939b4929}\label{struct_func_def_a30cc0f08eced735876be25dd939b4929}} 
+\index{FuncDef@{FuncDef}!nArg@{nArg}}
+\index{nArg@{nArg}!FuncDef@{FuncDef}}
+\doxysubsubsection{\texorpdfstring{nArg}{nArg}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_ad11a1324ecade336dc6ce17a20cf6617}{i8}} n\+Arg}
+
+\mbox{\Hypertarget{struct_func_def_ad1dfb003b093e5f8b868da1d6676c484}\label{struct_func_def_ad1dfb003b093e5f8b868da1d6676c484}} 
+\index{FuncDef@{FuncDef}!pDestructor@{pDestructor}}
+\index{pDestructor@{pDestructor}!FuncDef@{FuncDef}}
+\doxysubsubsection{\texorpdfstring{pDestructor}{pDestructor}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_func_destructor}{Func\+Destructor}}$\ast$ p\+Destructor}
+
+\mbox{\Hypertarget{struct_func_def_aa8c6f56dcfbdae15ece45ba7b71a13bb}\label{struct_func_def_aa8c6f56dcfbdae15ece45ba7b71a13bb}} 
+\index{FuncDef@{FuncDef}!pHash@{pHash}}
+\index{pHash@{pHash}!FuncDef@{FuncDef}}
+\doxysubsubsection{\texorpdfstring{pHash}{pHash}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_func_def}{Func\+Def}}$\ast$ p\+Hash}
+
+\mbox{\Hypertarget{struct_func_def_ad76d035fd062a7a1568a052ede09ea6e}\label{struct_func_def_ad76d035fd062a7a1568a052ede09ea6e}} 
+\index{FuncDef@{FuncDef}!pNext@{pNext}}
+\index{pNext@{pNext}!FuncDef@{FuncDef}}
+\doxysubsubsection{\texorpdfstring{pNext}{pNext}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_func_def}{Func\+Def}}$\ast$ p\+Next}
+
+\mbox{\Hypertarget{struct_func_def_a8d75dbe9027a94780bc2f31670400613}\label{struct_func_def_a8d75dbe9027a94780bc2f31670400613}} 
+\index{FuncDef@{FuncDef}!pUserData@{pUserData}}
+\index{pUserData@{pUserData}!FuncDef@{FuncDef}}
+\doxysubsubsection{\texorpdfstring{pUserData}{pUserData}}
+{\footnotesize\ttfamily void$\ast$ p\+User\+Data}
+
+\mbox{\Hypertarget{struct_func_def_a1662d021b4fdb61c76ac253ef6b5cb69}\label{struct_func_def_a1662d021b4fdb61c76ac253ef6b5cb69}} 
+\index{FuncDef@{FuncDef}!u@{u}}
+\index{u@{u}!FuncDef@{FuncDef}}
+\doxysubsubsection{\texorpdfstring{}{}}
+{\footnotesize\ttfamily union  \{ ... \}  u}
+
+\mbox{\Hypertarget{struct_func_def_a41e296d3e0af2a6f7c80c94139988e77}\label{struct_func_def_a41e296d3e0af2a6f7c80c94139988e77}} 
+\index{FuncDef@{FuncDef}!xFinalize@{xFinalize}}
+\index{xFinalize@{xFinalize}!FuncDef@{FuncDef}}
+\doxysubsubsection{\texorpdfstring{xFinalize}{xFinalize}}
+{\footnotesize\ttfamily void($\ast$ x\+Finalize) (\mbox{\hyperlink{structsqlite3__context}{sqlite3\+\_\+context}} $\ast$)}
+
+\mbox{\Hypertarget{struct_func_def_a36a5cc0ebefe94cf25dec9c475f553fc}\label{struct_func_def_a36a5cc0ebefe94cf25dec9c475f553fc}} 
+\index{FuncDef@{FuncDef}!xInverse@{xInverse}}
+\index{xInverse@{xInverse}!FuncDef@{FuncDef}}
+\doxysubsubsection{\texorpdfstring{xInverse}{xInverse}}
+{\footnotesize\ttfamily void($\ast$ x\+Inverse) (\mbox{\hyperlink{structsqlite3__context}{sqlite3\+\_\+context}} $\ast$, int, \mbox{\hyperlink{structsqlite3__value}{sqlite3\+\_\+value}} $\ast$$\ast$)}
+
+\mbox{\Hypertarget{struct_func_def_a036a5c6fbff5fee11238345083a21574}\label{struct_func_def_a036a5c6fbff5fee11238345083a21574}} 
+\index{FuncDef@{FuncDef}!xSFunc@{xSFunc}}
+\index{xSFunc@{xSFunc}!FuncDef@{FuncDef}}
+\doxysubsubsection{\texorpdfstring{xSFunc}{xSFunc}}
+{\footnotesize\ttfamily void($\ast$ x\+SFunc) (\mbox{\hyperlink{structsqlite3__context}{sqlite3\+\_\+context}} $\ast$, int, \mbox{\hyperlink{structsqlite3__value}{sqlite3\+\_\+value}} $\ast$$\ast$)}
+
+\mbox{\Hypertarget{struct_func_def_a58f4fa3cbee84d6769bc6f817cb26146}\label{struct_func_def_a58f4fa3cbee84d6769bc6f817cb26146}} 
+\index{FuncDef@{FuncDef}!xValue@{xValue}}
+\index{xValue@{xValue}!FuncDef@{FuncDef}}
+\doxysubsubsection{\texorpdfstring{xValue}{xValue}}
+{\footnotesize\ttfamily void($\ast$ x\+Value) (\mbox{\hyperlink{structsqlite3__context}{sqlite3\+\_\+context}} $\ast$)}
+
+\mbox{\Hypertarget{struct_func_def_ab014fc02d99cc45050cdfcda485c780a}\label{struct_func_def_ab014fc02d99cc45050cdfcda485c780a}} 
+\index{FuncDef@{FuncDef}!zName@{zName}}
+\index{zName@{zName}!FuncDef@{FuncDef}}
+\doxysubsubsection{\texorpdfstring{zName}{zName}}
+{\footnotesize\ttfamily const char$\ast$ z\+Name}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/macbookair/\+Documents/\+Git\+Hub/projet-\/final-\/c/functions/sql/\mbox{\hyperlink{sqlite3_8c}{sqlite3.\+c}}\end{DoxyCompactItemize}

@@ -1,0 +1,272 @@
+\hypertarget{struct_vdbe_cursor}{}\doxysection{Vdbe\+Cursor Struct Reference}
+\label{struct_vdbe_cursor}\index{VdbeCursor@{VdbeCursor}}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} \mbox{\hyperlink{struct_vdbe_cursor_a67f06ea5d5d492c4caf9a1b6dfdde50b}{e\+Cur\+Type}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_ad11a1324ecade336dc6ce17a20cf6617}{i8}} \mbox{\hyperlink{struct_vdbe_cursor_adb4fd692ce3625fae80bc89f71c57a2b}{i\+Db}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} \mbox{\hyperlink{struct_vdbe_cursor_a9997cf9a46ae166a735425897193bfb0}{null\+Row}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} \mbox{\hyperlink{struct_vdbe_cursor_a7b03e9d9280dae6d4184ebf86a6a557e}{deferred\+Moveto}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} \mbox{\hyperlink{struct_vdbe_cursor_a56fe6cd341141572cb2e3619e694cde6}{is\+Table}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a2f520588d7cfd47c237231e103dbeb78}{Bool}} \mbox{\hyperlink{struct_vdbe_cursor_a53dd61c651247c5df3d3a1f701032a0b}{is\+Ephemeral}}\+:1
+\item 
+\mbox{\hyperlink{sqlite3_8c_a2f520588d7cfd47c237231e103dbeb78}{Bool}} \mbox{\hyperlink{struct_vdbe_cursor_aa1fa2ce0c85923d79e8a119d949722a7}{use\+Random\+Rowid}}\+:1
+\item 
+\mbox{\hyperlink{sqlite3_8c_a2f520588d7cfd47c237231e103dbeb78}{Bool}} \mbox{\hyperlink{struct_vdbe_cursor_af467d3110dfc862dd5481f487ae62af6}{is\+Ordered}}\+:1
+\item 
+\mbox{\hyperlink{sqlite3_8c_a2f520588d7cfd47c237231e103dbeb78}{Bool}} \mbox{\hyperlink{struct_vdbe_cursor_affde48173c2593954c0ac561b1f739c9}{no\+Reuse}}\+:1
+\item 
+\mbox{\hyperlink{sqlite3_8c_a20f2299e322dcbde37cb07b16910b843}{u16}} \mbox{\hyperlink{struct_vdbe_cursor_ab8b4649cf23ec17547baa1c5807d3613}{seek\+Hit}}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>\mbox{\hyperlink{struct_btree}{Btree}} $\ast$ \mbox{\hyperlink{struct_vdbe_cursor_afc095db50418c31fa926fc3372da15e4}{p\+Btx}}\\
+\>\mbox{\hyperlink{sqlite3_8c_a03ad5adfaeb9b7640dde78a0cc390319}{u32}} $\ast$ \mbox{\hyperlink{struct_vdbe_cursor_aa5b4b8423b37eaa0c2c634e4b2277113}{a\+Alt\+Map}}\\
+\} \mbox{\hyperlink{struct_vdbe_cursor_ab7e8ca6da931ad834d9029542af4f591}{ub}}\\
+
+\end{tabbing}\item 
+\mbox{\hyperlink{sqlite3_8c_a2a0f0f4ae7001eb54351f77ea1cdbcfd}{i64}} \mbox{\hyperlink{struct_vdbe_cursor_abd2178c8ecc4c97494f90c4766b928f7}{seq\+Count}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a03ad5adfaeb9b7640dde78a0cc390319}{u32}} \mbox{\hyperlink{struct_vdbe_cursor_a07253ca07568b4f1be1fe2709deb6e16}{cache\+Status}}
+\item 
+int \mbox{\hyperlink{struct_vdbe_cursor_ad4a00b8dd3dc55901a7d9f7dc6b54794}{seek\+Result}}
+\item 
+\mbox{\hyperlink{struct_vdbe_cursor}{Vdbe\+Cursor}} $\ast$ \mbox{\hyperlink{struct_vdbe_cursor_a749cc295977cd2903ad89a8f2bb4521c}{p\+Alt\+Cursor}}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>\mbox{\hyperlink{struct_bt_cursor}{Bt\+Cursor}} $\ast$ \mbox{\hyperlink{struct_vdbe_cursor_a3719d9ea75c17cb66e4f628b8a4bd106}{p\+Cursor}}\\
+\>\mbox{\hyperlink{sqlite3_8c_a6556587b5d66fddd98d59e5d234f00c4}{sqlite3\+\_\+vtab\+\_\+cursor}} $\ast$ \mbox{\hyperlink{struct_vdbe_cursor_adea5f9aff23b56311240dc4575e8d724}{p\+VCur}}\\
+\>\mbox{\hyperlink{struct_vdbe_sorter}{Vdbe\+Sorter}} $\ast$ \mbox{\hyperlink{struct_vdbe_cursor_a4be97d7a48d4328b3f5339ebf2d6aa25}{p\+Sorter}}\\
+\} \mbox{\hyperlink{struct_vdbe_cursor_a990a7042ecef75ac807ef33e2db5c051}{uc}}\\
+
+\end{tabbing}\item 
+\mbox{\hyperlink{struct_key_info}{Key\+Info}} $\ast$ \mbox{\hyperlink{struct_vdbe_cursor_a2394c1e8402fe40753205256757b4165}{p\+Key\+Info}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a03ad5adfaeb9b7640dde78a0cc390319}{u32}} \mbox{\hyperlink{struct_vdbe_cursor_a6275a07eb80f66cc8da6503608c61111}{i\+Hdr\+Offset}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_aec0c653e8dd16e4639caf2f8ea54f55c}{Pgno}} \mbox{\hyperlink{struct_vdbe_cursor_a30f00f9ff785feab4d71f2cf58faab84}{pgno\+Root}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a7b32340f65cd15f029caad258fb3355c}{i16}} \mbox{\hyperlink{struct_vdbe_cursor_a1755ad239f6e44f3faeb8126792fb5be}{n\+Field}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a20f2299e322dcbde37cb07b16910b843}{u16}} \mbox{\hyperlink{struct_vdbe_cursor_a852275cc9d48313d2fd65595c065cb74}{n\+Hdr\+Parsed}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a2a0f0f4ae7001eb54351f77ea1cdbcfd}{i64}} \mbox{\hyperlink{struct_vdbe_cursor_a0684b330a73a8653f256e762327cb99b}{moveto\+Target}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a03ad5adfaeb9b7640dde78a0cc390319}{u32}} $\ast$ \mbox{\hyperlink{struct_vdbe_cursor_a413b8730948be78e2f36c35f6ae453e1}{a\+Offset}}
+\item 
+const \mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} $\ast$ \mbox{\hyperlink{struct_vdbe_cursor_a2fb89d269dbeccde95fe67e8043782ba}{a\+Row}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a03ad5adfaeb9b7640dde78a0cc390319}{u32}} \mbox{\hyperlink{struct_vdbe_cursor_a054d7cfc97910464363686b382c5f02a}{payload\+Size}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a03ad5adfaeb9b7640dde78a0cc390319}{u32}} \mbox{\hyperlink{struct_vdbe_cursor_a123e55d76daa31b2adbdc8a3ac10cd62}{sz\+Row}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a03ad5adfaeb9b7640dde78a0cc390319}{u32}} \mbox{\hyperlink{struct_vdbe_cursor_ac9a3d92f6e20d945ec2b55b1402455ba}{a\+Type}} \mbox{[}1\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{struct_vdbe_cursor_aa5b4b8423b37eaa0c2c634e4b2277113}\label{struct_vdbe_cursor_aa5b4b8423b37eaa0c2c634e4b2277113}} 
+\index{VdbeCursor@{VdbeCursor}!aAltMap@{aAltMap}}
+\index{aAltMap@{aAltMap}!VdbeCursor@{VdbeCursor}}
+\doxysubsubsection{\texorpdfstring{aAltMap}{aAltMap}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a03ad5adfaeb9b7640dde78a0cc390319}{u32}}$\ast$ a\+Alt\+Map}
+
+\mbox{\Hypertarget{struct_vdbe_cursor_a413b8730948be78e2f36c35f6ae453e1}\label{struct_vdbe_cursor_a413b8730948be78e2f36c35f6ae453e1}} 
+\index{VdbeCursor@{VdbeCursor}!aOffset@{aOffset}}
+\index{aOffset@{aOffset}!VdbeCursor@{VdbeCursor}}
+\doxysubsubsection{\texorpdfstring{aOffset}{aOffset}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a03ad5adfaeb9b7640dde78a0cc390319}{u32}}$\ast$ a\+Offset}
+
+\mbox{\Hypertarget{struct_vdbe_cursor_a2fb89d269dbeccde95fe67e8043782ba}\label{struct_vdbe_cursor_a2fb89d269dbeccde95fe67e8043782ba}} 
+\index{VdbeCursor@{VdbeCursor}!aRow@{aRow}}
+\index{aRow@{aRow}!VdbeCursor@{VdbeCursor}}
+\doxysubsubsection{\texorpdfstring{aRow}{aRow}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}}$\ast$ a\+Row}
+
+\mbox{\Hypertarget{struct_vdbe_cursor_ac9a3d92f6e20d945ec2b55b1402455ba}\label{struct_vdbe_cursor_ac9a3d92f6e20d945ec2b55b1402455ba}} 
+\index{VdbeCursor@{VdbeCursor}!aType@{aType}}
+\index{aType@{aType}!VdbeCursor@{VdbeCursor}}
+\doxysubsubsection{\texorpdfstring{aType}{aType}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a03ad5adfaeb9b7640dde78a0cc390319}{u32}} a\+Type\mbox{[}1\mbox{]}}
+
+\mbox{\Hypertarget{struct_vdbe_cursor_a07253ca07568b4f1be1fe2709deb6e16}\label{struct_vdbe_cursor_a07253ca07568b4f1be1fe2709deb6e16}} 
+\index{VdbeCursor@{VdbeCursor}!cacheStatus@{cacheStatus}}
+\index{cacheStatus@{cacheStatus}!VdbeCursor@{VdbeCursor}}
+\doxysubsubsection{\texorpdfstring{cacheStatus}{cacheStatus}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a03ad5adfaeb9b7640dde78a0cc390319}{u32}} cache\+Status}
+
+\mbox{\Hypertarget{struct_vdbe_cursor_a7b03e9d9280dae6d4184ebf86a6a557e}\label{struct_vdbe_cursor_a7b03e9d9280dae6d4184ebf86a6a557e}} 
+\index{VdbeCursor@{VdbeCursor}!deferredMoveto@{deferredMoveto}}
+\index{deferredMoveto@{deferredMoveto}!VdbeCursor@{VdbeCursor}}
+\doxysubsubsection{\texorpdfstring{deferredMoveto}{deferredMoveto}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} deferred\+Moveto}
+
+\mbox{\Hypertarget{struct_vdbe_cursor_a67f06ea5d5d492c4caf9a1b6dfdde50b}\label{struct_vdbe_cursor_a67f06ea5d5d492c4caf9a1b6dfdde50b}} 
+\index{VdbeCursor@{VdbeCursor}!eCurType@{eCurType}}
+\index{eCurType@{eCurType}!VdbeCursor@{VdbeCursor}}
+\doxysubsubsection{\texorpdfstring{eCurType}{eCurType}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} e\+Cur\+Type}
+
+\mbox{\Hypertarget{struct_vdbe_cursor_adb4fd692ce3625fae80bc89f71c57a2b}\label{struct_vdbe_cursor_adb4fd692ce3625fae80bc89f71c57a2b}} 
+\index{VdbeCursor@{VdbeCursor}!iDb@{iDb}}
+\index{iDb@{iDb}!VdbeCursor@{VdbeCursor}}
+\doxysubsubsection{\texorpdfstring{iDb}{iDb}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_ad11a1324ecade336dc6ce17a20cf6617}{i8}} i\+Db}
+
+\mbox{\Hypertarget{struct_vdbe_cursor_a6275a07eb80f66cc8da6503608c61111}\label{struct_vdbe_cursor_a6275a07eb80f66cc8da6503608c61111}} 
+\index{VdbeCursor@{VdbeCursor}!iHdrOffset@{iHdrOffset}}
+\index{iHdrOffset@{iHdrOffset}!VdbeCursor@{VdbeCursor}}
+\doxysubsubsection{\texorpdfstring{iHdrOffset}{iHdrOffset}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a03ad5adfaeb9b7640dde78a0cc390319}{u32}} i\+Hdr\+Offset}
+
+\mbox{\Hypertarget{struct_vdbe_cursor_a53dd61c651247c5df3d3a1f701032a0b}\label{struct_vdbe_cursor_a53dd61c651247c5df3d3a1f701032a0b}} 
+\index{VdbeCursor@{VdbeCursor}!isEphemeral@{isEphemeral}}
+\index{isEphemeral@{isEphemeral}!VdbeCursor@{VdbeCursor}}
+\doxysubsubsection{\texorpdfstring{isEphemeral}{isEphemeral}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a2f520588d7cfd47c237231e103dbeb78}{Bool}} is\+Ephemeral}
+
+\mbox{\Hypertarget{struct_vdbe_cursor_af467d3110dfc862dd5481f487ae62af6}\label{struct_vdbe_cursor_af467d3110dfc862dd5481f487ae62af6}} 
+\index{VdbeCursor@{VdbeCursor}!isOrdered@{isOrdered}}
+\index{isOrdered@{isOrdered}!VdbeCursor@{VdbeCursor}}
+\doxysubsubsection{\texorpdfstring{isOrdered}{isOrdered}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a2f520588d7cfd47c237231e103dbeb78}{Bool}} is\+Ordered}
+
+\mbox{\Hypertarget{struct_vdbe_cursor_a56fe6cd341141572cb2e3619e694cde6}\label{struct_vdbe_cursor_a56fe6cd341141572cb2e3619e694cde6}} 
+\index{VdbeCursor@{VdbeCursor}!isTable@{isTable}}
+\index{isTable@{isTable}!VdbeCursor@{VdbeCursor}}
+\doxysubsubsection{\texorpdfstring{isTable}{isTable}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} is\+Table}
+
+\mbox{\Hypertarget{struct_vdbe_cursor_a0684b330a73a8653f256e762327cb99b}\label{struct_vdbe_cursor_a0684b330a73a8653f256e762327cb99b}} 
+\index{VdbeCursor@{VdbeCursor}!movetoTarget@{movetoTarget}}
+\index{movetoTarget@{movetoTarget}!VdbeCursor@{VdbeCursor}}
+\doxysubsubsection{\texorpdfstring{movetoTarget}{movetoTarget}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a2a0f0f4ae7001eb54351f77ea1cdbcfd}{i64}} moveto\+Target}
+
+\mbox{\Hypertarget{struct_vdbe_cursor_a1755ad239f6e44f3faeb8126792fb5be}\label{struct_vdbe_cursor_a1755ad239f6e44f3faeb8126792fb5be}} 
+\index{VdbeCursor@{VdbeCursor}!nField@{nField}}
+\index{nField@{nField}!VdbeCursor@{VdbeCursor}}
+\doxysubsubsection{\texorpdfstring{nField}{nField}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a7b32340f65cd15f029caad258fb3355c}{i16}} n\+Field}
+
+\mbox{\Hypertarget{struct_vdbe_cursor_a852275cc9d48313d2fd65595c065cb74}\label{struct_vdbe_cursor_a852275cc9d48313d2fd65595c065cb74}} 
+\index{VdbeCursor@{VdbeCursor}!nHdrParsed@{nHdrParsed}}
+\index{nHdrParsed@{nHdrParsed}!VdbeCursor@{VdbeCursor}}
+\doxysubsubsection{\texorpdfstring{nHdrParsed}{nHdrParsed}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a20f2299e322dcbde37cb07b16910b843}{u16}} n\+Hdr\+Parsed}
+
+\mbox{\Hypertarget{struct_vdbe_cursor_affde48173c2593954c0ac561b1f739c9}\label{struct_vdbe_cursor_affde48173c2593954c0ac561b1f739c9}} 
+\index{VdbeCursor@{VdbeCursor}!noReuse@{noReuse}}
+\index{noReuse@{noReuse}!VdbeCursor@{VdbeCursor}}
+\doxysubsubsection{\texorpdfstring{noReuse}{noReuse}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a2f520588d7cfd47c237231e103dbeb78}{Bool}} no\+Reuse}
+
+\mbox{\Hypertarget{struct_vdbe_cursor_a9997cf9a46ae166a735425897193bfb0}\label{struct_vdbe_cursor_a9997cf9a46ae166a735425897193bfb0}} 
+\index{VdbeCursor@{VdbeCursor}!nullRow@{nullRow}}
+\index{nullRow@{nullRow}!VdbeCursor@{VdbeCursor}}
+\doxysubsubsection{\texorpdfstring{nullRow}{nullRow}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} null\+Row}
+
+\mbox{\Hypertarget{struct_vdbe_cursor_a749cc295977cd2903ad89a8f2bb4521c}\label{struct_vdbe_cursor_a749cc295977cd2903ad89a8f2bb4521c}} 
+\index{VdbeCursor@{VdbeCursor}!pAltCursor@{pAltCursor}}
+\index{pAltCursor@{pAltCursor}!VdbeCursor@{VdbeCursor}}
+\doxysubsubsection{\texorpdfstring{pAltCursor}{pAltCursor}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_vdbe_cursor}{Vdbe\+Cursor}}$\ast$ p\+Alt\+Cursor}
+
+\mbox{\Hypertarget{struct_vdbe_cursor_a054d7cfc97910464363686b382c5f02a}\label{struct_vdbe_cursor_a054d7cfc97910464363686b382c5f02a}} 
+\index{VdbeCursor@{VdbeCursor}!payloadSize@{payloadSize}}
+\index{payloadSize@{payloadSize}!VdbeCursor@{VdbeCursor}}
+\doxysubsubsection{\texorpdfstring{payloadSize}{payloadSize}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a03ad5adfaeb9b7640dde78a0cc390319}{u32}} payload\+Size}
+
+\mbox{\Hypertarget{struct_vdbe_cursor_afc095db50418c31fa926fc3372da15e4}\label{struct_vdbe_cursor_afc095db50418c31fa926fc3372da15e4}} 
+\index{VdbeCursor@{VdbeCursor}!pBtx@{pBtx}}
+\index{pBtx@{pBtx}!VdbeCursor@{VdbeCursor}}
+\doxysubsubsection{\texorpdfstring{pBtx}{pBtx}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_btree}{Btree}}$\ast$ p\+Btx}
+
+\mbox{\Hypertarget{struct_vdbe_cursor_a3719d9ea75c17cb66e4f628b8a4bd106}\label{struct_vdbe_cursor_a3719d9ea75c17cb66e4f628b8a4bd106}} 
+\index{VdbeCursor@{VdbeCursor}!pCursor@{pCursor}}
+\index{pCursor@{pCursor}!VdbeCursor@{VdbeCursor}}
+\doxysubsubsection{\texorpdfstring{pCursor}{pCursor}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_bt_cursor}{Bt\+Cursor}}$\ast$ p\+Cursor}
+
+\mbox{\Hypertarget{struct_vdbe_cursor_a30f00f9ff785feab4d71f2cf58faab84}\label{struct_vdbe_cursor_a30f00f9ff785feab4d71f2cf58faab84}} 
+\index{VdbeCursor@{VdbeCursor}!pgnoRoot@{pgnoRoot}}
+\index{pgnoRoot@{pgnoRoot}!VdbeCursor@{VdbeCursor}}
+\doxysubsubsection{\texorpdfstring{pgnoRoot}{pgnoRoot}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_aec0c653e8dd16e4639caf2f8ea54f55c}{Pgno}} pgno\+Root}
+
+\mbox{\Hypertarget{struct_vdbe_cursor_a2394c1e8402fe40753205256757b4165}\label{struct_vdbe_cursor_a2394c1e8402fe40753205256757b4165}} 
+\index{VdbeCursor@{VdbeCursor}!pKeyInfo@{pKeyInfo}}
+\index{pKeyInfo@{pKeyInfo}!VdbeCursor@{VdbeCursor}}
+\doxysubsubsection{\texorpdfstring{pKeyInfo}{pKeyInfo}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_key_info}{Key\+Info}}$\ast$ p\+Key\+Info}
+
+\mbox{\Hypertarget{struct_vdbe_cursor_a4be97d7a48d4328b3f5339ebf2d6aa25}\label{struct_vdbe_cursor_a4be97d7a48d4328b3f5339ebf2d6aa25}} 
+\index{VdbeCursor@{VdbeCursor}!pSorter@{pSorter}}
+\index{pSorter@{pSorter}!VdbeCursor@{VdbeCursor}}
+\doxysubsubsection{\texorpdfstring{pSorter}{pSorter}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_vdbe_sorter}{Vdbe\+Sorter}}$\ast$ p\+Sorter}
+
+\mbox{\Hypertarget{struct_vdbe_cursor_adea5f9aff23b56311240dc4575e8d724}\label{struct_vdbe_cursor_adea5f9aff23b56311240dc4575e8d724}} 
+\index{VdbeCursor@{VdbeCursor}!pVCur@{pVCur}}
+\index{pVCur@{pVCur}!VdbeCursor@{VdbeCursor}}
+\doxysubsubsection{\texorpdfstring{pVCur}{pVCur}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a6556587b5d66fddd98d59e5d234f00c4}{sqlite3\+\_\+vtab\+\_\+cursor}}$\ast$ p\+VCur}
+
+\mbox{\Hypertarget{struct_vdbe_cursor_ab8b4649cf23ec17547baa1c5807d3613}\label{struct_vdbe_cursor_ab8b4649cf23ec17547baa1c5807d3613}} 
+\index{VdbeCursor@{VdbeCursor}!seekHit@{seekHit}}
+\index{seekHit@{seekHit}!VdbeCursor@{VdbeCursor}}
+\doxysubsubsection{\texorpdfstring{seekHit}{seekHit}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a20f2299e322dcbde37cb07b16910b843}{u16}} seek\+Hit}
+
+\mbox{\Hypertarget{struct_vdbe_cursor_ad4a00b8dd3dc55901a7d9f7dc6b54794}\label{struct_vdbe_cursor_ad4a00b8dd3dc55901a7d9f7dc6b54794}} 
+\index{VdbeCursor@{VdbeCursor}!seekResult@{seekResult}}
+\index{seekResult@{seekResult}!VdbeCursor@{VdbeCursor}}
+\doxysubsubsection{\texorpdfstring{seekResult}{seekResult}}
+{\footnotesize\ttfamily int seek\+Result}
+
+\mbox{\Hypertarget{struct_vdbe_cursor_abd2178c8ecc4c97494f90c4766b928f7}\label{struct_vdbe_cursor_abd2178c8ecc4c97494f90c4766b928f7}} 
+\index{VdbeCursor@{VdbeCursor}!seqCount@{seqCount}}
+\index{seqCount@{seqCount}!VdbeCursor@{VdbeCursor}}
+\doxysubsubsection{\texorpdfstring{seqCount}{seqCount}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a2a0f0f4ae7001eb54351f77ea1cdbcfd}{i64}} seq\+Count}
+
+\mbox{\Hypertarget{struct_vdbe_cursor_a123e55d76daa31b2adbdc8a3ac10cd62}\label{struct_vdbe_cursor_a123e55d76daa31b2adbdc8a3ac10cd62}} 
+\index{VdbeCursor@{VdbeCursor}!szRow@{szRow}}
+\index{szRow@{szRow}!VdbeCursor@{VdbeCursor}}
+\doxysubsubsection{\texorpdfstring{szRow}{szRow}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a03ad5adfaeb9b7640dde78a0cc390319}{u32}} sz\+Row}
+
+\mbox{\Hypertarget{struct_vdbe_cursor_ab7e8ca6da931ad834d9029542af4f591}\label{struct_vdbe_cursor_ab7e8ca6da931ad834d9029542af4f591}} 
+\index{VdbeCursor@{VdbeCursor}!ub@{ub}}
+\index{ub@{ub}!VdbeCursor@{VdbeCursor}}
+\doxysubsubsection{\texorpdfstring{}{}}
+{\footnotesize\ttfamily union  \{ ... \}  ub}
+
+\mbox{\Hypertarget{struct_vdbe_cursor_a990a7042ecef75ac807ef33e2db5c051}\label{struct_vdbe_cursor_a990a7042ecef75ac807ef33e2db5c051}} 
+\index{VdbeCursor@{VdbeCursor}!uc@{uc}}
+\index{uc@{uc}!VdbeCursor@{VdbeCursor}}
+\doxysubsubsection{\texorpdfstring{}{}}
+{\footnotesize\ttfamily union  \{ ... \}  uc}
+
+\mbox{\Hypertarget{struct_vdbe_cursor_aa1fa2ce0c85923d79e8a119d949722a7}\label{struct_vdbe_cursor_aa1fa2ce0c85923d79e8a119d949722a7}} 
+\index{VdbeCursor@{VdbeCursor}!useRandomRowid@{useRandomRowid}}
+\index{useRandomRowid@{useRandomRowid}!VdbeCursor@{VdbeCursor}}
+\doxysubsubsection{\texorpdfstring{useRandomRowid}{useRandomRowid}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a2f520588d7cfd47c237231e103dbeb78}{Bool}} use\+Random\+Rowid}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/macbookair/\+Documents/\+Git\+Hub/projet-\/final-\/c/functions/sql/\mbox{\hyperlink{sqlite3_8c}{sqlite3.\+c}}\end{DoxyCompactItemize}

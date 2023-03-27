@@ -1,0 +1,109 @@
+\hypertarget{struct_name_context}{}\doxysection{Name\+Context Struct Reference}
+\label{struct_name_context}\index{NameContext@{NameContext}}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_parse}{Parse}} $\ast$ \mbox{\hyperlink{struct_name_context_ac700bf257b32cd7e491fde90a081379d}{p\+Parse}}
+\item 
+\mbox{\hyperlink{struct_src_list}{Src\+List}} $\ast$ \mbox{\hyperlink{struct_name_context_afbf9e5f3766df361d597cbcaba479e1d}{p\+Src\+List}}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>\mbox{\hyperlink{struct_expr_list}{Expr\+List}} $\ast$ \mbox{\hyperlink{struct_name_context_a08025e7aa4f4c6b65204b463580746ef}{p\+EList}}\\
+\>\mbox{\hyperlink{struct_agg_info}{Agg\+Info}} $\ast$ \mbox{\hyperlink{struct_name_context_a8d44bec2b506e6b367f1de588dbcae27}{p\+Agg\+Info}}\\
+\>\mbox{\hyperlink{struct_upsert}{Upsert}} $\ast$ \mbox{\hyperlink{struct_name_context_a078c8bf9aae204a0364ab2cc4bbbb12e}{p\+Upsert}}\\
+\>int \mbox{\hyperlink{struct_name_context_ab2f57b79c64b038d31116b4c590e979e}{i\+Base\+Reg}}\\
+\} \mbox{\hyperlink{struct_name_context_a6aaccf4fd7860070b1438db185d101c6}{u\+NC}}\\
+
+\end{tabbing}\item 
+\mbox{\hyperlink{struct_name_context}{Name\+Context}} $\ast$ \mbox{\hyperlink{struct_name_context_a378641f900e09d4c613d35b2808d1b82}{p\+Next}}
+\item 
+int \mbox{\hyperlink{struct_name_context_a3c459f9ae278c22b72583c55ca01acb7}{n\+Ref}}
+\item 
+int \mbox{\hyperlink{struct_name_context_a9f6ee7d2e9795224a44201319a6a1ae2}{n\+Nc\+Err}}
+\item 
+int \mbox{\hyperlink{struct_name_context_abc336c52e1be01206efd3793258b0b13}{nc\+Flags}}
+\item 
+\mbox{\hyperlink{struct_select}{Select}} $\ast$ \mbox{\hyperlink{struct_name_context_a436f5d2d90783360cd707122bc2bf18f}{p\+Win\+Select}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{struct_name_context_ab2f57b79c64b038d31116b4c590e979e}\label{struct_name_context_ab2f57b79c64b038d31116b4c590e979e}} 
+\index{NameContext@{NameContext}!iBaseReg@{iBaseReg}}
+\index{iBaseReg@{iBaseReg}!NameContext@{NameContext}}
+\doxysubsubsection{\texorpdfstring{iBaseReg}{iBaseReg}}
+{\footnotesize\ttfamily int i\+Base\+Reg}
+
+\mbox{\Hypertarget{struct_name_context_abc336c52e1be01206efd3793258b0b13}\label{struct_name_context_abc336c52e1be01206efd3793258b0b13}} 
+\index{NameContext@{NameContext}!ncFlags@{ncFlags}}
+\index{ncFlags@{ncFlags}!NameContext@{NameContext}}
+\doxysubsubsection{\texorpdfstring{ncFlags}{ncFlags}}
+{\footnotesize\ttfamily int nc\+Flags}
+
+\mbox{\Hypertarget{struct_name_context_a9f6ee7d2e9795224a44201319a6a1ae2}\label{struct_name_context_a9f6ee7d2e9795224a44201319a6a1ae2}} 
+\index{NameContext@{NameContext}!nNcErr@{nNcErr}}
+\index{nNcErr@{nNcErr}!NameContext@{NameContext}}
+\doxysubsubsection{\texorpdfstring{nNcErr}{nNcErr}}
+{\footnotesize\ttfamily int n\+Nc\+Err}
+
+\mbox{\Hypertarget{struct_name_context_a3c459f9ae278c22b72583c55ca01acb7}\label{struct_name_context_a3c459f9ae278c22b72583c55ca01acb7}} 
+\index{NameContext@{NameContext}!nRef@{nRef}}
+\index{nRef@{nRef}!NameContext@{NameContext}}
+\doxysubsubsection{\texorpdfstring{nRef}{nRef}}
+{\footnotesize\ttfamily int n\+Ref}
+
+\mbox{\Hypertarget{struct_name_context_a8d44bec2b506e6b367f1de588dbcae27}\label{struct_name_context_a8d44bec2b506e6b367f1de588dbcae27}} 
+\index{NameContext@{NameContext}!pAggInfo@{pAggInfo}}
+\index{pAggInfo@{pAggInfo}!NameContext@{NameContext}}
+\doxysubsubsection{\texorpdfstring{pAggInfo}{pAggInfo}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_agg_info}{Agg\+Info}}$\ast$ p\+Agg\+Info}
+
+\mbox{\Hypertarget{struct_name_context_a08025e7aa4f4c6b65204b463580746ef}\label{struct_name_context_a08025e7aa4f4c6b65204b463580746ef}} 
+\index{NameContext@{NameContext}!pEList@{pEList}}
+\index{pEList@{pEList}!NameContext@{NameContext}}
+\doxysubsubsection{\texorpdfstring{pEList}{pEList}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_expr_list}{Expr\+List}}$\ast$ p\+EList}
+
+\mbox{\Hypertarget{struct_name_context_a378641f900e09d4c613d35b2808d1b82}\label{struct_name_context_a378641f900e09d4c613d35b2808d1b82}} 
+\index{NameContext@{NameContext}!pNext@{pNext}}
+\index{pNext@{pNext}!NameContext@{NameContext}}
+\doxysubsubsection{\texorpdfstring{pNext}{pNext}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_name_context}{Name\+Context}}$\ast$ p\+Next}
+
+\mbox{\Hypertarget{struct_name_context_ac700bf257b32cd7e491fde90a081379d}\label{struct_name_context_ac700bf257b32cd7e491fde90a081379d}} 
+\index{NameContext@{NameContext}!pParse@{pParse}}
+\index{pParse@{pParse}!NameContext@{NameContext}}
+\doxysubsubsection{\texorpdfstring{pParse}{pParse}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_parse}{Parse}}$\ast$ p\+Parse}
+
+\mbox{\Hypertarget{struct_name_context_afbf9e5f3766df361d597cbcaba479e1d}\label{struct_name_context_afbf9e5f3766df361d597cbcaba479e1d}} 
+\index{NameContext@{NameContext}!pSrcList@{pSrcList}}
+\index{pSrcList@{pSrcList}!NameContext@{NameContext}}
+\doxysubsubsection{\texorpdfstring{pSrcList}{pSrcList}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_src_list}{Src\+List}}$\ast$ p\+Src\+List}
+
+\mbox{\Hypertarget{struct_name_context_a078c8bf9aae204a0364ab2cc4bbbb12e}\label{struct_name_context_a078c8bf9aae204a0364ab2cc4bbbb12e}} 
+\index{NameContext@{NameContext}!pUpsert@{pUpsert}}
+\index{pUpsert@{pUpsert}!NameContext@{NameContext}}
+\doxysubsubsection{\texorpdfstring{pUpsert}{pUpsert}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_upsert}{Upsert}}$\ast$ p\+Upsert}
+
+\mbox{\Hypertarget{struct_name_context_a436f5d2d90783360cd707122bc2bf18f}\label{struct_name_context_a436f5d2d90783360cd707122bc2bf18f}} 
+\index{NameContext@{NameContext}!pWinSelect@{pWinSelect}}
+\index{pWinSelect@{pWinSelect}!NameContext@{NameContext}}
+\doxysubsubsection{\texorpdfstring{pWinSelect}{pWinSelect}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_select}{Select}}$\ast$ p\+Win\+Select}
+
+\mbox{\Hypertarget{struct_name_context_a6aaccf4fd7860070b1438db185d101c6}\label{struct_name_context_a6aaccf4fd7860070b1438db185d101c6}} 
+\index{NameContext@{NameContext}!uNC@{uNC}}
+\index{uNC@{uNC}!NameContext@{NameContext}}
+\doxysubsubsection{\texorpdfstring{}{}}
+{\footnotesize\ttfamily union  \{ ... \}  u\+NC}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/macbookair/\+Documents/\+Git\+Hub/projet-\/final-\/c/functions/sql/\mbox{\hyperlink{sqlite3_8c}{sqlite3.\+c}}\end{DoxyCompactItemize}

@@ -1,0 +1,92 @@
+\hypertarget{struct_json_node}{}\doxysection{Json\+Node Struct Reference}
+\label{struct_json_node}\index{JsonNode@{JsonNode}}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} \mbox{\hyperlink{struct_json_node_aff5b550382746b59e89a9325f585d46c}{e\+Type}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} \mbox{\hyperlink{struct_json_node_a9e2c0291dee59c8194c3c19c33d818db}{jn\+Flags}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} \mbox{\hyperlink{struct_json_node_a83aa81a9e34339e245a69f8b122a4336}{eU}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a03ad5adfaeb9b7640dde78a0cc390319}{u32}} \mbox{\hyperlink{struct_json_node_a29cb04cbb4c657dd13df623a10eddf6e}{n}}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>const char $\ast$ \mbox{\hyperlink{struct_json_node_ad2e1eb7d8cab06152af1dcef4f5646fa}{z\+JContent}}\\
+\>\mbox{\hyperlink{sqlite3_8c_a03ad5adfaeb9b7640dde78a0cc390319}{u32}} \mbox{\hyperlink{struct_json_node_adc0b6b4497c96438a6b5aadb46f21623}{i\+Append}}\\
+\>\mbox{\hyperlink{sqlite3_8c_a03ad5adfaeb9b7640dde78a0cc390319}{u32}} \mbox{\hyperlink{struct_json_node_a9e614a9a5f4ce872998b14fe381f7130}{i\+Key}}\\
+\>\mbox{\hyperlink{sqlite3_8c_a03ad5adfaeb9b7640dde78a0cc390319}{u32}} \mbox{\hyperlink{struct_json_node_a19955442e3425a15e1dcd07342d5ca4e}{i\+Replace}}\\
+\>\mbox{\hyperlink{struct_json_node}{Json\+Node}} $\ast$ \mbox{\hyperlink{struct_json_node_a7ece3da14ff8de7b61fd73b425d1ce64}{p\+Patch}}\\
+\} \mbox{\hyperlink{struct_json_node_aa5c6b7a2802147570cb5ad670277ddca}{u}}\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{struct_json_node_aff5b550382746b59e89a9325f585d46c}\label{struct_json_node_aff5b550382746b59e89a9325f585d46c}} 
+\index{JsonNode@{JsonNode}!eType@{eType}}
+\index{eType@{eType}!JsonNode@{JsonNode}}
+\doxysubsubsection{\texorpdfstring{eType}{eType}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} e\+Type}
+
+\mbox{\Hypertarget{struct_json_node_a83aa81a9e34339e245a69f8b122a4336}\label{struct_json_node_a83aa81a9e34339e245a69f8b122a4336}} 
+\index{JsonNode@{JsonNode}!eU@{eU}}
+\index{eU@{eU}!JsonNode@{JsonNode}}
+\doxysubsubsection{\texorpdfstring{eU}{eU}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} eU}
+
+\mbox{\Hypertarget{struct_json_node_adc0b6b4497c96438a6b5aadb46f21623}\label{struct_json_node_adc0b6b4497c96438a6b5aadb46f21623}} 
+\index{JsonNode@{JsonNode}!iAppend@{iAppend}}
+\index{iAppend@{iAppend}!JsonNode@{JsonNode}}
+\doxysubsubsection{\texorpdfstring{iAppend}{iAppend}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a03ad5adfaeb9b7640dde78a0cc390319}{u32}} i\+Append}
+
+\mbox{\Hypertarget{struct_json_node_a9e614a9a5f4ce872998b14fe381f7130}\label{struct_json_node_a9e614a9a5f4ce872998b14fe381f7130}} 
+\index{JsonNode@{JsonNode}!iKey@{iKey}}
+\index{iKey@{iKey}!JsonNode@{JsonNode}}
+\doxysubsubsection{\texorpdfstring{iKey}{iKey}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a03ad5adfaeb9b7640dde78a0cc390319}{u32}} i\+Key}
+
+\mbox{\Hypertarget{struct_json_node_a19955442e3425a15e1dcd07342d5ca4e}\label{struct_json_node_a19955442e3425a15e1dcd07342d5ca4e}} 
+\index{JsonNode@{JsonNode}!iReplace@{iReplace}}
+\index{iReplace@{iReplace}!JsonNode@{JsonNode}}
+\doxysubsubsection{\texorpdfstring{iReplace}{iReplace}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a03ad5adfaeb9b7640dde78a0cc390319}{u32}} i\+Replace}
+
+\mbox{\Hypertarget{struct_json_node_a9e2c0291dee59c8194c3c19c33d818db}\label{struct_json_node_a9e2c0291dee59c8194c3c19c33d818db}} 
+\index{JsonNode@{JsonNode}!jnFlags@{jnFlags}}
+\index{jnFlags@{jnFlags}!JsonNode@{JsonNode}}
+\doxysubsubsection{\texorpdfstring{jnFlags}{jnFlags}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} jn\+Flags}
+
+\mbox{\Hypertarget{struct_json_node_a29cb04cbb4c657dd13df623a10eddf6e}\label{struct_json_node_a29cb04cbb4c657dd13df623a10eddf6e}} 
+\index{JsonNode@{JsonNode}!n@{n}}
+\index{n@{n}!JsonNode@{JsonNode}}
+\doxysubsubsection{\texorpdfstring{n}{n}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a03ad5adfaeb9b7640dde78a0cc390319}{u32}} n}
+
+\mbox{\Hypertarget{struct_json_node_a7ece3da14ff8de7b61fd73b425d1ce64}\label{struct_json_node_a7ece3da14ff8de7b61fd73b425d1ce64}} 
+\index{JsonNode@{JsonNode}!pPatch@{pPatch}}
+\index{pPatch@{pPatch}!JsonNode@{JsonNode}}
+\doxysubsubsection{\texorpdfstring{pPatch}{pPatch}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_json_node}{Json\+Node}}$\ast$ p\+Patch}
+
+\mbox{\Hypertarget{struct_json_node_aa5c6b7a2802147570cb5ad670277ddca}\label{struct_json_node_aa5c6b7a2802147570cb5ad670277ddca}} 
+\index{JsonNode@{JsonNode}!u@{u}}
+\index{u@{u}!JsonNode@{JsonNode}}
+\doxysubsubsection{\texorpdfstring{}{}}
+{\footnotesize\ttfamily union  \{ ... \}  u}
+
+\mbox{\Hypertarget{struct_json_node_ad2e1eb7d8cab06152af1dcef4f5646fa}\label{struct_json_node_ad2e1eb7d8cab06152af1dcef4f5646fa}} 
+\index{JsonNode@{JsonNode}!zJContent@{zJContent}}
+\index{zJContent@{zJContent}!JsonNode@{JsonNode}}
+\doxysubsubsection{\texorpdfstring{zJContent}{zJContent}}
+{\footnotesize\ttfamily const char$\ast$ z\+JContent}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/macbookair/\+Documents/\+Git\+Hub/projet-\/final-\/c/functions/sql/\mbox{\hyperlink{sqlite3_8c}{sqlite3.\+c}}\end{DoxyCompactItemize}

@@ -1,0 +1,173 @@
+\hypertarget{struct_bt_cursor}{}\doxysection{Bt\+Cursor Struct Reference}
+\label{struct_bt_cursor}\index{BtCursor@{BtCursor}}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} \mbox{\hyperlink{struct_bt_cursor_ae5babd54e329060ed9f926ca6df3ab4d}{e\+State}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} \mbox{\hyperlink{struct_bt_cursor_a3bae5f0b147a8a42b815f3512dc3b46e}{cur\+Flags}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} \mbox{\hyperlink{struct_bt_cursor_afaaa185033d6d52358ae9401b2f307a2}{cur\+Pager\+Flags}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} \mbox{\hyperlink{struct_bt_cursor_a6d76178ed694d71107fbae62d6fa9c38}{hints}}
+\item 
+int \mbox{\hyperlink{struct_bt_cursor_ad37941f0529357971cb490f54966185b}{skip\+Next}}
+\item 
+\mbox{\hyperlink{struct_btree}{Btree}} $\ast$ \mbox{\hyperlink{struct_bt_cursor_a8bc098d3190d7b0458b0f00fc3e9841b}{p\+Btree}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_aec0c653e8dd16e4639caf2f8ea54f55c}{Pgno}} $\ast$ \mbox{\hyperlink{struct_bt_cursor_a7deae3222686e7a2ef3247ee13dc5323}{a\+Overflow}}
+\item 
+void $\ast$ \mbox{\hyperlink{struct_bt_cursor_af4e0ec7c9494e9d87e0042ab054ac58b}{p\+Key}}
+\item 
+\mbox{\hyperlink{struct_bt_shared}{Bt\+Shared}} $\ast$ \mbox{\hyperlink{struct_bt_cursor_a2bc66d19c064bb25ff335241f8c621df}{p\+Bt}}
+\item 
+\mbox{\hyperlink{struct_bt_cursor}{Bt\+Cursor}} $\ast$ \mbox{\hyperlink{struct_bt_cursor_a1dac2396746176f48a6d2eebfc765c17}{p\+Next}}
+\item 
+\mbox{\hyperlink{struct_cell_info}{Cell\+Info}} \mbox{\hyperlink{struct_bt_cursor_ab84854bed31add78eccfc236e2d3895e}{info}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a2a0f0f4ae7001eb54351f77ea1cdbcfd}{i64}} \mbox{\hyperlink{struct_bt_cursor_a528c39e09f68386edd6e2fbb64784561}{n\+Key}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_aec0c653e8dd16e4639caf2f8ea54f55c}{Pgno}} \mbox{\hyperlink{struct_bt_cursor_a30f00f9ff785feab4d71f2cf58faab84}{pgno\+Root}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_ad11a1324ecade336dc6ce17a20cf6617}{i8}} \mbox{\hyperlink{struct_bt_cursor_a52aa92fd6f3eba9fdc9cfe95eb3e3d60}{i\+Page}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} \mbox{\hyperlink{struct_bt_cursor_a24a91c7ec67137d8f1b045ccdf92d51f}{cur\+Int\+Key}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a20f2299e322dcbde37cb07b16910b843}{u16}} \mbox{\hyperlink{struct_bt_cursor_a796470cfa015970837cd2c8fe99c5145}{ix}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a20f2299e322dcbde37cb07b16910b843}{u16}} \mbox{\hyperlink{struct_bt_cursor_acae2a50529f8b7bc8c00dc1bf7ca73b8}{ai\+Idx}} \mbox{[}\mbox{\hyperlink{sqlite3_8c_af0a8a704218e75e8258f2e33c3505473}{BTCURSOR\+\_\+\+MAX\+\_\+\+DEPTH}}-\/1\mbox{]}
+\item 
+struct \mbox{\hyperlink{struct_key_info}{Key\+Info}} $\ast$ \mbox{\hyperlink{struct_bt_cursor_a0c73f46f09fcecfd9c8d29cd3cc7744d}{p\+Key\+Info}}
+\item 
+\mbox{\hyperlink{struct_mem_page}{Mem\+Page}} $\ast$ \mbox{\hyperlink{struct_bt_cursor_a36c85062ed65ca597e90f79c8ee4c3d9}{p\+Page}}
+\item 
+\mbox{\hyperlink{struct_mem_page}{Mem\+Page}} $\ast$ \mbox{\hyperlink{struct_bt_cursor_a22c3b4b05493bf275ebd3c5505dd67b3}{ap\+Page}} \mbox{[}\mbox{\hyperlink{sqlite3_8c_af0a8a704218e75e8258f2e33c3505473}{BTCURSOR\+\_\+\+MAX\+\_\+\+DEPTH}}-\/1\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{struct_bt_cursor_acae2a50529f8b7bc8c00dc1bf7ca73b8}\label{struct_bt_cursor_acae2a50529f8b7bc8c00dc1bf7ca73b8}} 
+\index{BtCursor@{BtCursor}!aiIdx@{aiIdx}}
+\index{aiIdx@{aiIdx}!BtCursor@{BtCursor}}
+\doxysubsubsection{\texorpdfstring{aiIdx}{aiIdx}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a20f2299e322dcbde37cb07b16910b843}{u16}} ai\+Idx\mbox{[}\mbox{\hyperlink{sqlite3_8c_af0a8a704218e75e8258f2e33c3505473}{BTCURSOR\+\_\+\+MAX\+\_\+\+DEPTH}}-\/1\mbox{]}}
+
+\mbox{\Hypertarget{struct_bt_cursor_a7deae3222686e7a2ef3247ee13dc5323}\label{struct_bt_cursor_a7deae3222686e7a2ef3247ee13dc5323}} 
+\index{BtCursor@{BtCursor}!aOverflow@{aOverflow}}
+\index{aOverflow@{aOverflow}!BtCursor@{BtCursor}}
+\doxysubsubsection{\texorpdfstring{aOverflow}{aOverflow}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_aec0c653e8dd16e4639caf2f8ea54f55c}{Pgno}}$\ast$ a\+Overflow}
+
+\mbox{\Hypertarget{struct_bt_cursor_a22c3b4b05493bf275ebd3c5505dd67b3}\label{struct_bt_cursor_a22c3b4b05493bf275ebd3c5505dd67b3}} 
+\index{BtCursor@{BtCursor}!apPage@{apPage}}
+\index{apPage@{apPage}!BtCursor@{BtCursor}}
+\doxysubsubsection{\texorpdfstring{apPage}{apPage}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_mem_page}{Mem\+Page}}$\ast$ ap\+Page\mbox{[}\mbox{\hyperlink{sqlite3_8c_af0a8a704218e75e8258f2e33c3505473}{BTCURSOR\+\_\+\+MAX\+\_\+\+DEPTH}}-\/1\mbox{]}}
+
+\mbox{\Hypertarget{struct_bt_cursor_a3bae5f0b147a8a42b815f3512dc3b46e}\label{struct_bt_cursor_a3bae5f0b147a8a42b815f3512dc3b46e}} 
+\index{BtCursor@{BtCursor}!curFlags@{curFlags}}
+\index{curFlags@{curFlags}!BtCursor@{BtCursor}}
+\doxysubsubsection{\texorpdfstring{curFlags}{curFlags}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} cur\+Flags}
+
+\mbox{\Hypertarget{struct_bt_cursor_a24a91c7ec67137d8f1b045ccdf92d51f}\label{struct_bt_cursor_a24a91c7ec67137d8f1b045ccdf92d51f}} 
+\index{BtCursor@{BtCursor}!curIntKey@{curIntKey}}
+\index{curIntKey@{curIntKey}!BtCursor@{BtCursor}}
+\doxysubsubsection{\texorpdfstring{curIntKey}{curIntKey}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} cur\+Int\+Key}
+
+\mbox{\Hypertarget{struct_bt_cursor_afaaa185033d6d52358ae9401b2f307a2}\label{struct_bt_cursor_afaaa185033d6d52358ae9401b2f307a2}} 
+\index{BtCursor@{BtCursor}!curPagerFlags@{curPagerFlags}}
+\index{curPagerFlags@{curPagerFlags}!BtCursor@{BtCursor}}
+\doxysubsubsection{\texorpdfstring{curPagerFlags}{curPagerFlags}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} cur\+Pager\+Flags}
+
+\mbox{\Hypertarget{struct_bt_cursor_ae5babd54e329060ed9f926ca6df3ab4d}\label{struct_bt_cursor_ae5babd54e329060ed9f926ca6df3ab4d}} 
+\index{BtCursor@{BtCursor}!eState@{eState}}
+\index{eState@{eState}!BtCursor@{BtCursor}}
+\doxysubsubsection{\texorpdfstring{eState}{eState}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} e\+State}
+
+\mbox{\Hypertarget{struct_bt_cursor_a6d76178ed694d71107fbae62d6fa9c38}\label{struct_bt_cursor_a6d76178ed694d71107fbae62d6fa9c38}} 
+\index{BtCursor@{BtCursor}!hints@{hints}}
+\index{hints@{hints}!BtCursor@{BtCursor}}
+\doxysubsubsection{\texorpdfstring{hints}{hints}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} hints}
+
+\mbox{\Hypertarget{struct_bt_cursor_ab84854bed31add78eccfc236e2d3895e}\label{struct_bt_cursor_ab84854bed31add78eccfc236e2d3895e}} 
+\index{BtCursor@{BtCursor}!info@{info}}
+\index{info@{info}!BtCursor@{BtCursor}}
+\doxysubsubsection{\texorpdfstring{info}{info}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_cell_info}{Cell\+Info}} info}
+
+\mbox{\Hypertarget{struct_bt_cursor_a52aa92fd6f3eba9fdc9cfe95eb3e3d60}\label{struct_bt_cursor_a52aa92fd6f3eba9fdc9cfe95eb3e3d60}} 
+\index{BtCursor@{BtCursor}!iPage@{iPage}}
+\index{iPage@{iPage}!BtCursor@{BtCursor}}
+\doxysubsubsection{\texorpdfstring{iPage}{iPage}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_ad11a1324ecade336dc6ce17a20cf6617}{i8}} i\+Page}
+
+\mbox{\Hypertarget{struct_bt_cursor_a796470cfa015970837cd2c8fe99c5145}\label{struct_bt_cursor_a796470cfa015970837cd2c8fe99c5145}} 
+\index{BtCursor@{BtCursor}!ix@{ix}}
+\index{ix@{ix}!BtCursor@{BtCursor}}
+\doxysubsubsection{\texorpdfstring{ix}{ix}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a20f2299e322dcbde37cb07b16910b843}{u16}} ix}
+
+\mbox{\Hypertarget{struct_bt_cursor_a528c39e09f68386edd6e2fbb64784561}\label{struct_bt_cursor_a528c39e09f68386edd6e2fbb64784561}} 
+\index{BtCursor@{BtCursor}!nKey@{nKey}}
+\index{nKey@{nKey}!BtCursor@{BtCursor}}
+\doxysubsubsection{\texorpdfstring{nKey}{nKey}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a2a0f0f4ae7001eb54351f77ea1cdbcfd}{i64}} n\+Key}
+
+\mbox{\Hypertarget{struct_bt_cursor_a2bc66d19c064bb25ff335241f8c621df}\label{struct_bt_cursor_a2bc66d19c064bb25ff335241f8c621df}} 
+\index{BtCursor@{BtCursor}!pBt@{pBt}}
+\index{pBt@{pBt}!BtCursor@{BtCursor}}
+\doxysubsubsection{\texorpdfstring{pBt}{pBt}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_bt_shared}{Bt\+Shared}}$\ast$ p\+Bt}
+
+\mbox{\Hypertarget{struct_bt_cursor_a8bc098d3190d7b0458b0f00fc3e9841b}\label{struct_bt_cursor_a8bc098d3190d7b0458b0f00fc3e9841b}} 
+\index{BtCursor@{BtCursor}!pBtree@{pBtree}}
+\index{pBtree@{pBtree}!BtCursor@{BtCursor}}
+\doxysubsubsection{\texorpdfstring{pBtree}{pBtree}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_btree}{Btree}}$\ast$ p\+Btree}
+
+\mbox{\Hypertarget{struct_bt_cursor_a30f00f9ff785feab4d71f2cf58faab84}\label{struct_bt_cursor_a30f00f9ff785feab4d71f2cf58faab84}} 
+\index{BtCursor@{BtCursor}!pgnoRoot@{pgnoRoot}}
+\index{pgnoRoot@{pgnoRoot}!BtCursor@{BtCursor}}
+\doxysubsubsection{\texorpdfstring{pgnoRoot}{pgnoRoot}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_aec0c653e8dd16e4639caf2f8ea54f55c}{Pgno}} pgno\+Root}
+
+\mbox{\Hypertarget{struct_bt_cursor_af4e0ec7c9494e9d87e0042ab054ac58b}\label{struct_bt_cursor_af4e0ec7c9494e9d87e0042ab054ac58b}} 
+\index{BtCursor@{BtCursor}!pKey@{pKey}}
+\index{pKey@{pKey}!BtCursor@{BtCursor}}
+\doxysubsubsection{\texorpdfstring{pKey}{pKey}}
+{\footnotesize\ttfamily void$\ast$ p\+Key}
+
+\mbox{\Hypertarget{struct_bt_cursor_a0c73f46f09fcecfd9c8d29cd3cc7744d}\label{struct_bt_cursor_a0c73f46f09fcecfd9c8d29cd3cc7744d}} 
+\index{BtCursor@{BtCursor}!pKeyInfo@{pKeyInfo}}
+\index{pKeyInfo@{pKeyInfo}!BtCursor@{BtCursor}}
+\doxysubsubsection{\texorpdfstring{pKeyInfo}{pKeyInfo}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_key_info}{Key\+Info}}$\ast$ p\+Key\+Info}
+
+\mbox{\Hypertarget{struct_bt_cursor_a1dac2396746176f48a6d2eebfc765c17}\label{struct_bt_cursor_a1dac2396746176f48a6d2eebfc765c17}} 
+\index{BtCursor@{BtCursor}!pNext@{pNext}}
+\index{pNext@{pNext}!BtCursor@{BtCursor}}
+\doxysubsubsection{\texorpdfstring{pNext}{pNext}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_bt_cursor}{Bt\+Cursor}}$\ast$ p\+Next}
+
+\mbox{\Hypertarget{struct_bt_cursor_a36c85062ed65ca597e90f79c8ee4c3d9}\label{struct_bt_cursor_a36c85062ed65ca597e90f79c8ee4c3d9}} 
+\index{BtCursor@{BtCursor}!pPage@{pPage}}
+\index{pPage@{pPage}!BtCursor@{BtCursor}}
+\doxysubsubsection{\texorpdfstring{pPage}{pPage}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_mem_page}{Mem\+Page}}$\ast$ p\+Page}
+
+\mbox{\Hypertarget{struct_bt_cursor_ad37941f0529357971cb490f54966185b}\label{struct_bt_cursor_ad37941f0529357971cb490f54966185b}} 
+\index{BtCursor@{BtCursor}!skipNext@{skipNext}}
+\index{skipNext@{skipNext}!BtCursor@{BtCursor}}
+\doxysubsubsection{\texorpdfstring{skipNext}{skipNext}}
+{\footnotesize\ttfamily int skip\+Next}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/macbookair/\+Documents/\+Git\+Hub/projet-\/final-\/c/functions/sql/\mbox{\hyperlink{sqlite3_8c}{sqlite3.\+c}}\end{DoxyCompactItemize}

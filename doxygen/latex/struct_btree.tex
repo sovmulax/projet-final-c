@@ -1,0 +1,109 @@
+\hypertarget{struct_btree}{}\doxysection{Btree Struct Reference}
+\label{struct_btree}\index{Btree@{Btree}}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structsqlite3}{sqlite3}} $\ast$ \mbox{\hyperlink{struct_btree_ad6e663497d2c934364b3bcf07496b30b}{db}}
+\item 
+\mbox{\hyperlink{struct_bt_shared}{Bt\+Shared}} $\ast$ \mbox{\hyperlink{struct_btree_a2bc66d19c064bb25ff335241f8c621df}{p\+Bt}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} \mbox{\hyperlink{struct_btree_a2c8099ca044cfb9efe8e8f1868335882}{in\+Trans}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} \mbox{\hyperlink{struct_btree_a31049bc7f1be67cb3456bbb3ac791f99}{sharable}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} \mbox{\hyperlink{struct_btree_a43f3e82288339ce627521922c87afa2d}{locked}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} \mbox{\hyperlink{struct_btree_a5c4453d1dc2fada36be51c4554fd87bf}{has\+Incrblob\+Cur}}
+\item 
+int \mbox{\hyperlink{struct_btree_a97898981f2186862b2aeaa212556fa07}{want\+To\+Lock}}
+\item 
+int \mbox{\hyperlink{struct_btree_a0368c820089e3c6f7bc698c6bbe82339}{n\+Backup}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a03ad5adfaeb9b7640dde78a0cc390319}{u32}} \mbox{\hyperlink{struct_btree_a2c1d006912577ee3f9aa6219f43006fa}{i\+BData\+Version}}
+\item 
+\mbox{\hyperlink{struct_btree}{Btree}} $\ast$ \mbox{\hyperlink{struct_btree_a685ec01d7281c1aee9e1621da9fdc6e6}{p\+Next}}
+\item 
+\mbox{\hyperlink{struct_btree}{Btree}} $\ast$ \mbox{\hyperlink{struct_btree_a5073b2001300b8d13b12d202d174569d}{p\+Prev}}
+\item 
+\mbox{\hyperlink{struct_bt_lock}{Bt\+Lock}} \mbox{\hyperlink{struct_btree_a6e91b33e34747daf58cc28ca4994925b}{lock}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{struct_btree_ad6e663497d2c934364b3bcf07496b30b}\label{struct_btree_ad6e663497d2c934364b3bcf07496b30b}} 
+\index{Btree@{Btree}!db@{db}}
+\index{db@{db}!Btree@{Btree}}
+\doxysubsubsection{\texorpdfstring{db}{db}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsqlite3}{sqlite3}}$\ast$ db}
+
+\mbox{\Hypertarget{struct_btree_a5c4453d1dc2fada36be51c4554fd87bf}\label{struct_btree_a5c4453d1dc2fada36be51c4554fd87bf}} 
+\index{Btree@{Btree}!hasIncrblobCur@{hasIncrblobCur}}
+\index{hasIncrblobCur@{hasIncrblobCur}!Btree@{Btree}}
+\doxysubsubsection{\texorpdfstring{hasIncrblobCur}{hasIncrblobCur}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} has\+Incrblob\+Cur}
+
+\mbox{\Hypertarget{struct_btree_a2c1d006912577ee3f9aa6219f43006fa}\label{struct_btree_a2c1d006912577ee3f9aa6219f43006fa}} 
+\index{Btree@{Btree}!iBDataVersion@{iBDataVersion}}
+\index{iBDataVersion@{iBDataVersion}!Btree@{Btree}}
+\doxysubsubsection{\texorpdfstring{iBDataVersion}{iBDataVersion}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a03ad5adfaeb9b7640dde78a0cc390319}{u32}} i\+BData\+Version}
+
+\mbox{\Hypertarget{struct_btree_a2c8099ca044cfb9efe8e8f1868335882}\label{struct_btree_a2c8099ca044cfb9efe8e8f1868335882}} 
+\index{Btree@{Btree}!inTrans@{inTrans}}
+\index{inTrans@{inTrans}!Btree@{Btree}}
+\doxysubsubsection{\texorpdfstring{inTrans}{inTrans}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} in\+Trans}
+
+\mbox{\Hypertarget{struct_btree_a6e91b33e34747daf58cc28ca4994925b}\label{struct_btree_a6e91b33e34747daf58cc28ca4994925b}} 
+\index{Btree@{Btree}!lock@{lock}}
+\index{lock@{lock}!Btree@{Btree}}
+\doxysubsubsection{\texorpdfstring{lock}{lock}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_bt_lock}{Bt\+Lock}} lock}
+
+\mbox{\Hypertarget{struct_btree_a43f3e82288339ce627521922c87afa2d}\label{struct_btree_a43f3e82288339ce627521922c87afa2d}} 
+\index{Btree@{Btree}!locked@{locked}}
+\index{locked@{locked}!Btree@{Btree}}
+\doxysubsubsection{\texorpdfstring{locked}{locked}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} locked}
+
+\mbox{\Hypertarget{struct_btree_a0368c820089e3c6f7bc698c6bbe82339}\label{struct_btree_a0368c820089e3c6f7bc698c6bbe82339}} 
+\index{Btree@{Btree}!nBackup@{nBackup}}
+\index{nBackup@{nBackup}!Btree@{Btree}}
+\doxysubsubsection{\texorpdfstring{nBackup}{nBackup}}
+{\footnotesize\ttfamily int n\+Backup}
+
+\mbox{\Hypertarget{struct_btree_a2bc66d19c064bb25ff335241f8c621df}\label{struct_btree_a2bc66d19c064bb25ff335241f8c621df}} 
+\index{Btree@{Btree}!pBt@{pBt}}
+\index{pBt@{pBt}!Btree@{Btree}}
+\doxysubsubsection{\texorpdfstring{pBt}{pBt}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_bt_shared}{Bt\+Shared}}$\ast$ p\+Bt}
+
+\mbox{\Hypertarget{struct_btree_a685ec01d7281c1aee9e1621da9fdc6e6}\label{struct_btree_a685ec01d7281c1aee9e1621da9fdc6e6}} 
+\index{Btree@{Btree}!pNext@{pNext}}
+\index{pNext@{pNext}!Btree@{Btree}}
+\doxysubsubsection{\texorpdfstring{pNext}{pNext}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_btree}{Btree}}$\ast$ p\+Next}
+
+\mbox{\Hypertarget{struct_btree_a5073b2001300b8d13b12d202d174569d}\label{struct_btree_a5073b2001300b8d13b12d202d174569d}} 
+\index{Btree@{Btree}!pPrev@{pPrev}}
+\index{pPrev@{pPrev}!Btree@{Btree}}
+\doxysubsubsection{\texorpdfstring{pPrev}{pPrev}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_btree}{Btree}}$\ast$ p\+Prev}
+
+\mbox{\Hypertarget{struct_btree_a31049bc7f1be67cb3456bbb3ac791f99}\label{struct_btree_a31049bc7f1be67cb3456bbb3ac791f99}} 
+\index{Btree@{Btree}!sharable@{sharable}}
+\index{sharable@{sharable}!Btree@{Btree}}
+\doxysubsubsection{\texorpdfstring{sharable}{sharable}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} sharable}
+
+\mbox{\Hypertarget{struct_btree_a97898981f2186862b2aeaa212556fa07}\label{struct_btree_a97898981f2186862b2aeaa212556fa07}} 
+\index{Btree@{Btree}!wantToLock@{wantToLock}}
+\index{wantToLock@{wantToLock}!Btree@{Btree}}
+\doxysubsubsection{\texorpdfstring{wantToLock}{wantToLock}}
+{\footnotesize\ttfamily int want\+To\+Lock}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/macbookair/\+Documents/\+Git\+Hub/projet-\/final-\/c/functions/sql/\mbox{\hyperlink{sqlite3_8c}{sqlite3.\+c}}\end{DoxyCompactItemize}

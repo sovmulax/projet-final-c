@@ -1,0 +1,109 @@
+\hypertarget{structunix_shm_node}{}\doxysection{unix\+Shm\+Node Struct Reference}
+\label{structunix_shm_node}\index{unixShmNode@{unixShmNode}}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structunix_inode_info}{unix\+Inode\+Info}} $\ast$ \mbox{\hyperlink{structunix_shm_node_afe19cb877f2c3a50ca04a8272ed435b8}{p\+Inode}}
+\item 
+\mbox{\hyperlink{structsqlite3__mutex}{sqlite3\+\_\+mutex}} $\ast$ \mbox{\hyperlink{structunix_shm_node_ae60815f6b8d857d5d218103cd25ae194}{p\+Shm\+Mutex}}
+\item 
+char $\ast$ \mbox{\hyperlink{structunix_shm_node_a47b2dee2615c9bcdc2d8b755dc571e35}{z\+Filename}}
+\item 
+int \mbox{\hyperlink{structunix_shm_node_aa820f49e89fcdfc33c2dde44b1442451}{h\+Shm}}
+\item 
+int \mbox{\hyperlink{structunix_shm_node_acf8ce64e80f5d391b8d68cc6a1d306c5}{sz\+Region}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a20f2299e322dcbde37cb07b16910b843}{u16}} \mbox{\hyperlink{structunix_shm_node_af979ee5229cb18d9aba863e14d0bd0c7}{n\+Region}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} \mbox{\hyperlink{structunix_shm_node_aad407d6bd887cadd8d87e5ba9797d6b6}{is\+Readonly}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} \mbox{\hyperlink{structunix_shm_node_a38762f734c34217dae968600d435895f}{is\+Unlocked}}
+\item 
+char $\ast$$\ast$ \mbox{\hyperlink{structunix_shm_node_a08adddd4e750630785a4a4d069cfbce9}{ap\+Region}}
+\item 
+int \mbox{\hyperlink{structunix_shm_node_a3c459f9ae278c22b72583c55ca01acb7}{n\+Ref}}
+\item 
+\mbox{\hyperlink{structunix_shm}{unix\+Shm}} $\ast$ \mbox{\hyperlink{structunix_shm_node_a683e683f67cac8938671ef8edd2dc730}{p\+First}}
+\item 
+int \mbox{\hyperlink{structunix_shm_node_aa917384827629c040f1e611a17590ba7}{a\+Lock}} \mbox{[}\mbox{\hyperlink{sqlite3_8c_ac96d8f12e0c83cf92e8ab586c4b52dd5}{SQLITE\+\_\+\+SHM\+\_\+\+NLOCK}}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{structunix_shm_node_aa917384827629c040f1e611a17590ba7}\label{structunix_shm_node_aa917384827629c040f1e611a17590ba7}} 
+\index{unixShmNode@{unixShmNode}!aLock@{aLock}}
+\index{aLock@{aLock}!unixShmNode@{unixShmNode}}
+\doxysubsubsection{\texorpdfstring{aLock}{aLock}}
+{\footnotesize\ttfamily int a\+Lock\mbox{[}\mbox{\hyperlink{sqlite3_8c_ac96d8f12e0c83cf92e8ab586c4b52dd5}{SQLITE\+\_\+\+SHM\+\_\+\+NLOCK}}\mbox{]}}
+
+\mbox{\Hypertarget{structunix_shm_node_a08adddd4e750630785a4a4d069cfbce9}\label{structunix_shm_node_a08adddd4e750630785a4a4d069cfbce9}} 
+\index{unixShmNode@{unixShmNode}!apRegion@{apRegion}}
+\index{apRegion@{apRegion}!unixShmNode@{unixShmNode}}
+\doxysubsubsection{\texorpdfstring{apRegion}{apRegion}}
+{\footnotesize\ttfamily char$\ast$$\ast$ ap\+Region}
+
+\mbox{\Hypertarget{structunix_shm_node_aa820f49e89fcdfc33c2dde44b1442451}\label{structunix_shm_node_aa820f49e89fcdfc33c2dde44b1442451}} 
+\index{unixShmNode@{unixShmNode}!hShm@{hShm}}
+\index{hShm@{hShm}!unixShmNode@{unixShmNode}}
+\doxysubsubsection{\texorpdfstring{hShm}{hShm}}
+{\footnotesize\ttfamily int h\+Shm}
+
+\mbox{\Hypertarget{structunix_shm_node_aad407d6bd887cadd8d87e5ba9797d6b6}\label{structunix_shm_node_aad407d6bd887cadd8d87e5ba9797d6b6}} 
+\index{unixShmNode@{unixShmNode}!isReadonly@{isReadonly}}
+\index{isReadonly@{isReadonly}!unixShmNode@{unixShmNode}}
+\doxysubsubsection{\texorpdfstring{isReadonly}{isReadonly}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} is\+Readonly}
+
+\mbox{\Hypertarget{structunix_shm_node_a38762f734c34217dae968600d435895f}\label{structunix_shm_node_a38762f734c34217dae968600d435895f}} 
+\index{unixShmNode@{unixShmNode}!isUnlocked@{isUnlocked}}
+\index{isUnlocked@{isUnlocked}!unixShmNode@{unixShmNode}}
+\doxysubsubsection{\texorpdfstring{isUnlocked}{isUnlocked}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} is\+Unlocked}
+
+\mbox{\Hypertarget{structunix_shm_node_a3c459f9ae278c22b72583c55ca01acb7}\label{structunix_shm_node_a3c459f9ae278c22b72583c55ca01acb7}} 
+\index{unixShmNode@{unixShmNode}!nRef@{nRef}}
+\index{nRef@{nRef}!unixShmNode@{unixShmNode}}
+\doxysubsubsection{\texorpdfstring{nRef}{nRef}}
+{\footnotesize\ttfamily int n\+Ref}
+
+\mbox{\Hypertarget{structunix_shm_node_af979ee5229cb18d9aba863e14d0bd0c7}\label{structunix_shm_node_af979ee5229cb18d9aba863e14d0bd0c7}} 
+\index{unixShmNode@{unixShmNode}!nRegion@{nRegion}}
+\index{nRegion@{nRegion}!unixShmNode@{unixShmNode}}
+\doxysubsubsection{\texorpdfstring{nRegion}{nRegion}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a20f2299e322dcbde37cb07b16910b843}{u16}} n\+Region}
+
+\mbox{\Hypertarget{structunix_shm_node_a683e683f67cac8938671ef8edd2dc730}\label{structunix_shm_node_a683e683f67cac8938671ef8edd2dc730}} 
+\index{unixShmNode@{unixShmNode}!pFirst@{pFirst}}
+\index{pFirst@{pFirst}!unixShmNode@{unixShmNode}}
+\doxysubsubsection{\texorpdfstring{pFirst}{pFirst}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structunix_shm}{unix\+Shm}}$\ast$ p\+First}
+
+\mbox{\Hypertarget{structunix_shm_node_afe19cb877f2c3a50ca04a8272ed435b8}\label{structunix_shm_node_afe19cb877f2c3a50ca04a8272ed435b8}} 
+\index{unixShmNode@{unixShmNode}!pInode@{pInode}}
+\index{pInode@{pInode}!unixShmNode@{unixShmNode}}
+\doxysubsubsection{\texorpdfstring{pInode}{pInode}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structunix_inode_info}{unix\+Inode\+Info}}$\ast$ p\+Inode}
+
+\mbox{\Hypertarget{structunix_shm_node_ae60815f6b8d857d5d218103cd25ae194}\label{structunix_shm_node_ae60815f6b8d857d5d218103cd25ae194}} 
+\index{unixShmNode@{unixShmNode}!pShmMutex@{pShmMutex}}
+\index{pShmMutex@{pShmMutex}!unixShmNode@{unixShmNode}}
+\doxysubsubsection{\texorpdfstring{pShmMutex}{pShmMutex}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsqlite3__mutex}{sqlite3\+\_\+mutex}}$\ast$ p\+Shm\+Mutex}
+
+\mbox{\Hypertarget{structunix_shm_node_acf8ce64e80f5d391b8d68cc6a1d306c5}\label{structunix_shm_node_acf8ce64e80f5d391b8d68cc6a1d306c5}} 
+\index{unixShmNode@{unixShmNode}!szRegion@{szRegion}}
+\index{szRegion@{szRegion}!unixShmNode@{unixShmNode}}
+\doxysubsubsection{\texorpdfstring{szRegion}{szRegion}}
+{\footnotesize\ttfamily int sz\+Region}
+
+\mbox{\Hypertarget{structunix_shm_node_a47b2dee2615c9bcdc2d8b755dc571e35}\label{structunix_shm_node_a47b2dee2615c9bcdc2d8b755dc571e35}} 
+\index{unixShmNode@{unixShmNode}!zFilename@{zFilename}}
+\index{zFilename@{zFilename}!unixShmNode@{unixShmNode}}
+\doxysubsubsection{\texorpdfstring{zFilename}{zFilename}}
+{\footnotesize\ttfamily char$\ast$ z\+Filename}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/macbookair/\+Documents/\+Git\+Hub/projet-\/final-\/c/functions/sql/\mbox{\hyperlink{sqlite3_8c}{sqlite3.\+c}}\end{DoxyCompactItemize}

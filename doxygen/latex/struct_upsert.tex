@@ -1,0 +1,109 @@
+\hypertarget{struct_upsert}{}\doxysection{Upsert Struct Reference}
+\label{struct_upsert}\index{Upsert@{Upsert}}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_expr_list}{Expr\+List}} $\ast$ \mbox{\hyperlink{struct_upsert_ae30f1e329fa9b61a7a1382780c2c6bea}{p\+Upsert\+Target}}
+\item 
+\mbox{\hyperlink{struct_expr}{Expr}} $\ast$ \mbox{\hyperlink{struct_upsert_afdd3a6f7220ef998c709da95283b6bac}{p\+Upsert\+Target\+Where}}
+\item 
+\mbox{\hyperlink{struct_expr_list}{Expr\+List}} $\ast$ \mbox{\hyperlink{struct_upsert_aa741ffe505f8109d9adfbeb933e09a62}{p\+Upsert\+Set}}
+\item 
+\mbox{\hyperlink{struct_expr}{Expr}} $\ast$ \mbox{\hyperlink{struct_upsert_a50d28f58dd45cb59b4fe7fbc52522a09}{p\+Upsert\+Where}}
+\item 
+\mbox{\hyperlink{struct_upsert}{Upsert}} $\ast$ \mbox{\hyperlink{struct_upsert_a3f3fa6ca8e462265c84f5660f2b0504b}{p\+Next\+Upsert}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} \mbox{\hyperlink{struct_upsert_a18efd666f057a4a7aa9618154b45d0f6}{is\+Do\+Update}}
+\item 
+void $\ast$ \mbox{\hyperlink{struct_upsert_a09dce779f89f41f25e5e611fd41a4713}{p\+To\+Free}}
+\item 
+\mbox{\hyperlink{struct_index}{Index}} $\ast$ \mbox{\hyperlink{struct_upsert_a62b26446a09a7886529e49f49908e1ff}{p\+Upsert\+Idx}}
+\item 
+\mbox{\hyperlink{struct_src_list}{Src\+List}} $\ast$ \mbox{\hyperlink{struct_upsert_ae552e944ef38aaa39c58d16ecd6209a5}{p\+Upsert\+Src}}
+\item 
+int \mbox{\hyperlink{struct_upsert_aff3e58b954f8b42f28ea1b54b93cd223}{reg\+Data}}
+\item 
+int \mbox{\hyperlink{struct_upsert_a5ac3c399260998624787f31fec9c8af0}{i\+Data\+Cur}}
+\item 
+int \mbox{\hyperlink{struct_upsert_aecc5f6fc895b5d32e286a8a34ebbec98}{i\+Idx\+Cur}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{struct_upsert_a5ac3c399260998624787f31fec9c8af0}\label{struct_upsert_a5ac3c399260998624787f31fec9c8af0}} 
+\index{Upsert@{Upsert}!iDataCur@{iDataCur}}
+\index{iDataCur@{iDataCur}!Upsert@{Upsert}}
+\doxysubsubsection{\texorpdfstring{iDataCur}{iDataCur}}
+{\footnotesize\ttfamily int i\+Data\+Cur}
+
+\mbox{\Hypertarget{struct_upsert_aecc5f6fc895b5d32e286a8a34ebbec98}\label{struct_upsert_aecc5f6fc895b5d32e286a8a34ebbec98}} 
+\index{Upsert@{Upsert}!iIdxCur@{iIdxCur}}
+\index{iIdxCur@{iIdxCur}!Upsert@{Upsert}}
+\doxysubsubsection{\texorpdfstring{iIdxCur}{iIdxCur}}
+{\footnotesize\ttfamily int i\+Idx\+Cur}
+
+\mbox{\Hypertarget{struct_upsert_a18efd666f057a4a7aa9618154b45d0f6}\label{struct_upsert_a18efd666f057a4a7aa9618154b45d0f6}} 
+\index{Upsert@{Upsert}!isDoUpdate@{isDoUpdate}}
+\index{isDoUpdate@{isDoUpdate}!Upsert@{Upsert}}
+\doxysubsubsection{\texorpdfstring{isDoUpdate}{isDoUpdate}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} is\+Do\+Update}
+
+\mbox{\Hypertarget{struct_upsert_a3f3fa6ca8e462265c84f5660f2b0504b}\label{struct_upsert_a3f3fa6ca8e462265c84f5660f2b0504b}} 
+\index{Upsert@{Upsert}!pNextUpsert@{pNextUpsert}}
+\index{pNextUpsert@{pNextUpsert}!Upsert@{Upsert}}
+\doxysubsubsection{\texorpdfstring{pNextUpsert}{pNextUpsert}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_upsert}{Upsert}}$\ast$ p\+Next\+Upsert}
+
+\mbox{\Hypertarget{struct_upsert_a09dce779f89f41f25e5e611fd41a4713}\label{struct_upsert_a09dce779f89f41f25e5e611fd41a4713}} 
+\index{Upsert@{Upsert}!pToFree@{pToFree}}
+\index{pToFree@{pToFree}!Upsert@{Upsert}}
+\doxysubsubsection{\texorpdfstring{pToFree}{pToFree}}
+{\footnotesize\ttfamily void$\ast$ p\+To\+Free}
+
+\mbox{\Hypertarget{struct_upsert_a62b26446a09a7886529e49f49908e1ff}\label{struct_upsert_a62b26446a09a7886529e49f49908e1ff}} 
+\index{Upsert@{Upsert}!pUpsertIdx@{pUpsertIdx}}
+\index{pUpsertIdx@{pUpsertIdx}!Upsert@{Upsert}}
+\doxysubsubsection{\texorpdfstring{pUpsertIdx}{pUpsertIdx}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_index}{Index}}$\ast$ p\+Upsert\+Idx}
+
+\mbox{\Hypertarget{struct_upsert_aa741ffe505f8109d9adfbeb933e09a62}\label{struct_upsert_aa741ffe505f8109d9adfbeb933e09a62}} 
+\index{Upsert@{Upsert}!pUpsertSet@{pUpsertSet}}
+\index{pUpsertSet@{pUpsertSet}!Upsert@{Upsert}}
+\doxysubsubsection{\texorpdfstring{pUpsertSet}{pUpsertSet}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_expr_list}{Expr\+List}}$\ast$ p\+Upsert\+Set}
+
+\mbox{\Hypertarget{struct_upsert_ae552e944ef38aaa39c58d16ecd6209a5}\label{struct_upsert_ae552e944ef38aaa39c58d16ecd6209a5}} 
+\index{Upsert@{Upsert}!pUpsertSrc@{pUpsertSrc}}
+\index{pUpsertSrc@{pUpsertSrc}!Upsert@{Upsert}}
+\doxysubsubsection{\texorpdfstring{pUpsertSrc}{pUpsertSrc}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_src_list}{Src\+List}}$\ast$ p\+Upsert\+Src}
+
+\mbox{\Hypertarget{struct_upsert_ae30f1e329fa9b61a7a1382780c2c6bea}\label{struct_upsert_ae30f1e329fa9b61a7a1382780c2c6bea}} 
+\index{Upsert@{Upsert}!pUpsertTarget@{pUpsertTarget}}
+\index{pUpsertTarget@{pUpsertTarget}!Upsert@{Upsert}}
+\doxysubsubsection{\texorpdfstring{pUpsertTarget}{pUpsertTarget}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_expr_list}{Expr\+List}}$\ast$ p\+Upsert\+Target}
+
+\mbox{\Hypertarget{struct_upsert_afdd3a6f7220ef998c709da95283b6bac}\label{struct_upsert_afdd3a6f7220ef998c709da95283b6bac}} 
+\index{Upsert@{Upsert}!pUpsertTargetWhere@{pUpsertTargetWhere}}
+\index{pUpsertTargetWhere@{pUpsertTargetWhere}!Upsert@{Upsert}}
+\doxysubsubsection{\texorpdfstring{pUpsertTargetWhere}{pUpsertTargetWhere}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_expr}{Expr}}$\ast$ p\+Upsert\+Target\+Where}
+
+\mbox{\Hypertarget{struct_upsert_a50d28f58dd45cb59b4fe7fbc52522a09}\label{struct_upsert_a50d28f58dd45cb59b4fe7fbc52522a09}} 
+\index{Upsert@{Upsert}!pUpsertWhere@{pUpsertWhere}}
+\index{pUpsertWhere@{pUpsertWhere}!Upsert@{Upsert}}
+\doxysubsubsection{\texorpdfstring{pUpsertWhere}{pUpsertWhere}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_expr}{Expr}}$\ast$ p\+Upsert\+Where}
+
+\mbox{\Hypertarget{struct_upsert_aff3e58b954f8b42f28ea1b54b93cd223}\label{struct_upsert_aff3e58b954f8b42f28ea1b54b93cd223}} 
+\index{Upsert@{Upsert}!regData@{regData}}
+\index{regData@{regData}!Upsert@{Upsert}}
+\doxysubsubsection{\texorpdfstring{regData}{regData}}
+{\footnotesize\ttfamily int reg\+Data}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/macbookair/\+Documents/\+Git\+Hub/projet-\/final-\/c/functions/sql/\mbox{\hyperlink{sqlite3_8c}{sqlite3.\+c}}\end{DoxyCompactItemize}

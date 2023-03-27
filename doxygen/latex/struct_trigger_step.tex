@@ -1,0 +1,117 @@
+\hypertarget{struct_trigger_step}{}\doxysection{Trigger\+Step Struct Reference}
+\label{struct_trigger_step}\index{TriggerStep@{TriggerStep}}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} \mbox{\hyperlink{struct_trigger_step_a0991b29aa40e12f033237266ebe6610c}{op}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} \mbox{\hyperlink{struct_trigger_step_acd8a3ffdaa6342753efa34131e0f414f}{orconf}}
+\item 
+\mbox{\hyperlink{struct_trigger}{Trigger}} $\ast$ \mbox{\hyperlink{struct_trigger_step_aa795f89271dd5477d90d958829450199}{p\+Trig}}
+\item 
+\mbox{\hyperlink{struct_select}{Select}} $\ast$ \mbox{\hyperlink{struct_trigger_step_ab0e0ccc47de126415a7ad889ff1d228a}{p\+Select}}
+\item 
+char $\ast$ \mbox{\hyperlink{struct_trigger_step_a43612a4dd380649736cd8212f60f4e57}{z\+Target}}
+\item 
+\mbox{\hyperlink{struct_src_list}{Src\+List}} $\ast$ \mbox{\hyperlink{struct_trigger_step_a3d686d10351ef37246210afeefb8da9a}{p\+From}}
+\item 
+\mbox{\hyperlink{struct_expr}{Expr}} $\ast$ \mbox{\hyperlink{struct_trigger_step_aa35a11dc7821bfaf357249ff3da68863}{p\+Where}}
+\item 
+\mbox{\hyperlink{struct_expr_list}{Expr\+List}} $\ast$ \mbox{\hyperlink{struct_trigger_step_a59f61440b4fb0aa52cc63f045cc0abfa}{p\+Expr\+List}}
+\item 
+\mbox{\hyperlink{struct_id_list}{Id\+List}} $\ast$ \mbox{\hyperlink{struct_trigger_step_a2a5b925a55a70856d6818870b53bd74a}{p\+Id\+List}}
+\item 
+\mbox{\hyperlink{struct_upsert}{Upsert}} $\ast$ \mbox{\hyperlink{struct_trigger_step_a078c8bf9aae204a0364ab2cc4bbbb12e}{p\+Upsert}}
+\item 
+char $\ast$ \mbox{\hyperlink{struct_trigger_step_a16b42da8bcc375198f6e1942d1cfbfac}{z\+Span}}
+\item 
+\mbox{\hyperlink{struct_trigger_step}{Trigger\+Step}} $\ast$ \mbox{\hyperlink{struct_trigger_step_a0ad177537f1a6794a0ef4bc0f8a8609a}{p\+Next}}
+\item 
+\mbox{\hyperlink{struct_trigger_step}{Trigger\+Step}} $\ast$ \mbox{\hyperlink{struct_trigger_step_ac3ac638348976d194b8e3efe5111a5c1}{p\+Last}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{struct_trigger_step_a0991b29aa40e12f033237266ebe6610c}\label{struct_trigger_step_a0991b29aa40e12f033237266ebe6610c}} 
+\index{TriggerStep@{TriggerStep}!op@{op}}
+\index{op@{op}!TriggerStep@{TriggerStep}}
+\doxysubsubsection{\texorpdfstring{op}{op}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} op}
+
+\mbox{\Hypertarget{struct_trigger_step_acd8a3ffdaa6342753efa34131e0f414f}\label{struct_trigger_step_acd8a3ffdaa6342753efa34131e0f414f}} 
+\index{TriggerStep@{TriggerStep}!orconf@{orconf}}
+\index{orconf@{orconf}!TriggerStep@{TriggerStep}}
+\doxysubsubsection{\texorpdfstring{orconf}{orconf}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} orconf}
+
+\mbox{\Hypertarget{struct_trigger_step_a59f61440b4fb0aa52cc63f045cc0abfa}\label{struct_trigger_step_a59f61440b4fb0aa52cc63f045cc0abfa}} 
+\index{TriggerStep@{TriggerStep}!pExprList@{pExprList}}
+\index{pExprList@{pExprList}!TriggerStep@{TriggerStep}}
+\doxysubsubsection{\texorpdfstring{pExprList}{pExprList}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_expr_list}{Expr\+List}}$\ast$ p\+Expr\+List}
+
+\mbox{\Hypertarget{struct_trigger_step_a3d686d10351ef37246210afeefb8da9a}\label{struct_trigger_step_a3d686d10351ef37246210afeefb8da9a}} 
+\index{TriggerStep@{TriggerStep}!pFrom@{pFrom}}
+\index{pFrom@{pFrom}!TriggerStep@{TriggerStep}}
+\doxysubsubsection{\texorpdfstring{pFrom}{pFrom}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_src_list}{Src\+List}}$\ast$ p\+From}
+
+\mbox{\Hypertarget{struct_trigger_step_a2a5b925a55a70856d6818870b53bd74a}\label{struct_trigger_step_a2a5b925a55a70856d6818870b53bd74a}} 
+\index{TriggerStep@{TriggerStep}!pIdList@{pIdList}}
+\index{pIdList@{pIdList}!TriggerStep@{TriggerStep}}
+\doxysubsubsection{\texorpdfstring{pIdList}{pIdList}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_id_list}{Id\+List}}$\ast$ p\+Id\+List}
+
+\mbox{\Hypertarget{struct_trigger_step_ac3ac638348976d194b8e3efe5111a5c1}\label{struct_trigger_step_ac3ac638348976d194b8e3efe5111a5c1}} 
+\index{TriggerStep@{TriggerStep}!pLast@{pLast}}
+\index{pLast@{pLast}!TriggerStep@{TriggerStep}}
+\doxysubsubsection{\texorpdfstring{pLast}{pLast}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_trigger_step}{Trigger\+Step}}$\ast$ p\+Last}
+
+\mbox{\Hypertarget{struct_trigger_step_a0ad177537f1a6794a0ef4bc0f8a8609a}\label{struct_trigger_step_a0ad177537f1a6794a0ef4bc0f8a8609a}} 
+\index{TriggerStep@{TriggerStep}!pNext@{pNext}}
+\index{pNext@{pNext}!TriggerStep@{TriggerStep}}
+\doxysubsubsection{\texorpdfstring{pNext}{pNext}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_trigger_step}{Trigger\+Step}}$\ast$ p\+Next}
+
+\mbox{\Hypertarget{struct_trigger_step_ab0e0ccc47de126415a7ad889ff1d228a}\label{struct_trigger_step_ab0e0ccc47de126415a7ad889ff1d228a}} 
+\index{TriggerStep@{TriggerStep}!pSelect@{pSelect}}
+\index{pSelect@{pSelect}!TriggerStep@{TriggerStep}}
+\doxysubsubsection{\texorpdfstring{pSelect}{pSelect}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_select}{Select}}$\ast$ p\+Select}
+
+\mbox{\Hypertarget{struct_trigger_step_aa795f89271dd5477d90d958829450199}\label{struct_trigger_step_aa795f89271dd5477d90d958829450199}} 
+\index{TriggerStep@{TriggerStep}!pTrig@{pTrig}}
+\index{pTrig@{pTrig}!TriggerStep@{TriggerStep}}
+\doxysubsubsection{\texorpdfstring{pTrig}{pTrig}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_trigger}{Trigger}}$\ast$ p\+Trig}
+
+\mbox{\Hypertarget{struct_trigger_step_a078c8bf9aae204a0364ab2cc4bbbb12e}\label{struct_trigger_step_a078c8bf9aae204a0364ab2cc4bbbb12e}} 
+\index{TriggerStep@{TriggerStep}!pUpsert@{pUpsert}}
+\index{pUpsert@{pUpsert}!TriggerStep@{TriggerStep}}
+\doxysubsubsection{\texorpdfstring{pUpsert}{pUpsert}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_upsert}{Upsert}}$\ast$ p\+Upsert}
+
+\mbox{\Hypertarget{struct_trigger_step_aa35a11dc7821bfaf357249ff3da68863}\label{struct_trigger_step_aa35a11dc7821bfaf357249ff3da68863}} 
+\index{TriggerStep@{TriggerStep}!pWhere@{pWhere}}
+\index{pWhere@{pWhere}!TriggerStep@{TriggerStep}}
+\doxysubsubsection{\texorpdfstring{pWhere}{pWhere}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_expr}{Expr}}$\ast$ p\+Where}
+
+\mbox{\Hypertarget{struct_trigger_step_a16b42da8bcc375198f6e1942d1cfbfac}\label{struct_trigger_step_a16b42da8bcc375198f6e1942d1cfbfac}} 
+\index{TriggerStep@{TriggerStep}!zSpan@{zSpan}}
+\index{zSpan@{zSpan}!TriggerStep@{TriggerStep}}
+\doxysubsubsection{\texorpdfstring{zSpan}{zSpan}}
+{\footnotesize\ttfamily char$\ast$ z\+Span}
+
+\mbox{\Hypertarget{struct_trigger_step_a43612a4dd380649736cd8212f60f4e57}\label{struct_trigger_step_a43612a4dd380649736cd8212f60f4e57}} 
+\index{TriggerStep@{TriggerStep}!zTarget@{zTarget}}
+\index{zTarget@{zTarget}!TriggerStep@{TriggerStep}}
+\doxysubsubsection{\texorpdfstring{zTarget}{zTarget}}
+{\footnotesize\ttfamily char$\ast$ z\+Target}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/macbookair/\+Documents/\+Git\+Hub/projet-\/final-\/c/functions/sql/\mbox{\hyperlink{sqlite3_8c}{sqlite3.\+c}}\end{DoxyCompactItemize}

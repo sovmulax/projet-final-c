@@ -1,0 +1,517 @@
+\hypertarget{struct_pager}{}\doxysection{Pager Struct Reference}
+\label{struct_pager}\index{Pager@{Pager}}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a4b3859573509d792fc68dfed06ba888b}{sqlite3\+\_\+vfs}} $\ast$ \mbox{\hyperlink{struct_pager_a59603ca1cedf2bda0ee4e65eb610a0b5}{p\+Vfs}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} \mbox{\hyperlink{struct_pager_a97470c2be335613df4fd3af652fa60dc}{exclusive\+Mode}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} \mbox{\hyperlink{struct_pager_a0554b570563ec30be50c2c5901bba799}{journal\+Mode}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} \mbox{\hyperlink{struct_pager_a931b7472041e2b8b26dfc9a52c16b108}{use\+Journal}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} \mbox{\hyperlink{struct_pager_aa87063f84c94b21b9d571bf858a4a697}{no\+Sync}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} \mbox{\hyperlink{struct_pager_ae32bce1abb3f600be3349121c138deb6}{full\+Sync}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} \mbox{\hyperlink{struct_pager_ab1f71a081cd5448fbc25bf34a650dbbf}{extra\+Sync}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} \mbox{\hyperlink{struct_pager_ac97576f0f90c31296207602245d41195}{sync\+Flags}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} \mbox{\hyperlink{struct_pager_a754c6f3e9c986c552655557f044109e2}{wal\+Sync\+Flags}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} \mbox{\hyperlink{struct_pager_a9d9740be8094db2eea335d9dc9bada1b}{temp\+File}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} \mbox{\hyperlink{struct_pager_a1374f5f38b4d4a4dd63a597f7e097610}{no\+Lock}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} \mbox{\hyperlink{struct_pager_a109225a7975b2a37251bfa2079d3ad59}{read\+Only}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} \mbox{\hyperlink{struct_pager_a82aca84cd2805113446482e41bc94c2c}{mem\+Db}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} \mbox{\hyperlink{struct_pager_a5f4ecb76350e7c1877668ee3b39d1fc1}{mem\+Vfs}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} \mbox{\hyperlink{struct_pager_ae5babd54e329060ed9f926ca6df3ab4d}{e\+State}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} \mbox{\hyperlink{struct_pager_a94707eed51e15e9b3406656be1e3a39a}{e\+Lock}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} \mbox{\hyperlink{struct_pager_a4d340a3a1e54fa5af0bd842c1dd574bd}{change\+Count\+Done}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} \mbox{\hyperlink{struct_pager_add29d7bfcac24221329f15c8847308d2}{set\+Super}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} \mbox{\hyperlink{struct_pager_a48ff798251fbec718249b6df3fd60b24}{do\+Not\+Spill}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} \mbox{\hyperlink{struct_pager_a94da8b84bf671b4e2a5e63fb11eb4377}{subj\+In\+Memory}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} \mbox{\hyperlink{struct_pager_a36661c3c1b04f86795a22e0842bece1a}{b\+Use\+Fetch}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} \mbox{\hyperlink{struct_pager_aa6590d591ab9cc047d8d124618fd3c16}{has\+Held\+Shared\+Lock}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_aec0c653e8dd16e4639caf2f8ea54f55c}{Pgno}} \mbox{\hyperlink{struct_pager_afbe0739765fdd93414fe2457f0685a84}{db\+Size}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_aec0c653e8dd16e4639caf2f8ea54f55c}{Pgno}} \mbox{\hyperlink{struct_pager_a3b00f18eeb5b83d35c372474fe4dee9d}{db\+Orig\+Size}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_aec0c653e8dd16e4639caf2f8ea54f55c}{Pgno}} \mbox{\hyperlink{struct_pager_a3b0015aba946bd0a07bb904380e60123}{db\+File\+Size}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_aec0c653e8dd16e4639caf2f8ea54f55c}{Pgno}} \mbox{\hyperlink{struct_pager_a0ed011dd1d6e2bfe44fa54b146ff383d}{db\+Hint\+Size}}
+\item 
+int \mbox{\hyperlink{struct_pager_af3fde244c3a673c0a8a0531b7a92c45a}{err\+Code}}
+\item 
+int \mbox{\hyperlink{struct_pager_a3ef7a597d11c3d959679be103dbf3f21}{n\+Rec}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a03ad5adfaeb9b7640dde78a0cc390319}{u32}} \mbox{\hyperlink{struct_pager_aa4040b20ac15e54bf0309036afcb0b09}{cksum\+Init}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a03ad5adfaeb9b7640dde78a0cc390319}{u32}} \mbox{\hyperlink{struct_pager_a679e99aa1ded91536e2ddcad98c3e002}{n\+Sub\+Rec}}
+\item 
+\mbox{\hyperlink{struct_bitvec}{Bitvec}} $\ast$ \mbox{\hyperlink{struct_pager_aa96b10cfc9fc60aa0c349bcaabb9b4bb}{p\+In\+Journal}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a3691103fd7c57f5f69123c4c03aea05a}{sqlite3\+\_\+file}} $\ast$ \mbox{\hyperlink{struct_pager_a4181565f26eda2c718763effefea106b}{fd}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a3691103fd7c57f5f69123c4c03aea05a}{sqlite3\+\_\+file}} $\ast$ \mbox{\hyperlink{struct_pager_a6cf3b74eb6e96a0ec1018a1829fa5a40}{jfd}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a3691103fd7c57f5f69123c4c03aea05a}{sqlite3\+\_\+file}} $\ast$ \mbox{\hyperlink{struct_pager_aab381875115d7de04338ebe1566d0829}{sjfd}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a2a0f0f4ae7001eb54351f77ea1cdbcfd}{i64}} \mbox{\hyperlink{struct_pager_af4f5415276d71ec77ce45bb650e04d58}{journal\+Off}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a2a0f0f4ae7001eb54351f77ea1cdbcfd}{i64}} \mbox{\hyperlink{struct_pager_af083145c1d130d6c6dc3ed0eaf3683ef}{journal\+Hdr}}
+\item 
+\mbox{\hyperlink{structsqlite3__backup}{sqlite3\+\_\+backup}} $\ast$ \mbox{\hyperlink{struct_pager_aedd6a6ec27f63296ae65625d51b49f54}{p\+Backup}}
+\item 
+\mbox{\hyperlink{struct_pager_savepoint}{Pager\+Savepoint}} $\ast$ \mbox{\hyperlink{struct_pager_af464c94c2f39406e429a894bec61ed08}{a\+Savepoint}}
+\item 
+int \mbox{\hyperlink{struct_pager_a44c5f6cd07e2fa10ce567c1bd86c5189}{n\+Savepoint}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a03ad5adfaeb9b7640dde78a0cc390319}{u32}} \mbox{\hyperlink{struct_pager_a3a60e67667c7473065ef0c3a8785c6ea}{i\+Data\+Version}}
+\item 
+char \mbox{\hyperlink{struct_pager_a836ab610e51a1921192ef051ddb4b3ac}{db\+File\+Vers}} \mbox{[}16\mbox{]}
+\item 
+int \mbox{\hyperlink{struct_pager_a534c1f10017427734ae2bab8cae2813f}{n\+Mmap\+Out}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a0a4d3e6c1ad46f90e746b920ab6ca0d2}{sqlite3\+\_\+int64}} \mbox{\hyperlink{struct_pager_a16be0b65471da845d6b829adf5f17957}{sz\+Mmap}}
+\item 
+\mbox{\hyperlink{struct_pg_hdr}{Pg\+Hdr}} $\ast$ \mbox{\hyperlink{struct_pager_ae13253447db00c0cb1613cf60f77afc3}{p\+Mmap\+Freelist}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a20f2299e322dcbde37cb07b16910b843}{u16}} \mbox{\hyperlink{struct_pager_a20cc0a06d1046c9dd0aa2001c5c2b4f7}{n\+Extra}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a7b32340f65cd15f029caad258fb3355c}{i16}} \mbox{\hyperlink{struct_pager_aaf8a4d8a8f4618f4299ef0bb4b8b3ed2}{n\+Reserve}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a03ad5adfaeb9b7640dde78a0cc390319}{u32}} \mbox{\hyperlink{struct_pager_a8549852e04ca6a05bf6c18e1e8148ccb}{vfs\+Flags}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a03ad5adfaeb9b7640dde78a0cc390319}{u32}} \mbox{\hyperlink{struct_pager_af16a57f273bd3839ee95354c4a39262e}{sector\+Size}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_aec0c653e8dd16e4639caf2f8ea54f55c}{Pgno}} \mbox{\hyperlink{struct_pager_a4296f399610c7c39ee6187340ea5666d}{mx\+Pgno}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_aec0c653e8dd16e4639caf2f8ea54f55c}{Pgno}} \mbox{\hyperlink{struct_pager_a078f379af3690c53c6cf5f4efba5688b}{lck\+Pgno}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a2a0f0f4ae7001eb54351f77ea1cdbcfd}{i64}} \mbox{\hyperlink{struct_pager_ad1c0da28bb0b52717e43d2bdd43ea634}{page\+Size}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a2a0f0f4ae7001eb54351f77ea1cdbcfd}{i64}} \mbox{\hyperlink{struct_pager_aada024f938738bdded1f7d066086dced}{journal\+Size\+Limit}}
+\item 
+char $\ast$ \mbox{\hyperlink{struct_pager_a47b2dee2615c9bcdc2d8b755dc571e35}{z\+Filename}}
+\item 
+char $\ast$ \mbox{\hyperlink{struct_pager_ac131f027b6287ec5068c33fd866e5dbd}{z\+Journal}}
+\item 
+int($\ast$ \mbox{\hyperlink{struct_pager_a3c0ec4b23e5e61ba3ee7ae2021ed6128}{x\+Busy\+Handler}} )(void $\ast$)
+\item 
+void $\ast$ \mbox{\hyperlink{struct_pager_a9000362142a6d1a15587cdd9534c2213}{p\+Busy\+Handler\+Arg}}
+\item 
+int \mbox{\hyperlink{struct_pager_ac766a52aadc5eac5969541366a12d5e5}{a\+Stat}} \mbox{[}4\mbox{]}
+\item 
+void($\ast$ \mbox{\hyperlink{struct_pager_a1024b74014114a0ccd65cbeb57bf9137}{x\+Reiniter}} )(\mbox{\hyperlink{sqlite3_8c_aa41da1cdeedecb95acdb716e16bd9266}{Db\+Page}} $\ast$)
+\item 
+int($\ast$ \mbox{\hyperlink{struct_pager_a05417a5ecfef1f6fbd4cee6f8e97d112}{x\+Get}} )(\mbox{\hyperlink{struct_pager}{Pager}} $\ast$, \mbox{\hyperlink{sqlite3_8c_aec0c653e8dd16e4639caf2f8ea54f55c}{Pgno}}, \mbox{\hyperlink{sqlite3_8c_aa41da1cdeedecb95acdb716e16bd9266}{Db\+Page}} $\ast$$\ast$, int)
+\item 
+char $\ast$ \mbox{\hyperlink{struct_pager_a440071186989fd8259c13a1f1439df19}{p\+Tmp\+Space}}
+\item 
+\mbox{\hyperlink{struct_p_cache}{PCache}} $\ast$ \mbox{\hyperlink{struct_pager_af7a3a5c5ac8350d706a68a66e5675f2d}{p\+PCache}}
+\item 
+\mbox{\hyperlink{struct_wal}{Wal}} $\ast$ \mbox{\hyperlink{struct_pager_ac5f3cfd978474a39e7462844ec1a6fe1}{p\+Wal}}
+\item 
+char $\ast$ \mbox{\hyperlink{struct_pager_a383f1a3f6524788fe82a0f19e97fbb01}{z\+Wal}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{struct_pager_af464c94c2f39406e429a894bec61ed08}\label{struct_pager_af464c94c2f39406e429a894bec61ed08}} 
+\index{Pager@{Pager}!aSavepoint@{aSavepoint}}
+\index{aSavepoint@{aSavepoint}!Pager@{Pager}}
+\doxysubsubsection{\texorpdfstring{aSavepoint}{aSavepoint}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_pager_savepoint}{Pager\+Savepoint}}$\ast$ a\+Savepoint}
+
+\mbox{\Hypertarget{struct_pager_ac766a52aadc5eac5969541366a12d5e5}\label{struct_pager_ac766a52aadc5eac5969541366a12d5e5}} 
+\index{Pager@{Pager}!aStat@{aStat}}
+\index{aStat@{aStat}!Pager@{Pager}}
+\doxysubsubsection{\texorpdfstring{aStat}{aStat}}
+{\footnotesize\ttfamily int a\+Stat\mbox{[}4\mbox{]}}
+
+\mbox{\Hypertarget{struct_pager_a36661c3c1b04f86795a22e0842bece1a}\label{struct_pager_a36661c3c1b04f86795a22e0842bece1a}} 
+\index{Pager@{Pager}!bUseFetch@{bUseFetch}}
+\index{bUseFetch@{bUseFetch}!Pager@{Pager}}
+\doxysubsubsection{\texorpdfstring{bUseFetch}{bUseFetch}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} b\+Use\+Fetch}
+
+\mbox{\Hypertarget{struct_pager_a4d340a3a1e54fa5af0bd842c1dd574bd}\label{struct_pager_a4d340a3a1e54fa5af0bd842c1dd574bd}} 
+\index{Pager@{Pager}!changeCountDone@{changeCountDone}}
+\index{changeCountDone@{changeCountDone}!Pager@{Pager}}
+\doxysubsubsection{\texorpdfstring{changeCountDone}{changeCountDone}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} change\+Count\+Done}
+
+\mbox{\Hypertarget{struct_pager_aa4040b20ac15e54bf0309036afcb0b09}\label{struct_pager_aa4040b20ac15e54bf0309036afcb0b09}} 
+\index{Pager@{Pager}!cksumInit@{cksumInit}}
+\index{cksumInit@{cksumInit}!Pager@{Pager}}
+\doxysubsubsection{\texorpdfstring{cksumInit}{cksumInit}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a03ad5adfaeb9b7640dde78a0cc390319}{u32}} cksum\+Init}
+
+\mbox{\Hypertarget{struct_pager_a3b0015aba946bd0a07bb904380e60123}\label{struct_pager_a3b0015aba946bd0a07bb904380e60123}} 
+\index{Pager@{Pager}!dbFileSize@{dbFileSize}}
+\index{dbFileSize@{dbFileSize}!Pager@{Pager}}
+\doxysubsubsection{\texorpdfstring{dbFileSize}{dbFileSize}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_aec0c653e8dd16e4639caf2f8ea54f55c}{Pgno}} db\+File\+Size}
+
+\mbox{\Hypertarget{struct_pager_a836ab610e51a1921192ef051ddb4b3ac}\label{struct_pager_a836ab610e51a1921192ef051ddb4b3ac}} 
+\index{Pager@{Pager}!dbFileVers@{dbFileVers}}
+\index{dbFileVers@{dbFileVers}!Pager@{Pager}}
+\doxysubsubsection{\texorpdfstring{dbFileVers}{dbFileVers}}
+{\footnotesize\ttfamily char db\+File\+Vers\mbox{[}16\mbox{]}}
+
+\mbox{\Hypertarget{struct_pager_a0ed011dd1d6e2bfe44fa54b146ff383d}\label{struct_pager_a0ed011dd1d6e2bfe44fa54b146ff383d}} 
+\index{Pager@{Pager}!dbHintSize@{dbHintSize}}
+\index{dbHintSize@{dbHintSize}!Pager@{Pager}}
+\doxysubsubsection{\texorpdfstring{dbHintSize}{dbHintSize}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_aec0c653e8dd16e4639caf2f8ea54f55c}{Pgno}} db\+Hint\+Size}
+
+\mbox{\Hypertarget{struct_pager_a3b00f18eeb5b83d35c372474fe4dee9d}\label{struct_pager_a3b00f18eeb5b83d35c372474fe4dee9d}} 
+\index{Pager@{Pager}!dbOrigSize@{dbOrigSize}}
+\index{dbOrigSize@{dbOrigSize}!Pager@{Pager}}
+\doxysubsubsection{\texorpdfstring{dbOrigSize}{dbOrigSize}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_aec0c653e8dd16e4639caf2f8ea54f55c}{Pgno}} db\+Orig\+Size}
+
+\mbox{\Hypertarget{struct_pager_afbe0739765fdd93414fe2457f0685a84}\label{struct_pager_afbe0739765fdd93414fe2457f0685a84}} 
+\index{Pager@{Pager}!dbSize@{dbSize}}
+\index{dbSize@{dbSize}!Pager@{Pager}}
+\doxysubsubsection{\texorpdfstring{dbSize}{dbSize}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_aec0c653e8dd16e4639caf2f8ea54f55c}{Pgno}} db\+Size}
+
+\mbox{\Hypertarget{struct_pager_a48ff798251fbec718249b6df3fd60b24}\label{struct_pager_a48ff798251fbec718249b6df3fd60b24}} 
+\index{Pager@{Pager}!doNotSpill@{doNotSpill}}
+\index{doNotSpill@{doNotSpill}!Pager@{Pager}}
+\doxysubsubsection{\texorpdfstring{doNotSpill}{doNotSpill}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} do\+Not\+Spill}
+
+\mbox{\Hypertarget{struct_pager_a94707eed51e15e9b3406656be1e3a39a}\label{struct_pager_a94707eed51e15e9b3406656be1e3a39a}} 
+\index{Pager@{Pager}!eLock@{eLock}}
+\index{eLock@{eLock}!Pager@{Pager}}
+\doxysubsubsection{\texorpdfstring{eLock}{eLock}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} e\+Lock}
+
+\mbox{\Hypertarget{struct_pager_af3fde244c3a673c0a8a0531b7a92c45a}\label{struct_pager_af3fde244c3a673c0a8a0531b7a92c45a}} 
+\index{Pager@{Pager}!errCode@{errCode}}
+\index{errCode@{errCode}!Pager@{Pager}}
+\doxysubsubsection{\texorpdfstring{errCode}{errCode}}
+{\footnotesize\ttfamily int err\+Code}
+
+\mbox{\Hypertarget{struct_pager_ae5babd54e329060ed9f926ca6df3ab4d}\label{struct_pager_ae5babd54e329060ed9f926ca6df3ab4d}} 
+\index{Pager@{Pager}!eState@{eState}}
+\index{eState@{eState}!Pager@{Pager}}
+\doxysubsubsection{\texorpdfstring{eState}{eState}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} e\+State}
+
+\mbox{\Hypertarget{struct_pager_a97470c2be335613df4fd3af652fa60dc}\label{struct_pager_a97470c2be335613df4fd3af652fa60dc}} 
+\index{Pager@{Pager}!exclusiveMode@{exclusiveMode}}
+\index{exclusiveMode@{exclusiveMode}!Pager@{Pager}}
+\doxysubsubsection{\texorpdfstring{exclusiveMode}{exclusiveMode}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} exclusive\+Mode}
+
+\mbox{\Hypertarget{struct_pager_ab1f71a081cd5448fbc25bf34a650dbbf}\label{struct_pager_ab1f71a081cd5448fbc25bf34a650dbbf}} 
+\index{Pager@{Pager}!extraSync@{extraSync}}
+\index{extraSync@{extraSync}!Pager@{Pager}}
+\doxysubsubsection{\texorpdfstring{extraSync}{extraSync}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} extra\+Sync}
+
+\mbox{\Hypertarget{struct_pager_a4181565f26eda2c718763effefea106b}\label{struct_pager_a4181565f26eda2c718763effefea106b}} 
+\index{Pager@{Pager}!fd@{fd}}
+\index{fd@{fd}!Pager@{Pager}}
+\doxysubsubsection{\texorpdfstring{fd}{fd}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a3691103fd7c57f5f69123c4c03aea05a}{sqlite3\+\_\+file}}$\ast$ fd}
+
+\mbox{\Hypertarget{struct_pager_ae32bce1abb3f600be3349121c138deb6}\label{struct_pager_ae32bce1abb3f600be3349121c138deb6}} 
+\index{Pager@{Pager}!fullSync@{fullSync}}
+\index{fullSync@{fullSync}!Pager@{Pager}}
+\doxysubsubsection{\texorpdfstring{fullSync}{fullSync}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} full\+Sync}
+
+\mbox{\Hypertarget{struct_pager_aa6590d591ab9cc047d8d124618fd3c16}\label{struct_pager_aa6590d591ab9cc047d8d124618fd3c16}} 
+\index{Pager@{Pager}!hasHeldSharedLock@{hasHeldSharedLock}}
+\index{hasHeldSharedLock@{hasHeldSharedLock}!Pager@{Pager}}
+\doxysubsubsection{\texorpdfstring{hasHeldSharedLock}{hasHeldSharedLock}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} has\+Held\+Shared\+Lock}
+
+\mbox{\Hypertarget{struct_pager_a3a60e67667c7473065ef0c3a8785c6ea}\label{struct_pager_a3a60e67667c7473065ef0c3a8785c6ea}} 
+\index{Pager@{Pager}!iDataVersion@{iDataVersion}}
+\index{iDataVersion@{iDataVersion}!Pager@{Pager}}
+\doxysubsubsection{\texorpdfstring{iDataVersion}{iDataVersion}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a03ad5adfaeb9b7640dde78a0cc390319}{u32}} i\+Data\+Version}
+
+\mbox{\Hypertarget{struct_pager_a6cf3b74eb6e96a0ec1018a1829fa5a40}\label{struct_pager_a6cf3b74eb6e96a0ec1018a1829fa5a40}} 
+\index{Pager@{Pager}!jfd@{jfd}}
+\index{jfd@{jfd}!Pager@{Pager}}
+\doxysubsubsection{\texorpdfstring{jfd}{jfd}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a3691103fd7c57f5f69123c4c03aea05a}{sqlite3\+\_\+file}}$\ast$ jfd}
+
+\mbox{\Hypertarget{struct_pager_af083145c1d130d6c6dc3ed0eaf3683ef}\label{struct_pager_af083145c1d130d6c6dc3ed0eaf3683ef}} 
+\index{Pager@{Pager}!journalHdr@{journalHdr}}
+\index{journalHdr@{journalHdr}!Pager@{Pager}}
+\doxysubsubsection{\texorpdfstring{journalHdr}{journalHdr}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a2a0f0f4ae7001eb54351f77ea1cdbcfd}{i64}} journal\+Hdr}
+
+\mbox{\Hypertarget{struct_pager_a0554b570563ec30be50c2c5901bba799}\label{struct_pager_a0554b570563ec30be50c2c5901bba799}} 
+\index{Pager@{Pager}!journalMode@{journalMode}}
+\index{journalMode@{journalMode}!Pager@{Pager}}
+\doxysubsubsection{\texorpdfstring{journalMode}{journalMode}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} journal\+Mode}
+
+\mbox{\Hypertarget{struct_pager_af4f5415276d71ec77ce45bb650e04d58}\label{struct_pager_af4f5415276d71ec77ce45bb650e04d58}} 
+\index{Pager@{Pager}!journalOff@{journalOff}}
+\index{journalOff@{journalOff}!Pager@{Pager}}
+\doxysubsubsection{\texorpdfstring{journalOff}{journalOff}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a2a0f0f4ae7001eb54351f77ea1cdbcfd}{i64}} journal\+Off}
+
+\mbox{\Hypertarget{struct_pager_aada024f938738bdded1f7d066086dced}\label{struct_pager_aada024f938738bdded1f7d066086dced}} 
+\index{Pager@{Pager}!journalSizeLimit@{journalSizeLimit}}
+\index{journalSizeLimit@{journalSizeLimit}!Pager@{Pager}}
+\doxysubsubsection{\texorpdfstring{journalSizeLimit}{journalSizeLimit}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a2a0f0f4ae7001eb54351f77ea1cdbcfd}{i64}} journal\+Size\+Limit}
+
+\mbox{\Hypertarget{struct_pager_a078f379af3690c53c6cf5f4efba5688b}\label{struct_pager_a078f379af3690c53c6cf5f4efba5688b}} 
+\index{Pager@{Pager}!lckPgno@{lckPgno}}
+\index{lckPgno@{lckPgno}!Pager@{Pager}}
+\doxysubsubsection{\texorpdfstring{lckPgno}{lckPgno}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_aec0c653e8dd16e4639caf2f8ea54f55c}{Pgno}} lck\+Pgno}
+
+\mbox{\Hypertarget{struct_pager_a82aca84cd2805113446482e41bc94c2c}\label{struct_pager_a82aca84cd2805113446482e41bc94c2c}} 
+\index{Pager@{Pager}!memDb@{memDb}}
+\index{memDb@{memDb}!Pager@{Pager}}
+\doxysubsubsection{\texorpdfstring{memDb}{memDb}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} mem\+Db}
+
+\mbox{\Hypertarget{struct_pager_a5f4ecb76350e7c1877668ee3b39d1fc1}\label{struct_pager_a5f4ecb76350e7c1877668ee3b39d1fc1}} 
+\index{Pager@{Pager}!memVfs@{memVfs}}
+\index{memVfs@{memVfs}!Pager@{Pager}}
+\doxysubsubsection{\texorpdfstring{memVfs}{memVfs}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} mem\+Vfs}
+
+\mbox{\Hypertarget{struct_pager_a4296f399610c7c39ee6187340ea5666d}\label{struct_pager_a4296f399610c7c39ee6187340ea5666d}} 
+\index{Pager@{Pager}!mxPgno@{mxPgno}}
+\index{mxPgno@{mxPgno}!Pager@{Pager}}
+\doxysubsubsection{\texorpdfstring{mxPgno}{mxPgno}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_aec0c653e8dd16e4639caf2f8ea54f55c}{Pgno}} mx\+Pgno}
+
+\mbox{\Hypertarget{struct_pager_a20cc0a06d1046c9dd0aa2001c5c2b4f7}\label{struct_pager_a20cc0a06d1046c9dd0aa2001c5c2b4f7}} 
+\index{Pager@{Pager}!nExtra@{nExtra}}
+\index{nExtra@{nExtra}!Pager@{Pager}}
+\doxysubsubsection{\texorpdfstring{nExtra}{nExtra}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a20f2299e322dcbde37cb07b16910b843}{u16}} n\+Extra}
+
+\mbox{\Hypertarget{struct_pager_a534c1f10017427734ae2bab8cae2813f}\label{struct_pager_a534c1f10017427734ae2bab8cae2813f}} 
+\index{Pager@{Pager}!nMmapOut@{nMmapOut}}
+\index{nMmapOut@{nMmapOut}!Pager@{Pager}}
+\doxysubsubsection{\texorpdfstring{nMmapOut}{nMmapOut}}
+{\footnotesize\ttfamily int n\+Mmap\+Out}
+
+\mbox{\Hypertarget{struct_pager_a1374f5f38b4d4a4dd63a597f7e097610}\label{struct_pager_a1374f5f38b4d4a4dd63a597f7e097610}} 
+\index{Pager@{Pager}!noLock@{noLock}}
+\index{noLock@{noLock}!Pager@{Pager}}
+\doxysubsubsection{\texorpdfstring{noLock}{noLock}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} no\+Lock}
+
+\mbox{\Hypertarget{struct_pager_aa87063f84c94b21b9d571bf858a4a697}\label{struct_pager_aa87063f84c94b21b9d571bf858a4a697}} 
+\index{Pager@{Pager}!noSync@{noSync}}
+\index{noSync@{noSync}!Pager@{Pager}}
+\doxysubsubsection{\texorpdfstring{noSync}{noSync}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} no\+Sync}
+
+\mbox{\Hypertarget{struct_pager_a3ef7a597d11c3d959679be103dbf3f21}\label{struct_pager_a3ef7a597d11c3d959679be103dbf3f21}} 
+\index{Pager@{Pager}!nRec@{nRec}}
+\index{nRec@{nRec}!Pager@{Pager}}
+\doxysubsubsection{\texorpdfstring{nRec}{nRec}}
+{\footnotesize\ttfamily int n\+Rec}
+
+\mbox{\Hypertarget{struct_pager_aaf8a4d8a8f4618f4299ef0bb4b8b3ed2}\label{struct_pager_aaf8a4d8a8f4618f4299ef0bb4b8b3ed2}} 
+\index{Pager@{Pager}!nReserve@{nReserve}}
+\index{nReserve@{nReserve}!Pager@{Pager}}
+\doxysubsubsection{\texorpdfstring{nReserve}{nReserve}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a7b32340f65cd15f029caad258fb3355c}{i16}} n\+Reserve}
+
+\mbox{\Hypertarget{struct_pager_a44c5f6cd07e2fa10ce567c1bd86c5189}\label{struct_pager_a44c5f6cd07e2fa10ce567c1bd86c5189}} 
+\index{Pager@{Pager}!nSavepoint@{nSavepoint}}
+\index{nSavepoint@{nSavepoint}!Pager@{Pager}}
+\doxysubsubsection{\texorpdfstring{nSavepoint}{nSavepoint}}
+{\footnotesize\ttfamily int n\+Savepoint}
+
+\mbox{\Hypertarget{struct_pager_a679e99aa1ded91536e2ddcad98c3e002}\label{struct_pager_a679e99aa1ded91536e2ddcad98c3e002}} 
+\index{Pager@{Pager}!nSubRec@{nSubRec}}
+\index{nSubRec@{nSubRec}!Pager@{Pager}}
+\doxysubsubsection{\texorpdfstring{nSubRec}{nSubRec}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a03ad5adfaeb9b7640dde78a0cc390319}{u32}} n\+Sub\+Rec}
+
+\mbox{\Hypertarget{struct_pager_ad1c0da28bb0b52717e43d2bdd43ea634}\label{struct_pager_ad1c0da28bb0b52717e43d2bdd43ea634}} 
+\index{Pager@{Pager}!pageSize@{pageSize}}
+\index{pageSize@{pageSize}!Pager@{Pager}}
+\doxysubsubsection{\texorpdfstring{pageSize}{pageSize}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a2a0f0f4ae7001eb54351f77ea1cdbcfd}{i64}} page\+Size}
+
+\mbox{\Hypertarget{struct_pager_aedd6a6ec27f63296ae65625d51b49f54}\label{struct_pager_aedd6a6ec27f63296ae65625d51b49f54}} 
+\index{Pager@{Pager}!pBackup@{pBackup}}
+\index{pBackup@{pBackup}!Pager@{Pager}}
+\doxysubsubsection{\texorpdfstring{pBackup}{pBackup}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsqlite3__backup}{sqlite3\+\_\+backup}}$\ast$ p\+Backup}
+
+\mbox{\Hypertarget{struct_pager_a9000362142a6d1a15587cdd9534c2213}\label{struct_pager_a9000362142a6d1a15587cdd9534c2213}} 
+\index{Pager@{Pager}!pBusyHandlerArg@{pBusyHandlerArg}}
+\index{pBusyHandlerArg@{pBusyHandlerArg}!Pager@{Pager}}
+\doxysubsubsection{\texorpdfstring{pBusyHandlerArg}{pBusyHandlerArg}}
+{\footnotesize\ttfamily void$\ast$ p\+Busy\+Handler\+Arg}
+
+\mbox{\Hypertarget{struct_pager_aa96b10cfc9fc60aa0c349bcaabb9b4bb}\label{struct_pager_aa96b10cfc9fc60aa0c349bcaabb9b4bb}} 
+\index{Pager@{Pager}!pInJournal@{pInJournal}}
+\index{pInJournal@{pInJournal}!Pager@{Pager}}
+\doxysubsubsection{\texorpdfstring{pInJournal}{pInJournal}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_bitvec}{Bitvec}}$\ast$ p\+In\+Journal}
+
+\mbox{\Hypertarget{struct_pager_ae13253447db00c0cb1613cf60f77afc3}\label{struct_pager_ae13253447db00c0cb1613cf60f77afc3}} 
+\index{Pager@{Pager}!pMmapFreelist@{pMmapFreelist}}
+\index{pMmapFreelist@{pMmapFreelist}!Pager@{Pager}}
+\doxysubsubsection{\texorpdfstring{pMmapFreelist}{pMmapFreelist}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_pg_hdr}{Pg\+Hdr}}$\ast$ p\+Mmap\+Freelist}
+
+\mbox{\Hypertarget{struct_pager_af7a3a5c5ac8350d706a68a66e5675f2d}\label{struct_pager_af7a3a5c5ac8350d706a68a66e5675f2d}} 
+\index{Pager@{Pager}!pPCache@{pPCache}}
+\index{pPCache@{pPCache}!Pager@{Pager}}
+\doxysubsubsection{\texorpdfstring{pPCache}{pPCache}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_p_cache}{PCache}}$\ast$ p\+PCache}
+
+\mbox{\Hypertarget{struct_pager_a440071186989fd8259c13a1f1439df19}\label{struct_pager_a440071186989fd8259c13a1f1439df19}} 
+\index{Pager@{Pager}!pTmpSpace@{pTmpSpace}}
+\index{pTmpSpace@{pTmpSpace}!Pager@{Pager}}
+\doxysubsubsection{\texorpdfstring{pTmpSpace}{pTmpSpace}}
+{\footnotesize\ttfamily char$\ast$ p\+Tmp\+Space}
+
+\mbox{\Hypertarget{struct_pager_a59603ca1cedf2bda0ee4e65eb610a0b5}\label{struct_pager_a59603ca1cedf2bda0ee4e65eb610a0b5}} 
+\index{Pager@{Pager}!pVfs@{pVfs}}
+\index{pVfs@{pVfs}!Pager@{Pager}}
+\doxysubsubsection{\texorpdfstring{pVfs}{pVfs}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a4b3859573509d792fc68dfed06ba888b}{sqlite3\+\_\+vfs}}$\ast$ p\+Vfs}
+
+\mbox{\Hypertarget{struct_pager_ac5f3cfd978474a39e7462844ec1a6fe1}\label{struct_pager_ac5f3cfd978474a39e7462844ec1a6fe1}} 
+\index{Pager@{Pager}!pWal@{pWal}}
+\index{pWal@{pWal}!Pager@{Pager}}
+\doxysubsubsection{\texorpdfstring{pWal}{pWal}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_wal}{Wal}}$\ast$ p\+Wal}
+
+\mbox{\Hypertarget{struct_pager_a109225a7975b2a37251bfa2079d3ad59}\label{struct_pager_a109225a7975b2a37251bfa2079d3ad59}} 
+\index{Pager@{Pager}!readOnly@{readOnly}}
+\index{readOnly@{readOnly}!Pager@{Pager}}
+\doxysubsubsection{\texorpdfstring{readOnly}{readOnly}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} read\+Only}
+
+\mbox{\Hypertarget{struct_pager_af16a57f273bd3839ee95354c4a39262e}\label{struct_pager_af16a57f273bd3839ee95354c4a39262e}} 
+\index{Pager@{Pager}!sectorSize@{sectorSize}}
+\index{sectorSize@{sectorSize}!Pager@{Pager}}
+\doxysubsubsection{\texorpdfstring{sectorSize}{sectorSize}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a03ad5adfaeb9b7640dde78a0cc390319}{u32}} sector\+Size}
+
+\mbox{\Hypertarget{struct_pager_add29d7bfcac24221329f15c8847308d2}\label{struct_pager_add29d7bfcac24221329f15c8847308d2}} 
+\index{Pager@{Pager}!setSuper@{setSuper}}
+\index{setSuper@{setSuper}!Pager@{Pager}}
+\doxysubsubsection{\texorpdfstring{setSuper}{setSuper}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} set\+Super}
+
+\mbox{\Hypertarget{struct_pager_aab381875115d7de04338ebe1566d0829}\label{struct_pager_aab381875115d7de04338ebe1566d0829}} 
+\index{Pager@{Pager}!sjfd@{sjfd}}
+\index{sjfd@{sjfd}!Pager@{Pager}}
+\doxysubsubsection{\texorpdfstring{sjfd}{sjfd}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a3691103fd7c57f5f69123c4c03aea05a}{sqlite3\+\_\+file}}$\ast$ sjfd}
+
+\mbox{\Hypertarget{struct_pager_a94da8b84bf671b4e2a5e63fb11eb4377}\label{struct_pager_a94da8b84bf671b4e2a5e63fb11eb4377}} 
+\index{Pager@{Pager}!subjInMemory@{subjInMemory}}
+\index{subjInMemory@{subjInMemory}!Pager@{Pager}}
+\doxysubsubsection{\texorpdfstring{subjInMemory}{subjInMemory}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} subj\+In\+Memory}
+
+\mbox{\Hypertarget{struct_pager_ac97576f0f90c31296207602245d41195}\label{struct_pager_ac97576f0f90c31296207602245d41195}} 
+\index{Pager@{Pager}!syncFlags@{syncFlags}}
+\index{syncFlags@{syncFlags}!Pager@{Pager}}
+\doxysubsubsection{\texorpdfstring{syncFlags}{syncFlags}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} sync\+Flags}
+
+\mbox{\Hypertarget{struct_pager_a16be0b65471da845d6b829adf5f17957}\label{struct_pager_a16be0b65471da845d6b829adf5f17957}} 
+\index{Pager@{Pager}!szMmap@{szMmap}}
+\index{szMmap@{szMmap}!Pager@{Pager}}
+\doxysubsubsection{\texorpdfstring{szMmap}{szMmap}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a0a4d3e6c1ad46f90e746b920ab6ca0d2}{sqlite3\+\_\+int64}} sz\+Mmap}
+
+\mbox{\Hypertarget{struct_pager_a9d9740be8094db2eea335d9dc9bada1b}\label{struct_pager_a9d9740be8094db2eea335d9dc9bada1b}} 
+\index{Pager@{Pager}!tempFile@{tempFile}}
+\index{tempFile@{tempFile}!Pager@{Pager}}
+\doxysubsubsection{\texorpdfstring{tempFile}{tempFile}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} temp\+File}
+
+\mbox{\Hypertarget{struct_pager_a931b7472041e2b8b26dfc9a52c16b108}\label{struct_pager_a931b7472041e2b8b26dfc9a52c16b108}} 
+\index{Pager@{Pager}!useJournal@{useJournal}}
+\index{useJournal@{useJournal}!Pager@{Pager}}
+\doxysubsubsection{\texorpdfstring{useJournal}{useJournal}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} use\+Journal}
+
+\mbox{\Hypertarget{struct_pager_a8549852e04ca6a05bf6c18e1e8148ccb}\label{struct_pager_a8549852e04ca6a05bf6c18e1e8148ccb}} 
+\index{Pager@{Pager}!vfsFlags@{vfsFlags}}
+\index{vfsFlags@{vfsFlags}!Pager@{Pager}}
+\doxysubsubsection{\texorpdfstring{vfsFlags}{vfsFlags}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a03ad5adfaeb9b7640dde78a0cc390319}{u32}} vfs\+Flags}
+
+\mbox{\Hypertarget{struct_pager_a754c6f3e9c986c552655557f044109e2}\label{struct_pager_a754c6f3e9c986c552655557f044109e2}} 
+\index{Pager@{Pager}!walSyncFlags@{walSyncFlags}}
+\index{walSyncFlags@{walSyncFlags}!Pager@{Pager}}
+\doxysubsubsection{\texorpdfstring{walSyncFlags}{walSyncFlags}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} wal\+Sync\+Flags}
+
+\mbox{\Hypertarget{struct_pager_a3c0ec4b23e5e61ba3ee7ae2021ed6128}\label{struct_pager_a3c0ec4b23e5e61ba3ee7ae2021ed6128}} 
+\index{Pager@{Pager}!xBusyHandler@{xBusyHandler}}
+\index{xBusyHandler@{xBusyHandler}!Pager@{Pager}}
+\doxysubsubsection{\texorpdfstring{xBusyHandler}{xBusyHandler}}
+{\footnotesize\ttfamily int($\ast$ x\+Busy\+Handler) (void $\ast$)}
+
+\mbox{\Hypertarget{struct_pager_a05417a5ecfef1f6fbd4cee6f8e97d112}\label{struct_pager_a05417a5ecfef1f6fbd4cee6f8e97d112}} 
+\index{Pager@{Pager}!xGet@{xGet}}
+\index{xGet@{xGet}!Pager@{Pager}}
+\doxysubsubsection{\texorpdfstring{xGet}{xGet}}
+{\footnotesize\ttfamily int($\ast$ x\+Get) (\mbox{\hyperlink{struct_pager}{Pager}} $\ast$, \mbox{\hyperlink{sqlite3_8c_aec0c653e8dd16e4639caf2f8ea54f55c}{Pgno}}, \mbox{\hyperlink{sqlite3_8c_aa41da1cdeedecb95acdb716e16bd9266}{Db\+Page}} $\ast$$\ast$, int)}
+
+\mbox{\Hypertarget{struct_pager_a1024b74014114a0ccd65cbeb57bf9137}\label{struct_pager_a1024b74014114a0ccd65cbeb57bf9137}} 
+\index{Pager@{Pager}!xReiniter@{xReiniter}}
+\index{xReiniter@{xReiniter}!Pager@{Pager}}
+\doxysubsubsection{\texorpdfstring{xReiniter}{xReiniter}}
+{\footnotesize\ttfamily void($\ast$ x\+Reiniter) (\mbox{\hyperlink{sqlite3_8c_aa41da1cdeedecb95acdb716e16bd9266}{Db\+Page}} $\ast$)}
+
+\mbox{\Hypertarget{struct_pager_a47b2dee2615c9bcdc2d8b755dc571e35}\label{struct_pager_a47b2dee2615c9bcdc2d8b755dc571e35}} 
+\index{Pager@{Pager}!zFilename@{zFilename}}
+\index{zFilename@{zFilename}!Pager@{Pager}}
+\doxysubsubsection{\texorpdfstring{zFilename}{zFilename}}
+{\footnotesize\ttfamily char$\ast$ z\+Filename}
+
+\mbox{\Hypertarget{struct_pager_ac131f027b6287ec5068c33fd866e5dbd}\label{struct_pager_ac131f027b6287ec5068c33fd866e5dbd}} 
+\index{Pager@{Pager}!zJournal@{zJournal}}
+\index{zJournal@{zJournal}!Pager@{Pager}}
+\doxysubsubsection{\texorpdfstring{zJournal}{zJournal}}
+{\footnotesize\ttfamily char$\ast$ z\+Journal}
+
+\mbox{\Hypertarget{struct_pager_a383f1a3f6524788fe82a0f19e97fbb01}\label{struct_pager_a383f1a3f6524788fe82a0f19e97fbb01}} 
+\index{Pager@{Pager}!zWal@{zWal}}
+\index{zWal@{zWal}!Pager@{Pager}}
+\doxysubsubsection{\texorpdfstring{zWal}{zWal}}
+{\footnotesize\ttfamily char$\ast$ z\+Wal}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/macbookair/\+Documents/\+Git\+Hub/projet-\/final-\/c/functions/sql/\mbox{\hyperlink{sqlite3_8c}{sqlite3.\+c}}\end{DoxyCompactItemize}

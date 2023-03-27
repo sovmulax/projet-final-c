@@ -1,0 +1,149 @@
+\hypertarget{struct_where_term}{}\doxysection{Where\+Term Struct Reference}
+\label{struct_where_term}\index{WhereTerm@{WhereTerm}}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_expr}{Expr}} $\ast$ \mbox{\hyperlink{struct_where_term_aab4193f0accd02e4c2e5e60e105c03ca}{p\+Expr}}
+\item 
+\mbox{\hyperlink{struct_where_clause}{Where\+Clause}} $\ast$ \mbox{\hyperlink{struct_where_term_ab85657232a3c235326f1e0dd179e32b7}{p\+WC}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_aa0f9b3b63ad120ac15b96785b05ce733}{Log\+Est}} \mbox{\hyperlink{struct_where_term_ada1f7e88cbf8154b8f353eb87f753e95}{truth\+Prob}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a20f2299e322dcbde37cb07b16910b843}{u16}} \mbox{\hyperlink{struct_where_term_a2fca16b07d01ffb5660833e875675401}{wt\+Flags}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a20f2299e322dcbde37cb07b16910b843}{u16}} \mbox{\hyperlink{struct_where_term_a695bfc96317aa1d79ee883b711da4bc3}{e\+Operator}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} \mbox{\hyperlink{struct_where_term_ab94097e5c2844a5a1c3ec58e8acb9a3d}{n\+Child}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} \mbox{\hyperlink{struct_where_term_a9cbe04d7c7ec0ea37031917d1c749d0c}{e\+Match\+Op}}
+\item 
+int \mbox{\hyperlink{struct_where_term_a247cff41b07e5d14c9ba6650d89a0060}{i\+Parent}}
+\item 
+int \mbox{\hyperlink{struct_where_term_a5dfdebab7f5ce6a9e8c3985173ed6584}{left\+Cursor}}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>struct \{\\
+\>\>int \mbox{\hyperlink{struct_where_term_afe35f80ea3d374f6d4c0e62e2153cae1}{left\+Column}}\\
+\>\>int \mbox{\hyperlink{struct_where_term_af62e8dcf7187bd1b609d6707bc39fa62}{i\+Field}}\\
+\>\} \mbox{\hyperlink{struct_where_term_adaf964e868554b860916fc8f59842952}{x}}\\
+\>\mbox{\hyperlink{struct_where_or_info}{Where\+Or\+Info}} $\ast$ \mbox{\hyperlink{struct_where_term_a233fab5761379ed04adf6c216578c81a}{p\+Or\+Info}}\\
+\>\mbox{\hyperlink{struct_where_and_info}{Where\+And\+Info}} $\ast$ \mbox{\hyperlink{struct_where_term_a150360a9358431e4d53420fc0779a1c1}{p\+And\+Info}}\\
+\} \mbox{\hyperlink{struct_where_term_ae5bfd1c3f945d51273be5baf1aef6b7b}{u}}\\
+
+\end{tabbing}\item 
+\mbox{\hyperlink{sqlite3_8c_afa77b629897c4457bfdc47d364ba5c3f}{Bitmask}} \mbox{\hyperlink{struct_where_term_a327b0c75e6d1aabcd5ca7fafae1be2db}{prereq\+Right}}
+\item 
+\mbox{\hyperlink{sqlite3_8c_afa77b629897c4457bfdc47d364ba5c3f}{Bitmask}} \mbox{\hyperlink{struct_where_term_ae4bf473a378401a7052787c59b4a6e3a}{prereq\+All}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{struct_where_term_a9cbe04d7c7ec0ea37031917d1c749d0c}\label{struct_where_term_a9cbe04d7c7ec0ea37031917d1c749d0c}} 
+\index{WhereTerm@{WhereTerm}!eMatchOp@{eMatchOp}}
+\index{eMatchOp@{eMatchOp}!WhereTerm@{WhereTerm}}
+\doxysubsubsection{\texorpdfstring{eMatchOp}{eMatchOp}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} e\+Match\+Op}
+
+\mbox{\Hypertarget{struct_where_term_a695bfc96317aa1d79ee883b711da4bc3}\label{struct_where_term_a695bfc96317aa1d79ee883b711da4bc3}} 
+\index{WhereTerm@{WhereTerm}!eOperator@{eOperator}}
+\index{eOperator@{eOperator}!WhereTerm@{WhereTerm}}
+\doxysubsubsection{\texorpdfstring{eOperator}{eOperator}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a20f2299e322dcbde37cb07b16910b843}{u16}} e\+Operator}
+
+\mbox{\Hypertarget{struct_where_term_af62e8dcf7187bd1b609d6707bc39fa62}\label{struct_where_term_af62e8dcf7187bd1b609d6707bc39fa62}} 
+\index{WhereTerm@{WhereTerm}!iField@{iField}}
+\index{iField@{iField}!WhereTerm@{WhereTerm}}
+\doxysubsubsection{\texorpdfstring{iField}{iField}}
+{\footnotesize\ttfamily int i\+Field}
+
+\mbox{\Hypertarget{struct_where_term_a247cff41b07e5d14c9ba6650d89a0060}\label{struct_where_term_a247cff41b07e5d14c9ba6650d89a0060}} 
+\index{WhereTerm@{WhereTerm}!iParent@{iParent}}
+\index{iParent@{iParent}!WhereTerm@{WhereTerm}}
+\doxysubsubsection{\texorpdfstring{iParent}{iParent}}
+{\footnotesize\ttfamily int i\+Parent}
+
+\mbox{\Hypertarget{struct_where_term_afe35f80ea3d374f6d4c0e62e2153cae1}\label{struct_where_term_afe35f80ea3d374f6d4c0e62e2153cae1}} 
+\index{WhereTerm@{WhereTerm}!leftColumn@{leftColumn}}
+\index{leftColumn@{leftColumn}!WhereTerm@{WhereTerm}}
+\doxysubsubsection{\texorpdfstring{leftColumn}{leftColumn}}
+{\footnotesize\ttfamily int left\+Column}
+
+\mbox{\Hypertarget{struct_where_term_a5dfdebab7f5ce6a9e8c3985173ed6584}\label{struct_where_term_a5dfdebab7f5ce6a9e8c3985173ed6584}} 
+\index{WhereTerm@{WhereTerm}!leftCursor@{leftCursor}}
+\index{leftCursor@{leftCursor}!WhereTerm@{WhereTerm}}
+\doxysubsubsection{\texorpdfstring{leftCursor}{leftCursor}}
+{\footnotesize\ttfamily int left\+Cursor}
+
+\mbox{\Hypertarget{struct_where_term_ab94097e5c2844a5a1c3ec58e8acb9a3d}\label{struct_where_term_ab94097e5c2844a5a1c3ec58e8acb9a3d}} 
+\index{WhereTerm@{WhereTerm}!nChild@{nChild}}
+\index{nChild@{nChild}!WhereTerm@{WhereTerm}}
+\doxysubsubsection{\texorpdfstring{nChild}{nChild}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a74a0f6424ae628af25f23f0a35f6ead3}{u8}} n\+Child}
+
+\mbox{\Hypertarget{struct_where_term_a150360a9358431e4d53420fc0779a1c1}\label{struct_where_term_a150360a9358431e4d53420fc0779a1c1}} 
+\index{WhereTerm@{WhereTerm}!pAndInfo@{pAndInfo}}
+\index{pAndInfo@{pAndInfo}!WhereTerm@{WhereTerm}}
+\doxysubsubsection{\texorpdfstring{pAndInfo}{pAndInfo}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_where_and_info}{Where\+And\+Info}}$\ast$ p\+And\+Info}
+
+\mbox{\Hypertarget{struct_where_term_aab4193f0accd02e4c2e5e60e105c03ca}\label{struct_where_term_aab4193f0accd02e4c2e5e60e105c03ca}} 
+\index{WhereTerm@{WhereTerm}!pExpr@{pExpr}}
+\index{pExpr@{pExpr}!WhereTerm@{WhereTerm}}
+\doxysubsubsection{\texorpdfstring{pExpr}{pExpr}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_expr}{Expr}}$\ast$ p\+Expr}
+
+\mbox{\Hypertarget{struct_where_term_a233fab5761379ed04adf6c216578c81a}\label{struct_where_term_a233fab5761379ed04adf6c216578c81a}} 
+\index{WhereTerm@{WhereTerm}!pOrInfo@{pOrInfo}}
+\index{pOrInfo@{pOrInfo}!WhereTerm@{WhereTerm}}
+\doxysubsubsection{\texorpdfstring{pOrInfo}{pOrInfo}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_where_or_info}{Where\+Or\+Info}}$\ast$ p\+Or\+Info}
+
+\mbox{\Hypertarget{struct_where_term_ae4bf473a378401a7052787c59b4a6e3a}\label{struct_where_term_ae4bf473a378401a7052787c59b4a6e3a}} 
+\index{WhereTerm@{WhereTerm}!prereqAll@{prereqAll}}
+\index{prereqAll@{prereqAll}!WhereTerm@{WhereTerm}}
+\doxysubsubsection{\texorpdfstring{prereqAll}{prereqAll}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_afa77b629897c4457bfdc47d364ba5c3f}{Bitmask}} prereq\+All}
+
+\mbox{\Hypertarget{struct_where_term_a327b0c75e6d1aabcd5ca7fafae1be2db}\label{struct_where_term_a327b0c75e6d1aabcd5ca7fafae1be2db}} 
+\index{WhereTerm@{WhereTerm}!prereqRight@{prereqRight}}
+\index{prereqRight@{prereqRight}!WhereTerm@{WhereTerm}}
+\doxysubsubsection{\texorpdfstring{prereqRight}{prereqRight}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_afa77b629897c4457bfdc47d364ba5c3f}{Bitmask}} prereq\+Right}
+
+\mbox{\Hypertarget{struct_where_term_ab85657232a3c235326f1e0dd179e32b7}\label{struct_where_term_ab85657232a3c235326f1e0dd179e32b7}} 
+\index{WhereTerm@{WhereTerm}!pWC@{pWC}}
+\index{pWC@{pWC}!WhereTerm@{WhereTerm}}
+\doxysubsubsection{\texorpdfstring{pWC}{pWC}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_where_clause}{Where\+Clause}}$\ast$ p\+WC}
+
+\mbox{\Hypertarget{struct_where_term_ada1f7e88cbf8154b8f353eb87f753e95}\label{struct_where_term_ada1f7e88cbf8154b8f353eb87f753e95}} 
+\index{WhereTerm@{WhereTerm}!truthProb@{truthProb}}
+\index{truthProb@{truthProb}!WhereTerm@{WhereTerm}}
+\doxysubsubsection{\texorpdfstring{truthProb}{truthProb}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_aa0f9b3b63ad120ac15b96785b05ce733}{Log\+Est}} truth\+Prob}
+
+\mbox{\Hypertarget{struct_where_term_ae5bfd1c3f945d51273be5baf1aef6b7b}\label{struct_where_term_ae5bfd1c3f945d51273be5baf1aef6b7b}} 
+\index{WhereTerm@{WhereTerm}!u@{u}}
+\index{u@{u}!WhereTerm@{WhereTerm}}
+\doxysubsubsection{\texorpdfstring{}{}}
+{\footnotesize\ttfamily union  \{ ... \}  u}
+
+\mbox{\Hypertarget{struct_where_term_a2fca16b07d01ffb5660833e875675401}\label{struct_where_term_a2fca16b07d01ffb5660833e875675401}} 
+\index{WhereTerm@{WhereTerm}!wtFlags@{wtFlags}}
+\index{wtFlags@{wtFlags}!WhereTerm@{WhereTerm}}
+\doxysubsubsection{\texorpdfstring{wtFlags}{wtFlags}}
+{\footnotesize\ttfamily \mbox{\hyperlink{sqlite3_8c_a20f2299e322dcbde37cb07b16910b843}{u16}} wt\+Flags}
+
+\mbox{\Hypertarget{struct_where_term_adaf964e868554b860916fc8f59842952}\label{struct_where_term_adaf964e868554b860916fc8f59842952}} 
+\index{WhereTerm@{WhereTerm}!x@{x}}
+\index{x@{x}!WhereTerm@{WhereTerm}}
+\doxysubsubsection{\texorpdfstring{}{}}
+{\footnotesize\ttfamily struct  \{ ... \}  x}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/macbookair/\+Documents/\+Git\+Hub/projet-\/final-\/c/functions/sql/\mbox{\hyperlink{sqlite3_8c}{sqlite3.\+c}}\end{DoxyCompactItemize}

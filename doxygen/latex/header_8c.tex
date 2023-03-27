@@ -1,0 +1,100 @@
+\hypertarget{header_8c}{}\doxysection{header.\+c File Reference}
+\label{header_8c}\index{header.c@{header.c}}
+{\ttfamily \#include \char`\"{}../sql/sqlite3.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{header_8c_a582fd00074c79506644e9ae675c8cda4}{add\+\_\+event}} (\mbox{\hyperlink{structsqlite3}{sqlite3}} $\ast$db, char a\mbox{[}200\mbox{]}, char b\mbox{[}200\mbox{]}, char c\mbox{[}200\mbox{]}, char d\mbox{[}200\mbox{]}, char e\mbox{[}200\mbox{]})
+\item 
+void \mbox{\hyperlink{header_8c_af358767439f5e1384ccb519a82f5cfba}{event\+\_\+list}} (\mbox{\hyperlink{structsqlite3}{sqlite3}} $\ast$db, const char $\ast$columns)
+\item 
+int \mbox{\hyperlink{header_8c_a4414ceeebf480aa1e9135219dc3b7b81}{achat\+\_\+billet}} (\mbox{\hyperlink{structsqlite3}{sqlite3}} $\ast$db, int id, int cine)
+\item 
+void \mbox{\hyperlink{header_8c_a7cde8572217044d08a1ca6ef9c392259}{ajout\+\_\+seance}} (char $\ast$film, int nb)
+\item 
+void \mbox{\hyperlink{header_8c_aa7b8c9998fbe12f00ebbee134fc17423}{liste\+\_\+seance}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{header_8c_a4414ceeebf480aa1e9135219dc3b7b81}\label{header_8c_a4414ceeebf480aa1e9135219dc3b7b81}} 
+\index{header.c@{header.c}!achat\_billet@{achat\_billet}}
+\index{achat\_billet@{achat\_billet}!header.c@{header.c}}
+\doxysubsubsection{\texorpdfstring{achat\_billet()}{achat\_billet()}}
+{\footnotesize\ttfamily int achat\+\_\+billet (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsqlite3}{sqlite3}} $\ast$}]{db,  }\item[{int}]{id,  }\item[{int}]{cine }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & \\
+\hline
+{\em id} & \\
+\hline
+{\em cine} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+~\newline
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{header_8c_a582fd00074c79506644e9ae675c8cda4}\label{header_8c_a582fd00074c79506644e9ae675c8cda4}} 
+\index{header.c@{header.c}!add\_event@{add\_event}}
+\index{add\_event@{add\_event}!header.c@{header.c}}
+\doxysubsubsection{\texorpdfstring{add\_event()}{add\_event()}}
+{\footnotesize\ttfamily void add\+\_\+event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsqlite3}{sqlite3}} $\ast$}]{db,  }\item[{char}]{a\mbox{[}200\mbox{]},  }\item[{char}]{b\mbox{[}200\mbox{]},  }\item[{char}]{c\mbox{[}200\mbox{]},  }\item[{char}]{d\mbox{[}200\mbox{]},  }\item[{char}]{e\mbox{[}200\mbox{]} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & \\
+\hline
+{\em a} & \\
+\hline
+{\em b} & \\
+\hline
+{\em c} & \\
+\hline
+{\em d} & \\
+\hline
+{\em e} & ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{header_8c_a7cde8572217044d08a1ca6ef9c392259}\label{header_8c_a7cde8572217044d08a1ca6ef9c392259}} 
+\index{header.c@{header.c}!ajout\_seance@{ajout\_seance}}
+\index{ajout\_seance@{ajout\_seance}!header.c@{header.c}}
+\doxysubsubsection{\texorpdfstring{ajout\_seance()}{ajout\_seance()}}
+{\footnotesize\ttfamily void ajout\+\_\+seance (\begin{DoxyParamCaption}\item[{char $\ast$}]{film,  }\item[{int}]{nb }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em film} & \\
+\hline
+{\em nb} & ~\newline
+\\
+\hline
+{\em db} & \\
+\hline
+{\em film} & \\
+\hline
+{\em nb} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{header_8c_af358767439f5e1384ccb519a82f5cfba}\label{header_8c_af358767439f5e1384ccb519a82f5cfba}} 
+\index{header.c@{header.c}!event\_list@{event\_list}}
+\index{event\_list@{event\_list}!header.c@{header.c}}
+\doxysubsubsection{\texorpdfstring{event\_list()}{event\_list()}}
+{\footnotesize\ttfamily void event\+\_\+list (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsqlite3}{sqlite3}} $\ast$}]{db,  }\item[{const char $\ast$}]{columns }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & \\
+\hline
+{\em columns} & ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{header_8c_aa7b8c9998fbe12f00ebbee134fc17423}\label{header_8c_aa7b8c9998fbe12f00ebbee134fc17423}} 
+\index{header.c@{header.c}!liste\_seance@{liste\_seance}}
+\index{liste\_seance@{liste\_seance}!header.c@{header.c}}
+\doxysubsubsection{\texorpdfstring{liste\_seance()}{liste\_seance()}}
+{\footnotesize\ttfamily void liste\+\_\+seance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
