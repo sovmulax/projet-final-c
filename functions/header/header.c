@@ -1,3 +1,5 @@
+#include "../sql/sqlite3.h"
+
 /// @brief 
 /// @param db 
 /// @param a 
@@ -17,7 +19,6 @@ void event_list(sqlite3 *db, const char *columns);
 /// @return 
 int achat_billet(sqlite3 *db, int id, int cine);
 /// @brief 
-/// @param db 
 /// @param film 
 /// @param nb 
 void ajout_seance(char *film, int nb);
