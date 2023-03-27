@@ -24,3 +24,11 @@ int achat_billet(sqlite3 *db, int id, int cine);
 void ajout_seance(char *film, int nb);
 /// @brief 
 void liste_seance();
+/// @brief 
+/// @param exist 
+/// @param count 
+/// @param id_jour 
+/// @param seance 
+/// @param film 
+/// @param nb 
+void action(int exist, int count, int id_jour, int seance, char *film, int nb);
