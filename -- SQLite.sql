@@ -6,5 +6,3 @@ CREATE TABLE menus(Id INTEGER PRIMARY KEY, idevent INTEGER, element TEXT);
 CREATE TABLE billets(Id INTEGER PRIMARY KEY, idevent INTEGER, idseance INTEGER);
 CREATE TABLE jours(Id INTEGER PRIMARY KEY, date TEXT UNIQUE);
 CREATE TABLE seances(Id INTEGER PRIMARY KEY, idjour INTEGER, film TEXT, nbplace INTEGER);
-
-INSERT INTO seances (idjour, film, nbplace) VALUES (2, 'slayer', 2);
