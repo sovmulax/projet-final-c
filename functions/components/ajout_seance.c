@@ -3,6 +3,10 @@
 #include <stdio.h>
 #include <time.h>
 
+/// @brief 
+/// @param db 
+/// @param film 
+/// @param nb 
 void ajout_seance(sqlite3 *db, const char *film, int nb)
 {
     char *zErrMsg = 0;

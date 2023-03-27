@@ -4,6 +4,13 @@
 #include <stdlib.h>
 #include <string.h>
 
+/// @brief 
+/// @param db 
+/// @param a 
+/// @param b 
+/// @param c 
+/// @param d 
+/// @param e 
 void add_event(sqlite3 *db, char a[200], char b[200], char c[200], char d[200], char e[200])
 {
     // Ouvre la base de données event.db

@@ -4,6 +4,11 @@
 #include <stdlib.h>
 #include <string.h>
 
+/// @brief 
+/// @param db 
+/// @param id 
+/// @param cine 
+/// @return 
 int achat_billet(sqlite3 *db, int id, int cine)
 {
     int nbOccurences = 0;

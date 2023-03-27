@@ -3,6 +3,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/// @brief 
+/// @param argc 
+/// @param argv 
+/// @return 
 int main(int argc, char *argv[])
 {
     char choix[100];

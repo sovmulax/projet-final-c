@@ -4,6 +4,9 @@
 #include <stdlib.h>
 #include <string.h>
 
+/// @brief 
+/// @param db 
+/// @param columns 
 void event_list(sqlite3 *db, const char *columns)
 {
     // Ouvre la base de données event.db

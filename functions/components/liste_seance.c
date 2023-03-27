@@ -5,6 +5,7 @@
 
 #define DB_PATH "event.db"
 
+/// @brief 
 void liste_seance()
 {
     // Connexion à la base de données
