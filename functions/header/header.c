@@ -20,6 +20,6 @@ int achat_billet(sqlite3 *db, int id, int cine);
 /// @param db 
 /// @param film 
 /// @param nb 
-void ajout_seance(sqlite3 *db, const char *film, int nb);
+void ajout_seance(char *film, int nb);
 /// @brief 
 void liste_seance();

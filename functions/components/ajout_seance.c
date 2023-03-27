@@ -3,17 +3,26 @@
 #include <stdio.h>
 #include <time.h>
 
-/// @brief 
-/// @param db 
-/// @param film 
-/// @param nb 
-void ajout_seance(sqlite3 *db, const char *film, int nb)
+/// @brief
+/// @param db
+/// @param film
+/// @param nb
+
+#define DB_PATH "event.db"
+
+void ajout_seance(char *film, int nb)
 {
     char *zErrMsg = 0;
     int rc;
 
-    // Ouvre la base de données event.db
-    sqlite3_open("event.db", &db);
+    // Connexion à la base de données
+    sqlite3 *db;
+    if (sqlite3_open(DB_PATH, &db) != SQLITE_OK)
+    {
+        fprintf(stderr, "Erreur lors de la connexion à la base de données : %s\n", sqlite3_errmsg(db));
+        sqlite3_close(db);
+        return;
+    }
 
     // Get the current date
     time_t now = time(NULL);
@@ -59,7 +68,7 @@ void ajout_seance(sqlite3 *db, const char *film, int nb)
                 // Insert a new seance for the current jour
                 sqlite3_finalize(stmt);
 
-                sql = "INSERT INTO seances (idjour, film, nbplace) VALUES (?, ?, ?)";
+                sql = "INSERT INTO seances(idjour, film, nbplace) VALUES (?, ?, ?)";
                 sqlite3_prepare_v2(db, sql, -1, &stmt, NULL);
                 sqlite3_bind_int(stmt, 1, jour_id);
                 sqlite3_bind_text(stmt, 2, film, -1, SQLITE_TRANSIENT);
@@ -69,6 +78,7 @@ void ajout_seance(sqlite3 *db, const char *film, int nb)
                 if (rc != SQLITE_DONE)
                 {
                     printf("Erreur : impossible d'ajouter la séance pour le jour %s.\n", date);
+                    printf("Erreur SQLite : %s\n", sqlite3_errmsg(db));
                 }
                 else
                 {
