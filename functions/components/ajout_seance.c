@@ -67,7 +67,7 @@ void ajout_seance(char *film, int nb)
 
             int nb_seances = sqlite3_column_int(stmt, 0);
             sqlite3_close_v2(db);
-            sqlite3_finalize_v2(stmt);
+            sqlite3_finalize(stmt);
             
             if (nb_seances >= 4)
             {

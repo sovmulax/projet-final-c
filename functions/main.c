@@ -3,10 +3,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/// @brief 
-/// @param argc 
-/// @param argv 
-/// @return 
+/// @brief
+/// @param argc
+/// @param argv
+/// @return
 int main(int argc, char *argv[])
 {
     char choix[100];
@@ -86,10 +86,16 @@ int main(int argc, char *argv[])
                 printf("➡️ ");
                 scanf("%d", &v7);
                 achat_billet(db2, v7, 0);
+                break;
             }
             else
             {
-                /* code */
+                liste_seance();
+                printf("L'Id de l'evenement\n");
+                printf("➡️ ");
+                scanf("%d", &v7);
+                achat_billet(db2, 0, v7);
+                break;
             }
         case 4:
             printf("\e[1;1H\e[2J");
@@ -101,7 +107,7 @@ int main(int argc, char *argv[])
             printf("➡️ ");
             scanf("%d", &v7);
             ajout_seance(v1, v7);
-            //printf("\e[1;1H\e[2J");
+            // printf("\e[1;1H\e[2J");
             liste_seance();
             break;
         }

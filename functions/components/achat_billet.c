@@ -71,6 +71,8 @@ int achat_billet(sqlite3 *db, int id, int cine)
             sqlite3_bind_int(stmt, 1, id);
             sqlite3_step(stmt);
             sqlite3_finalize(stmt);
+            printf("✅ Billet acheter\n");
+
             return 0;
         }else{
             printf("❌ Il n'y a plus de place disponible\n");
