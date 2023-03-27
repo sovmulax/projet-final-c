@@ -20,8 +20,9 @@ void event_list(sqlite3 *db, const char *columns);
 int achat_billet(sqlite3 *db, int id, int cine);
 /// @brief 
 /// @param film 
+/// @param db 
 /// @param nb 
-void ajout_seance(char *film, int nb);
+void ajout_seance(sqlite3 *db, char *film, int nb);
 /// @brief 
 void liste_seance();
 /// @brief 
@@ -30,8 +31,9 @@ void liste_seance();
 /// @param id_jour 
 /// @param seance 
 /// @param film 
+/// @param db 
 /// @param nb 
-void action(int exist, int count, int id_jour, int seance, char *film, int nb);
+void action(sqlite3 *db, int exist, int count, int id_jour, int seance, char *film, int nb);
 /// @brief 
 /// @param db 
 /// @param sql 

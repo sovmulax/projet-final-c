@@ -2,6 +2,7 @@
 #include "../header/header.c"
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
 
 int retry_exec(sqlite3 *db, char *sql, int max_retries, int wait_time_ms) {
     int rc;

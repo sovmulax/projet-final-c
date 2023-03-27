@@ -11,12 +11,12 @@ static int callback_select_count(void *data, int argc, char **argv, char **azCol
 /// @param db
 /// @param film
 /// @param nb
-void ajout_seance(char *film, int nb)
+void ajout_seance(sqlite3 *db, char *film, int nb)
 {
     // Connexion à la base de données
-    sqlite3 *db;
     int rc = sqlite3_open("event.db", &db);
-    if (rc != SQLITE_OK) {
+    if (rc != SQLITE_OK)
+    {
         fprintf(stderr, "Erreur lors de l'ouverture de la base de données : %s\n", sqlite3_errmsg(db));
         sqlite3_close(db);
         return;
@@ -33,7 +33,8 @@ void ajout_seance(char *film, int nb)
     int id_jour = 0;
     sprintf(query, "SELECT id FROM jours WHERE date='%s'", date);
     int exist = sqlite3_exec(db, query, callback_select_id, &id_jour, NULL);
-    if (exist != SQLITE_OK) {
+    if (exist != SQLITE_OK)
+    {
         fprintf(stderr, "Erreur lors de la récupération de l'id du jour : %s\n", sqlite3_errmsg(db));
         sqlite3_close(db);
         return;
@@ -43,11 +44,12 @@ void ajout_seance(char *film, int nb)
     int nb_seances = 0;
     sprintf(query, "SELECT COUNT(*) FROM seances WHERE idjour =%d", id_jour);
     int count = sqlite3_exec(db, query, callback_select_count, &nb_seances, NULL);
-    if (count != SQLITE_OK) {
+    if (count != SQLITE_OK)
+    {
         fprintf(stderr, "Erreur lors de la récupération du nombre de séances : %s\n", sqlite3_errmsg(db));
         sqlite3_close(db);
         return;
-    }    
+    }
 
     // Ferme la connexion à la base de données
     sqlite3_close(db);
@@ -62,8 +64,9 @@ void ajout_seance(char *film, int nb)
 
 static int callback_select_id(void *data, int argc, char **argv, char **azColName)
 {
-    int *id_jour = (int*) data;
-    if (argc > 0 && argv[0] != NULL) {
+    int *id_jour = (int *)data;
+    if (argc > 0 && argv[0] != NULL)
+    {
         *id_jour = atoi(argv[0]);
     }
     return 0;
@@ -71,8 +74,9 @@ static int callback_select_id(void *data, int argc, char **argv, char **azColNam
 
 static int callback_select_count(void *data, int argc, char **argv, char **azColName)
 {
-    int *nb_seances = (int*) data;
-    if (argc > 0 && argv[0] != NULL) {
+    int *nb_seances = (int *)data;
+    if (argc > 0 && argv[0] != NULL)
+    {
         *nb_seances = atoi(argv[0]);
     }
     return 0;
