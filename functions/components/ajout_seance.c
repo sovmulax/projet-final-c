@@ -2,6 +2,10 @@
 #include "../header/header.c"
 #include <stdio.h>
 #include <time.h>
+#include <stdlib.h>
+
+static int callback_select_id(void *data, int argc, char **argv, char **azColName);
+static int callback_select_count(void *data, int argc, char **argv, char **azColName);
 
 /// @brief
 /// @param db
@@ -11,8 +15,12 @@ void ajout_seance(char *film, int nb)
 {
     // Connexion à la base de données
     sqlite3 *db;
-    sqlite3_open("event.db", &db);
-    sqlite3_stmt *stmt;
+    int rc = sqlite3_open("event.db", &db);
+    if (rc != SQLITE_OK) {
+        fprintf(stderr, "Erreur lors de l'ouverture de la base de données : %s\n", sqlite3_errmsg(db));
+        sqlite3_close(db);
+        return;
+    }
 
     // Get the current date
     time_t t = time(NULL);
@@ -24,35 +32,48 @@ void ajout_seance(char *film, int nb)
     char query[200];
     int id_jour = 0;
     sprintf(query, "SELECT id FROM jours WHERE date='%s'", date);
-    int exist = sqlite3_prepare_v2(db, query, -1, &stmt, NULL);
-    exist = sqlite3_step(stmt);
-    if (exist == SQLITE_ROW)
-    {
-        id_jour = sqlite3_column_int(stmt, 0);
+    int exist = sqlite3_exec(db, query, callback_select_id, &id_jour, NULL);
+    if (exist != SQLITE_OK) {
+        fprintf(stderr, "Erreur lors de la récupération de l'id du jour : %s\n", sqlite3_errmsg(db));
+        sqlite3_close(db);
+        return;
     }
-    sqlite3_finalize(stmt);
 
     // step deux
     int nb_seances = 0;
     sprintf(query, "SELECT COUNT(*) FROM seances WHERE idjour =%d", id_jour);
-    int count = sqlite3_prepare_v2(db, query, -1, &stmt, NULL);
-    count = sqlite3_step(stmt);
-    if (count == SQLITE_ROW)
-    {
-        nb_seances = sqlite3_column_int(stmt, 0);
-    }
+    int count = sqlite3_exec(db, query, callback_select_count, &nb_seances, NULL);
+    if (count != SQLITE_OK) {
+        fprintf(stderr, "Erreur lors de la récupération du nombre de séances : %s\n", sqlite3_errmsg(db));
+        sqlite3_close(db);
+        return;
+    }    
 
-    // step trois
-    sqlite3_finalize(stmt);
+    // Ferme la connexion à la base de données
     sqlite3_close(db);
 
-    if (sqlite3_db_handle(stmt) != NULL)
-    {
-        printf("La stmt avec la base de données est ouverte.\n");
+    // step trois
+    printf("%d\n", exist);
+    printf("%d\n", count);
+    printf("%d\n", id_jour);
+    printf("%d\n", nb_seances);
+    action(exist, count, id_jour, nb_seances, film, nb);
+}
+
+static int callback_select_id(void *data, int argc, char **argv, char **azColName)
+{
+    int *id_jour = (int*) data;
+    if (argc > 0 && argv[0] != NULL) {
+        *id_jour = atoi(argv[0]);
     }
-    else
-    {
-        printf("La stmt avec la base de données est fermée.\n");
+    return 0;
+}
+
+static int callback_select_count(void *data, int argc, char **argv, char **azColName)
+{
+    int *nb_seances = (int*) data;
+    if (argc > 0 && argv[0] != NULL) {
+        *nb_seances = atoi(argv[0]);
     }
-    //action(exist, count, id_jour, nb_seances);
+    return 0;
 }

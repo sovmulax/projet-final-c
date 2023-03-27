@@ -14,27 +14,31 @@ void action(int exist, int count, int id_jour, int seance, char *film, int nb)
 {
     // Connexion à la base de données
     sqlite3 *db;
-    sqlite3_open("event.db", &db);
+    int rc = sqlite3_open("event.db", &db);
+    if (rc != SQLITE_OK) {
+        fprintf(stderr, "Erreur lors de l'ouverture de la base de données : %s\n", sqlite3_errmsg(db));
+        sqlite3_close(db);
+        return;
+    }
 
-    sqlite3_stmt *stmt;
     char query[200];
 
-    if (exist == SQLITE_ROW)
+    if (exist == 0)
     {
-        if (count == SQLITE_ROW)
+        if (count == 0)
         {
             /* si le jour existe déja */
             if (seance >= 4)
             {
-                printf("Erreur : le nombre maximum de séances a été atteint pour le jour .\n");
+                printf("Erreur : le nombre maximum de séances a été atteint pour le jour.\n");
+                sqlite3_close(db);
                 return;
             }
             else
             {
                 sprintf(query, "INSERT INTO seances(idjour, film, nbplace) VALUES (%d, '%s', %d)", id_jour, film, seance);
-                int rc = sqlite3_prepare_v2(db, query, -1, &stmt, NULL);
-                rc = sqlite3_step(stmt);
-                if (rc != SQLITE_DONE)
+                rc = sqlite3_exec(db, query, NULL, NULL, NULL);
+                if (rc != SQLITE_OK)
                 {
                     printf("Erreur SQLite : %s\n", sqlite3_errmsg(db));
                 }
@@ -43,7 +47,6 @@ void action(int exist, int count, int id_jour, int seance, char *film, int nb)
                     printf("Séance ajoutée avec succès pour le jour.\n");
                 }
 
-                sqlite3_finalize(stmt);
                 sqlite3_close(db);
             }
         }
@@ -53,34 +56,31 @@ void action(int exist, int count, int id_jour, int seance, char *film, int nb)
         /* si le jour n'existe pas */
 
         sprintf(query, "INSERT INTO seances(idjour, film, nbplace) VALUES (%d, %s, %d)", id_jour, film, seance);
-        int rc = sqlite3_prepare_v2(db, query, -1, &stmt, NULL);
-        rc = sqlite3_step(stmt);
+        rc = sqlite3_exec(db, query, NULL, NULL, NULL);
 
-        if (rc != SQLITE_DONE)
+        if (rc != SQLITE_OK)
         {
-            printf("Erreur : impossible d'ajouter le jour .\n");
+            printf("Erreur : impossible d'ajouter le jour.\n");
+            sqlite3_close(db);
+            return;
         }
         else
         {
             printf("Jour ajouté avec succès : \n");
         }
 
-        sqlite3_finalize(stmt);
-
         sprintf(query, "INSERT INTO seances(idjour, film, nbplace) VALUES (%lld, %s, %d)", sqlite3_last_insert_rowid(db), film, seance);
-        rc = sqlite3_prepare_v2(db, query, -1, &stmt, NULL);
-        rc = sqlite3_step(stmt);
+        rc = sqlite3_exec(db, query, NULL, NULL, NULL);
 
-        if (rc != SQLITE_DONE)
+        if (rc != SQLITE_OK)
         {
-            printf("Erreur : impossible d'ajouter le jour .\n");
+            printf("Erreur : impossible d'ajouter la première séance.\n");
         }
         else
         {
             printf("Nouvelle date ajoutée avec succès avec une première séance.\n");
         }
 
-        sqlite3_finalize(stmt);
         sqlite3_close(db);
     }
 }
