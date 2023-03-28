@@ -37,3 +37,5 @@ void liste_seance(sqlite3 *db);
 void action(sqlite3 *db, int exist, int count, int id_jour, int seance, char *film, int nb);
 /// @brief 
 void stats()
+
+gcc stats.c -o stat -I/Library/Frameworks/Python.framework/Versions/3.11/ -L/Library/Frameworks/Python.framework/Versions/3.11/lib -lpython3.11

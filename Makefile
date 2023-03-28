@@ -4,6 +4,9 @@ SRC_DIR_SQL = ./functions/sql
 SRC_DIR_CPNT = ./functions/components
 BIN_DIR = ./bin
 LIB_DIR = ./lib
+PY1 = -I/Library/Frameworks/Python.framework/Versions/3.11/include/python3.11
+PY2 = -L/Library/Frameworks/Python.framework/Versions/3.11/lib
+STAT = ./functions/components/py
 
 # Liste des fichiers source
 SRC_FILES = $(wildcard $(SRC_DIR)/*.c)
@@ -17,6 +20,9 @@ OBJ_FILES_3 = $(patsubst $(SRC_DIR_CPNT)/%.c,$(BIN_DIR)/%.o,$(SRC_FILES_DEUX))
 all: $(BIN_DIR)/event run
 
 # Fichier objet
+$(BIN_DIR)/%.o: $(STAT)/%.c
+	$(CC) -c -o $@ $< $(PY1) $(PY1) -lpython3.11
+
 $(BIN_DIR)/%.o: $(SRC_DIR)/%.c
 	$(CC) -c -o $@ $<
 
