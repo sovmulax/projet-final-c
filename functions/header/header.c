@@ -37,4 +37,4 @@ void liste_seance(sqlite3 *db);
 void action(sqlite3 *db, int exist, int count, int id_jour, int seance, char *film, int nb);
 /// @brief 
 /// @return 
-int stats();
+int main();

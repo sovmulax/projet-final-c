@@ -1,13 +1,36 @@
 #include "./sql/sqlite3.h"
 #include "./header/header.c"
+#include "/Library/Frameworks/Python.framework/Versions/3.11/Headers/Python.h"
+#define PY_SSIZE_T_CLEAN
 #include <stdio.h>
 #include <stdlib.h>
+
+void stat() {
+    wchar_t *program = Py_DecodeLocale("test_program", NULL);
+    if (program == NULL)
+    {
+        fprintf(stderr, "Fatal Error: Cannot decode program name\n");
+        exit(1);
+    }
+
+    Py_SetProgramName(program);
+    Py_Initialize();
+
+    PyRun_SimpleString("exec(open('./components/py/stats.py').read())");
+
+    // Finish the Python Interpreter
+    if(Py_FinalizeEx() < 0){
+        exit(120);
+    }
+
+    PyMem_RawFree(program);
+}
 
 /// @brief
 /// @param argc
 /// @param argv
 /// @return
-int main(int argc, char *argv[])
+void main(int argc, char *argv[])
 {
     char choix[100];
     int boo = 1;
@@ -114,7 +137,7 @@ int main(int argc, char *argv[])
             liste_seance(db);
             break;
         case 6:
-            stats();
+            stat();
             break;
         }
 

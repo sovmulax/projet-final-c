@@ -20,11 +20,9 @@ OBJ_FILES_3 = $(patsubst $(SRC_DIR_CPNT)/%.c,$(BIN_DIR)/%.o,$(SRC_FILES_DEUX))
 all: $(BIN_DIR)/event run
 
 # Fichier objet
-$(BIN_DIR)/%.o: $(STAT)/%.c
-	$(CC) -c -o $@ $< $(PY1) $(PY1) -lpython3.11
 
 $(BIN_DIR)/%.o: $(SRC_DIR)/%.c
-	$(CC) -c -o $@ $<
+	$(CC) -o $@ $< $(PY1) $(PY2) -lpython3.11
 
 $(BIN_DIR)/%.o: $(SRC_DIR_SQL)/%.c
 	$(CC) -c -o $@ $<
@@ -32,13 +30,15 @@ $(BIN_DIR)/%.o: $(SRC_DIR_SQL)/%.c
 $(BIN_DIR)/%.o: $(SRC_DIR_CPNT)/%.c
 	$(CC) -c -o $@ $<
 
+# $(BIN_DIR)/%.o: $(STAT)/%.c
+# 	$(CC) -c -o $@ $< $(PY1) $(PY1) -lpython3.11
 # Librairie statique
 $(LIB_DIR)/libevent.a: $(BIN_DIR)/*.o
 	ar rcs $@ $^
 
 # liaisin fichier objet et la librairie statique
 $(BIN_DIR)/event: $(OBJ_FILES_1) $(OBJ_FILES_2) $(OBJ_FILES_3) $(LIB_DIR)/libevent.a
-	$(CC) -o $@ $^ -lsqlite3
+	$(CC) -o $@ $^ -lsqlite3 $(PY1) $(PY2) -lpython3.11
 
 # Nottoyage
 clean:
