@@ -36,9 +36,4 @@ void liste_seance(sqlite3 *db);
 /// @param nb 
 void action(sqlite3 *db, int exist, int count, int id_jour, int seance, char *film, int nb);
 /// @brief 
-/// @param db 
-/// @param sql 
-/// @param max_retries 
-/// @param wait_time_ms 
-/// @return 
-int retry_exec(sqlite3 *db, char *sql, int max_retries, int wait_time_ms);
+void stats()

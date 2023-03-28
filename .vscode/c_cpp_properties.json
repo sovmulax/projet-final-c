@@ -3,7 +3,8 @@
         {
             "name": "Mac",
             "includePath": [
-                "${workspaceFolder}/**"
+                "${workspaceFolder}/**",
+                "/Library/Frameworks/Python.framework/Versions/3.11/Headers/*"
             ],
             "defines": [],
             "macFrameworkPath": [
