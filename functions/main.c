@@ -139,7 +139,7 @@ int main(int argc, char *argv[])
             liste_seance(db);
             break;
         case 6:
-            printf("\e[1;1H\e[2J");
+            //printf("\e[1;1H\e[2J");
             stats();
             break;
         }
