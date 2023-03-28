@@ -15,15 +15,21 @@ void action(sqlite3 *db, int exist, int count, int id_jour, int seance, char *fi
 {
     // Connexion à la base de données
     int rc = sqlite3_open("event.db", &db);
-    if (rc != SQLITE_OK) {
+    if (rc != SQLITE_OK)
+    {
         fprintf(stderr, "Erreur lors de l'ouverture de la base de données : %s\n", sqlite3_errmsg(db));
         sqlite3_close(db);
         return;
     }
 
+    time_t t = time(NULL);
+    struct tm tm = *localtime(&t);
+    char date[11];
+    sprintf(date, "%04d-%02d-%02d", tm.tm_year + 1900, tm.tm_mon + 1, tm.tm_mday);
+
     char query[200];
 
-    if (exist == 0)
+    if (exist == 0 && id_jour != 0)
     {
         if (count == 0)
         {
@@ -55,12 +61,13 @@ void action(sqlite3 *db, int exist, int count, int id_jour, int seance, char *fi
     {
         /* si le jour n'existe pas */
 
-        sprintf(query, "INSERT INTO seances(idjour, film, nbplace) VALUES (%d, %s, %d)", id_jour, film, seance);
+        sprintf(query, "INSERT INTO jours(date) VALUES('%s')", date);
         rc = sqlite3_exec(db, query, NULL, NULL, NULL);
 
         if (rc != SQLITE_OK)
         {
             printf("Erreur : impossible d'ajouter le jour.\n");
+            printf("Erreur SQLite : %s\n", sqlite3_errmsg(db));
             sqlite3_close(db);
             return;
         }
@@ -69,12 +76,13 @@ void action(sqlite3 *db, int exist, int count, int id_jour, int seance, char *fi
             printf("Jour ajouté avec succès : \n");
         }
 
-        sprintf(query, "INSERT INTO seances(idjour, film, nbplace) VALUES (%lld, %s, %d)", sqlite3_last_insert_rowid(db), film, seance);
+        sprintf(query, "INSERT INTO seances(idjour, film, nbplace) VALUES('%lld', '%s', %d)", sqlite3_last_insert_rowid(db), film, nb);
         rc = sqlite3_exec(db, query, NULL, NULL, NULL);
 
         if (rc != SQLITE_OK)
         {
             printf("Erreur : impossible d'ajouter la première séance.\n");
+            printf("Erreur SQLite : %s\n", sqlite3_errmsg(db));
         }
         else
         {
