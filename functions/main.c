@@ -5,32 +5,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void stat() {
-    wchar_t *program = Py_DecodeLocale("test_program", NULL);
-    if (program == NULL)
-    {
-        fprintf(stderr, "Fatal Error: Cannot decode program name\n");
-        exit(1);
-    }
-
-    Py_SetProgramName(program);
-    Py_Initialize();
-
-    PyRun_SimpleString("exec(open('./components/py/stats.py').read())");
-
-    // Finish the Python Interpreter
-    if(Py_FinalizeEx() < 0){
-        exit(120);
-    }
-
-    PyMem_RawFree(program);
-}
+void stats();
 
 /// @brief
 /// @param argc
 /// @param argv
 /// @return
-void main(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
     char choix[100];
     int boo = 1;
@@ -63,81 +44,81 @@ void main(int argc, char *argv[])
 
         switch (atoi(choix))
         {
-        case 1:
-            printf("\e[1;1H\e[2J");
-            printf("Le nom de l'evenement\n");
-            printf("➡️ ");
-            scanf("%s", v1);
-            printf("La date de l'evenement (JJ/MM/AAAA)\n");
-            printf("➡️ ");
-            scanf("%s", v2);
-            printf("Le nombre de place\n");
-            printf("➡️ ");
-            scanf("%s", v3);
-            printf("Le type d'evenement (1 ou 2)\n");
-            printf("1- Anniversaire\n");
-            printf("2- Mariage\n");
-            printf("➡️ ");
-            scanf("%s", v4);
-            printf("\e[1;1H\e[2J");
-            printf("🧾 Création du Menu\n");
-            printf("Liste des éléments (element;element;element)\n");
-            printf("➡️ ");
-            scanf("%s", v5);
-            add_event(db, v1, v2, v3, v4, v5);
+        // case 1:
+        //     printf("\e[1;1H\e[2J");
+        //     printf("Le nom de l'evenement\n");
+        //     printf("➡️ ");
+        //     scanf("%s", v1);
+        //     printf("La date de l'evenement (JJ/MM/AAAA)\n");
+        //     printf("➡️ ");
+        //     scanf("%s", v2);
+        //     printf("Le nombre de place\n");
+        //     printf("➡️ ");
+        //     scanf("%s", v3);
+        //     printf("Le type d'evenement (1 ou 2)\n");
+        //     printf("1- Anniversaire\n");
+        //     printf("2- Mariage\n");
+        //     printf("➡️ ");
+        //     scanf("%s", v4);
+        //     printf("\e[1;1H\e[2J");
+        //     printf("🧾 Création du Menu\n");
+        //     printf("Liste des éléments (element;element;element)\n");
+        //     printf("➡️ ");
+        //     scanf("%s", v5);
+        //     add_event(db, v1, v2, v3, v4, v5);
 
-            break;
+        //     break;
 
-        case 2:
-            printf("\e[1;1H\e[2J");
-            event_list(db, "*");
-            break;
+        // case 2:
+        //     printf("\e[1;1H\e[2J");
+        //     event_list(db, "*");
+        //     break;
 
-        case 3:
-            printf("\e[1;1H\e[2J");
-            printf("Le type d'evenement (1 ou 2 ou 3)\n");
-            printf("1- Anniversaire\n");
-            printf("2- Mariage\n");
-            printf("3- Cinéma\n");
-            printf("➡️ ");
-            scanf("%d", &v6);
-            printf("\e[1;1H\e[2J");
+        // case 3:
+        //     printf("\e[1;1H\e[2J");
+        //     printf("Le type d'evenement (1 ou 2 ou 3)\n");
+        //     printf("1- Anniversaire\n");
+        //     printf("2- Mariage\n");
+        //     printf("3- Cinéma\n");
+        //     printf("➡️ ");
+        //     scanf("%d", &v6);
+        //     printf("\e[1;1H\e[2J");
 
-            if (v6 != 3)
-            {
-                event_list(db, "*");
-                printf("L'Id de l'evenement\n");
-                printf("➡️ ");
-                scanf("%d", &v7);
-                achat_billet(db2, v7, 0);
-                break;
-            }
-            else
-            {
-                liste_seance(db2);
-                printf("L'Id de l'evenement\n");
-                printf("➡️ ");
-                scanf("%d", &v7);
-                achat_billet(db2, 0, v7);
-                break;
-            }
-        case 4:
-            printf("\e[1;1H\e[2J");
-            printf("Le nom du film\n");
-            printf("➡️ ");
-            scanf("%s", v1);
-            printf("Le nombre de place\n");
-            printf("➡️ ");
-            scanf("%d", &v7);
-            ajout_seance(db, v1, v7);
-            break;
+        //     if (v6 != 3)
+        //     {
+        //         event_list(db, "*");
+        //         printf("L'Id de l'evenement\n");
+        //         printf("➡️ ");
+        //         scanf("%d", &v7);
+        //         achat_billet(db2, v7, 0);
+        //         break;
+        //     }
+        //     else
+        //     {
+        //         liste_seance(db2);
+        //         printf("L'Id de l'evenement\n");
+        //         printf("➡️ ");
+        //         scanf("%d", &v7);
+        //         achat_billet(db2, 0, v7);
+        //         break;
+        //     }
+        // case 4:
+        //     printf("\e[1;1H\e[2J");
+        //     printf("Le nom du film\n");
+        //     printf("➡️ ");
+        //     scanf("%s", v1);
+        //     printf("Le nombre de place\n");
+        //     printf("➡️ ");
+        //     scanf("%d", &v7);
+        //     ajout_seance(db, v1, v7);
+        //     break;
 
-        case 5:
-            printf("\e[1;1H\e[2J");
-            liste_seance(db);
-            break;
+        // case 5:
+        //     printf("\e[1;1H\e[2J");
+        //     liste_seance(db);
+        //     break;
         case 6:
-            stat();
+            stats();
             break;
         }
 
@@ -152,4 +133,25 @@ void main(int argc, char *argv[])
         }
     }
     return (0);
+}
+
+void stats() {
+    wchar_t *program = Py_DecodeLocale("test_program", NULL);
+    if (program == NULL)
+    {
+        fprintf(stderr, "Fatal Error: Cannot decode program name\n");
+        exit(1);
+    }
+
+    Py_SetProgramName(program);
+    Py_Initialize();
+
+    PyRun_SimpleString("exec(open('./stats.py').read())");
+
+    // Finish the Python Interpreter
+    if(Py_FinalizeEx() < 0){
+        exit(120);
+    }
+
+    PyMem_RawFree(program);
 }

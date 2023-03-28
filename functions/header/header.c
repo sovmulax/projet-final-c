@@ -1,4 +1,5 @@
 #include "../sql/sqlite3.h"
+#include "/Library/Frameworks/Python.framework/Versions/3.11/Headers/Python.h"
 
 /// @brief 
 /// @param db 
@@ -35,6 +36,3 @@ void liste_seance(sqlite3 *db);
 /// @param db 
 /// @param nb 
 void action(sqlite3 *db, int exist, int count, int id_jour, int seance, char *film, int nb);
-/// @brief 
-/// @return 
-int main();
