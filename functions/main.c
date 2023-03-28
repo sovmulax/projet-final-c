@@ -51,15 +51,13 @@ int main(int argc, char *argv[])
     {
         printf("\e[1;1H\e[2J");
         printf("📖 Menu : \n");
-        printf("1️⃣ - Création d'evenement : \n");
-        printf("2️⃣ - Liste des evenements : \n");
-        printf("3️⃣ - Achat de billets: \n");
-        printf("4️⃣ - Création de Seances (Cinéma) : \n");
-        printf("5️⃣ - Liste de Séances du jour: \n");
-        printf("6️⃣ - Les statistiques : \n");
+        printf("1️⃣ - Création d'evenement\n");
+        printf("2️⃣ - Liste des evenements\n");
+        printf("3️⃣ - Achat de billets\n");
+        printf("4️⃣ - Création de Seances (Cinéma) \n");
+        printf("5️⃣ - Liste de Séances du jour\n");
+        printf("6️⃣ - Les statistiques\n");
 
-        // printf("6️⃣ - Retourné un livre : \n");
-        // printf("7️⃣ - Les emprunts en cour: \n");
         printf("➡️ ");
         scanf("%s", choix);
 

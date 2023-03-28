@@ -73,7 +73,7 @@ void action(sqlite3 *db, int exist, int count, int id_jour, int seance, char *fi
         }
         else
         {
-            printf("Jour ajouté avec succès : \n");
+            printf("Jour ajouté avec succès \n");
         }
 
         sprintf(query, "INSERT INTO seances(idjour, film, nbplace) VALUES('%lld', '%s', %d)", sqlite3_last_insert_rowid(db), film, nb);
