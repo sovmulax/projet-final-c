@@ -24,15 +24,15 @@ int main(int argc, char *argv[])
 
     while (boo == 1)
     {
-        printf("\e[1;1H\e[2J");
+        //printf("\e[1;1H\e[2J");
         printf("📖 Menu : \n");
         printf("1️⃣ - Création d'evenement : \n");
         printf("2️⃣ - Liste des evenements : \n");
         printf("3️⃣ - Achat de billets: \n");
         printf("4️⃣ - Création de Seances (Cinéma) : \n");
         printf("5️⃣ - Liste de Séances du jour: \n");
-
-        // printf("5️⃣ - Emprunté un livre : \n");
+        printf("6️⃣ - Les statistiques : \n");
+        
         // printf("6️⃣ - Retourné un livre : \n");
         // printf("7️⃣ - Les emprunts en cour: \n");
         printf("➡️ ");
@@ -112,6 +112,9 @@ int main(int argc, char *argv[])
         case 5:
             printf("\e[1;1H\e[2J");
             liste_seance(db);
+            break;
+        case 6:
+            stats();
             break;
         }
 

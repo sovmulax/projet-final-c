@@ -1,8 +1,12 @@
 #include "/Library/Frameworks/Python.framework/Versions/3.11/Headers/Python.h"
 #define PY_SSIZE_T_CLEAN
-/// @brief
-int main(int arg, char const *argv[])
+
+/// @brief 
+/// @return 
+
+int stats()
 {
+    char const *argv[];
     wchar_t *program = Py_DecodeLocale(argv[0], NULL);
     if (program == NULL)
     {
