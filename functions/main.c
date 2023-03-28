@@ -5,7 +5,28 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void stats();
+void stats()
+{
+    wchar_t *program = Py_DecodeLocale("programm", NULL);
+    if (program == NULL)
+    {
+        fprintf(stderr, "Fatal Error: Cannot decode program name\n");
+        exit(1);
+    }
+
+    Py_SetProgramName(program);
+    Py_Initialize();
+
+    PyRun_SimpleString("exec(open('./stats.py').read())");
+
+    // Finish the Python Interpreter
+    if (Py_FinalizeEx() < 0)
+    {
+        exit(120);
+    }
+
+    PyMem_RawFree(program);
+}
 
 /// @brief
 /// @param argc
@@ -24,11 +45,11 @@ int main(int argc, char *argv[])
     char v4[100];
     char v5[100];
     int v6 = 1;
-    int v7 = 1;
+    int v7 = 1; 
 
     while (boo == 1)
     {
-        //printf("\e[1;1H\e[2J");
+        printf("\e[1;1H\e[2J");
         printf("📖 Menu : \n");
         printf("1️⃣ - Création d'evenement : \n");
         printf("2️⃣ - Liste des evenements : \n");
@@ -36,7 +57,7 @@ int main(int argc, char *argv[])
         printf("4️⃣ - Création de Seances (Cinéma) : \n");
         printf("5️⃣ - Liste de Séances du jour: \n");
         printf("6️⃣ - Les statistiques : \n");
-        
+
         // printf("6️⃣ - Retourné un livre : \n");
         // printf("7️⃣ - Les emprunts en cour: \n");
         printf("➡️ ");
@@ -118,6 +139,7 @@ int main(int argc, char *argv[])
             liste_seance(db);
             break;
         case 6:
+            printf("\e[1;1H\e[2J");
             stats();
             break;
         }
@@ -133,25 +155,4 @@ int main(int argc, char *argv[])
         }
     }
     return (0);
-}
-
-void stats() {
-    wchar_t *program = Py_DecodeLocale("test_program", NULL);
-    if (program == NULL)
-    {
-        fprintf(stderr, "Fatal Error: Cannot decode program name\n");
-        exit(1);
-    }
-
-    Py_SetProgramName(program);
-    Py_Initialize();
-
-    PyRun_SimpleString("exec(open('./stats.py').read())");
-
-    // Finish the Python Interpreter
-    if(Py_FinalizeEx() < 0){
-        exit(120);
-    }
-
-    PyMem_RawFree(program);
 }

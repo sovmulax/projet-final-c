@@ -22,13 +22,13 @@ all: $(BIN_DIR)/event run
 # Fichier objet
 
 $(BIN_DIR)/%.o: $(SRC_DIR_SQL)/%.c
-	$(CC) -c -o $@ $<
+	$(CC) -c $< -o $@ 
 
 $(BIN_DIR)/%.o: $(SRC_DIR_CPNT)/%.c
-	$(CC) -c -o $@ $<
+	$(CC) -c $< -o $@ 
 
 $(BIN_DIR)/%.o: $(SRC_DIR)/%.c
-	$(CC) -o $@ $< $(PY1) $(PY2) -lpython3.11
+	$(CC) -c $< -o $@  $(PY1) $(PY2) -lpython3.11
 
 # $(BIN_DIR)/%.o: $(STAT)/%.c
 # 	$(CC) -c -o $@ $< $(PY1) $(PY1) -lpython3.11
@@ -39,7 +39,7 @@ $(LIB_DIR)/libevent.a: $(BIN_DIR)/*.o
 
 # liaisin fichier objet et la librairie statique
 $(BIN_DIR)/event: $(OBJ_FILES_1) $(OBJ_FILES_2) $(OBJ_FILES_3) $(LIB_DIR)/libevent.a
-	$(CC) -o $@ $^ -lsqlite3
+	$(CC) -c $^ -lsqlite3 -o $@ 
 
 # Nottoyage
 clean:
