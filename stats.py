@@ -11,3 +11,14 @@ for row in cursor:
 
 # Fermeture de la connexion à la base de données
 conn.close()
+# Connexion à la base de données
+conn = sqlite3.connect('event.db')
+
+# Récupération des événements et affichage des attributs "title" et "date"
+cursor = conn.execute("SELECT film, nbplace FROM seances")
+
+for row in cursor:
+    print(f"📺 Film : {row[0]} | 📊 Nombre de Place : {row[1]}")
+
+# Fermeture de la connexion à la base de données
+conn.close()
